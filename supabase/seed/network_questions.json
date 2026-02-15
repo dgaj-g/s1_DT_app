@@ -1,0 +1,5801 @@
+[
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of networking.",
+    "options_json": {
+      "choices": [
+        "linking devices to share data",
+        "storing files on one offline computer",
+        "using one device with no connections",
+        "deleting data from all devices"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "linking devices to share data"
+    },
+    "markscheme_points_json": [
+      "linking devices to share data"
+    ],
+    "explanation": "A network is a set of connected devices that can exchange data and resources.",
+    "source_ref": "U1 DT 2025 Q8(d) + MS",
+    "tags_json": [
+      "networking_definition"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for LAN?",
+    "options_json": {
+      "choices": [
+        "LAN",
+        "WAN",
+        "Intranet",
+        "Ring"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "LAN"
+    },
+    "markscheme_points_json": [
+      "LAN"
+    ],
+    "explanation": "A LAN usually serves a local site such as a school, home, or office building.",
+    "source_ref": "U1 DT 2024 Q1(c) + MS",
+    "tags_json": [
+      "lan"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Select the accurate option for WAN.",
+    "options_json": {
+      "choices": [
+        "World area network",
+        "LAN",
+        "WAN",
+        "Wired applications network"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "WAN"
+    },
+    "markscheme_points_json": [
+      "WAN"
+    ],
+    "explanation": "A WAN spans large distances, often connecting sites in different towns or countries.",
+    "source_ref": "U1 DT 2024 Q1(b) + MS",
+    "tags_json": [
+      "wan"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of internet.",
+    "options_json": {
+      "choices": [
+        "private organisational network",
+        "single network in one building",
+        "global network of networks",
+        "collection of linked web pages"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "global network of networks"
+    },
+    "markscheme_points_json": [
+      "global network of networks"
+    ],
+    "explanation": "The internet links many networks together worldwide.",
+    "source_ref": "U1 DT 2025 Q8(b) + MS",
+    "tags_json": [
+      "internet_definition"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for World Wide Web?",
+    "options_json": {
+      "choices": [
+        "collection of linked web pages on web servers",
+        "global physical cable backbone",
+        "private internal staff network",
+        "device-to-device short-range link"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "collection of linked web pages on web servers"
+    },
+    "markscheme_points_json": [
+      "collection of linked web pages on web servers"
+    ],
+    "explanation": "The web is one service that runs on the internet and provides linked pages.",
+    "source_ref": "U1 DT 2025 Q8(b) + MS",
+    "tags_json": [
+      "www_definition"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Select the accurate option for internet vs world wide web.",
+    "options_json": {
+      "choices": [
+        "internet is network; web is application",
+        "internet is only email",
+        "web is hardware",
+        "both terms mean exactly the same"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "internet is network; web is application"
+    },
+    "markscheme_points_json": [
+      "internet is network; web is application"
+    ],
+    "explanation": "The internet is the infrastructure; the web is one service that uses it.",
+    "source_ref": "U1 DT 2025 Q8(c) + MS",
+    "tags_json": [
+      "internet_vs_www"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of intranet.",
+    "options_json": {
+      "choices": [
+        "private organisational network",
+        "large geographical network",
+        "global public network",
+        "wireless headset pairing"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "private organisational network"
+    },
+    "markscheme_points_json": [
+      "private organisational network"
+    ],
+    "explanation": "An intranet is restricted to authorised people inside an organisation.",
+    "source_ref": "U1 DT 2019 Q6(a)(iii) + MS",
+    "tags_json": [
+      "intranet"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for IoT?",
+    "options_json": {
+      "choices": [
+        "only social media accounts",
+        "physical devices connected to the internet",
+        "only desktop computers",
+        "printed barcodes on paper"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "physical devices connected to the internet"
+    },
+    "markscheme_points_json": [
+      "physical devices connected to the internet"
+    ],
+    "explanation": "IoT refers to connected physical devices such as sensors and smart home equipment.",
+    "source_ref": "U1 DT 2025 Q8(a) + MS",
+    "tags_json": [
+      "iot"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Select the accurate option for Wi-Fi.",
+    "options_json": {
+      "choices": [
+        "short-range personal pairing only",
+        "wireless network access in homes/schools",
+        "main cable in a bus network",
+        "light-based long-distance cable system"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "wireless network access in homes/schools"
+    },
+    "markscheme_points_json": [
+      "wireless network access in homes/schools"
+    ],
+    "explanation": "Wi-Fi provides wireless access to a local network and internet.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS",
+    "tags_json": [
+      "wifi"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of Bluetooth.",
+    "options_json": {
+      "choices": [
+        "global network of networks",
+        "main cable in a bus topology",
+        "short-range wireless technology",
+        "long-distance fixed cable backbone"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "short-range wireless technology"
+    },
+    "markscheme_points_json": [
+      "short-range wireless technology"
+    ],
+    "explanation": "Bluetooth is commonly used for links such as phone-to-headphones or watch-to-phone.",
+    "source_ref": "U1 DT 2025 Q8(c) + MS",
+    "tags_json": [
+      "bluetooth"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for optical fibre?",
+    "options_json": {
+      "choices": [
+        "light signals",
+        "audio waves",
+        "electrical signals",
+        "magnetic tape"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "light signals"
+    },
+    "markscheme_points_json": [
+      "light signals"
+    ],
+    "explanation": "Fibre-optic cables use pulses of light to carry data.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_signals"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Select the accurate option for optical fibre bandwidth.",
+    "options_json": {
+      "choices": [
+        "no data capacity",
+        "text only",
+        "very low bandwidth",
+        "high bandwidth"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "high bandwidth"
+    },
+    "markscheme_points_json": [
+      "high bandwidth"
+    ],
+    "explanation": "Fibre is designed to carry large amounts of data quickly.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_bandwidth"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of optical fibre interference.",
+    "options_json": {
+      "choices": [
+        "cannot carry data",
+        "wireless only",
+        "more susceptible to interference",
+        "less susceptible to interference"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "less susceptible to interference"
+    },
+    "markscheme_points_json": [
+      "less susceptible to interference"
+    ],
+    "explanation": "Fibre is less affected by electromagnetic interference than copper cables.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_interference"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for optical fibre security?",
+    "options_json": {
+      "choices": [
+        "easier to intercept than copper",
+        "always publicly broadcast",
+        "cannot be made secure",
+        "harder to intercept than copper"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "harder to intercept than copper"
+    },
+    "markscheme_points_json": [
+      "harder to intercept than copper"
+    ],
+    "explanation": "Fibre is typically harder to tap without detection than copper cabling.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_security"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Select the accurate option for best medium while travelling.",
+    "options_json": {
+      "choices": [
+        "Bluetooth",
+        "Fibre-optic",
+        "5G",
+        "Wi-Fi"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "5G"
+    },
+    "markscheme_points_json": [
+      "5G"
+    ],
+    "explanation": "Mobile broadband such as 5G is used when travelling away from fixed networks.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS",
+    "tags_json": [
+      "mobile_5g"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of NIC purpose.",
+    "options_json": {
+      "choices": [
+        "connect to and communicate on a network",
+        "prints paper documents",
+        "creates topology diagrams",
+        "stores shared files"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "connect to and communicate on a network"
+    },
+    "markscheme_points_json": [
+      "connect to and communicate on a network"
+    ],
+    "explanation": "A network interface card provides the hardware interface for network access.",
+    "source_ref": "U1 DT 2023 Q7(e) + MS",
+    "tags_json": [
+      "nic"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for switch function?",
+    "options_json": {
+      "choices": [
+        "creates wireless signals only",
+        "connects devices in a lan and forwards data",
+        "stores files for all users",
+        "connects countries globally"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "connects devices in a lan and forwards data"
+    },
+    "markscheme_points_json": [
+      "connects devices in a lan and forwards data"
+    ],
+    "explanation": "A switch operates inside a LAN, sending traffic to the correct destination.",
+    "source_ref": "U1 DT 2021 Q6(1) + MS",
+    "tags_json": [
+      "switch"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Select the accurate option for router function.",
+    "options_json": {
+      "choices": [
+        "connects networks and routes packets",
+        "joins nodes to one backbone cable",
+        "stores documents centrally",
+        "acts as a workstation"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "connects networks and routes packets"
+    },
+    "markscheme_points_json": [
+      "connects networks and routes packets"
+    ],
+    "explanation": "Routers direct traffic between networks, including between a LAN and the internet.",
+    "source_ref": "U1 DT 2021 Q6(2), 2023 Q6(b) + MS",
+    "tags_json": [
+      "router"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of file server purpose.",
+    "options_json": {
+      "choices": [
+        "stores shared files for network users",
+        "routes internet packets",
+        "pairs bluetooth accessories",
+        "ends a bus cable"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "stores shared files for network users"
+    },
+    "markscheme_points_json": [
+      "stores shared files for network users"
+    ],
+    "explanation": "A file server gives centralised access to shared resources in a network.",
+    "source_ref": "U1 DT 2021 Q6(1) + MS",
+    "tags_json": [
+      "file_server"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for wired LAN setup?",
+    "options_json": {
+      "choices": [
+        "single global internet cable",
+        "wireless-only satellite link",
+        "wired connection to switch",
+        "social media platform"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "wired connection to switch"
+    },
+    "markscheme_points_json": [
+      "wired connection to switch"
+    ],
+    "explanation": "In wired LANs, Ethernet cabling links network devices to switches.",
+    "source_ref": "U1 DT 2023 Q6(b) + MS",
+    "tags_json": [
+      "ethernet_switch"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Select the accurate option for network advantages.",
+    "options_json": {
+      "choices": [
+        "removes all failures",
+        "eliminates all maintenance",
+        "prevents updates",
+        "share files hardware and communication"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "share files hardware and communication"
+    },
+    "markscheme_points_json": [
+      "share files hardware and communication"
+    ],
+    "explanation": "Typical network benefits are resource sharing and easier collaboration.",
+    "source_ref": "U1 DT 2019 Q6(a)(ii), 2025 Q8(d) + MS",
+    "tags_json": [
+      "network_advantages"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of bus topology structure.",
+    "options_json": {
+      "choices": [
+        "nodes connect in a closed ring",
+        "all nodes connect to central switch",
+        "every node connects to every node",
+        "all nodes connect to one backbone cable"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "all nodes connect to one backbone cable"
+    },
+    "markscheme_points_json": [
+      "all nodes connect to one backbone cable"
+    ],
+    "explanation": "Bus topology uses one main cable shared by all connected nodes.",
+    "source_ref": "U1 DT 2023 Q7(b)(i), Q7(c) + MS",
+    "tags_json": [
+      "bus_topology"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for bus topology disadvantages?",
+    "options_json": {
+      "choices": [
+        "no collisions occur",
+        "one cable fault affects only one workstation",
+        "performance always improves with more nodes",
+        "if backbone cable fails network fails"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "if backbone cable fails network fails"
+    },
+    "markscheme_points_json": [
+      "if backbone cable fails network fails"
+    ],
+    "explanation": "A single backbone fault can stop communication for the whole bus network.",
+    "source_ref": "U1 DT 2023 Q7(b)(ii) + MS",
+    "tags_json": [
+      "bus_disadvantage"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Select the accurate option for backbone.",
+    "options_json": {
+      "choices": [
+        "main cable in bus network",
+        "central server in star",
+        "wireless hotspot",
+        "ring token"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "main cable in bus network"
+    },
+    "markscheme_points_json": [
+      "main cable in bus network"
+    ],
+    "explanation": "All devices in a bus topology connect to the backbone cable.",
+    "source_ref": "U1 DT 2023 Q7(b)(iii), 2025 Q13 + MS",
+    "tags_json": [
+      "backbone"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of terminator purpose.",
+    "options_json": {
+      "choices": [
+        "stores user files",
+        "converts bus to ring",
+        "stop signal bounce on bus cable",
+        "increases bluetooth range"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "stop signal bounce on bus cable"
+    },
+    "markscheme_points_json": [
+      "stop signal bounce on bus cable"
+    ],
+    "explanation": "Terminators absorb signals at cable ends to reduce distortion and data loss.",
+    "source_ref": "U1 DT 2023 Q7(b)(iii) + MS",
+    "tags_json": [
+      "terminator"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for ring topology?",
+    "options_json": {
+      "choices": [
+        "all devices share one backbone only",
+        "no cables are used",
+        "all devices connect to central switch",
+        "data passes from one node/workstation to another"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "data passes from one node/workstation to another"
+    },
+    "markscheme_points_json": [
+      "data passes from one node/workstation to another"
+    ],
+    "explanation": "Ring topology sends data around the loop via each connected node.",
+    "source_ref": "U1 DT 2023 Q7(c), 2022 Q7(a) + MS",
+    "tags_json": [
+      "ring_topology"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Select the accurate option for star topology structure.",
+    "options_json": {
+      "choices": [
+        "no central device is used",
+        "devices share one backbone cable",
+        "all devices connect to central server/switch/hub",
+        "devices connect in one circle"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "all devices connect to central server/switch/hub"
+    },
+    "markscheme_points_json": [
+      "all devices connect to central server/switch/hub"
+    ],
+    "explanation": "Star networks use a central point with separate links to each workstation.",
+    "source_ref": "U1 DT 2019 Q6(d)(i), 2024 Q6(a) + MS",
+    "tags_json": [
+      "star_topology"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Choose the best description of star advantage.",
+    "options_json": {
+      "choices": [
+        "new workstations cannot be added",
+        "if one workstation fails others can continue",
+        "one workstation failure stops all devices",
+        "star has no performance benefits"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "if one workstation fails others can continue"
+    },
+    "markscheme_points_json": [
+      "if one workstation fails others can continue"
+    ],
+    "explanation": "Separate links mean faults are often isolated to one device connection.",
+    "source_ref": "U1 DT 2024 Q6(a), 2019 Q6(d)(ii) + MS",
+    "tags_json": [
+      "star_advantage"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option is correct for name of backbone topology?",
+    "options_json": {
+      "choices": [
+        "wan",
+        "ring",
+        "star",
+        "bus"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "bus"
+    },
+    "markscheme_points_json": [
+      "bus"
+    ],
+    "explanation": "Bus topology is identified by a shared backbone cable.",
+    "source_ref": "U1 DT 2023 Q7(b)(i) + MS",
+    "tags_json": [
+      "topology_bus_name"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "mcq",
+    "stem": "Which option correctly matches this task: phone to wireless headphones?",
+    "options_json": {
+      "choices": [
+        "Fibre-optic",
+        "Bluetooth",
+        "5G",
+        "Wi-Fi"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Bluetooth"
+    },
+    "markscheme_points_json": [
+      "Bluetooth"
+    ],
+    "explanation": "Bluetooth is the expected short-range medium for personal peripherals.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS",
+    "tags_json": [
+      "media_headphones"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A ____ covers a small geographical area such as one building.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "LAN",
+        "local area network"
+      ]
+    },
+    "markscheme_points_json": [
+      "LAN"
+    ],
+    "explanation": "A LAN usually serves a local site such as a school, home, or office building.",
+    "source_ref": "U1 DT 2024 Q1(c) + MS",
+    "tags_json": [
+      "lan"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A ____ connects networks across a large geographical area.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "WAN",
+        "wide area network"
+      ]
+    },
+    "markscheme_points_json": [
+      "WAN"
+    ],
+    "explanation": "A WAN spans large distances, often connecting sites in different towns or countries.",
+    "source_ref": "U1 DT 2024 Q1(b) + MS",
+    "tags_json": [
+      "wan"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: The internet is a global network of ____.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "networks",
+        "networks of networks",
+        "global network of networks",
+        "a large global network of networks",
+        "large global network of networks"
+      ]
+    },
+    "markscheme_points_json": [
+      "global network of networks"
+    ],
+    "explanation": "The internet links many networks together worldwide.",
+    "source_ref": "U1 DT 2025 Q8(b) + MS",
+    "tags_json": [
+      "internet_definition"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: An intranet is a ____ organisational network.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "private",
+        "private organisational network",
+        "private network owned and managed by an organisation",
+        "private network for employees"
+      ]
+    },
+    "markscheme_points_json": [
+      "private organisational network"
+    ],
+    "explanation": "An intranet is restricted to authorised people inside an organisation.",
+    "source_ref": "U1 DT 2019 Q6(a)(iii) + MS",
+    "tags_json": [
+      "intranet"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: IoT refers to ____ devices connected to the internet.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "physical",
+        "smart",
+        "physical smart",
+        "physical devices connected to the internet",
+        "devices connected to the internet",
+        "physical smart devices connected to the internet"
+      ]
+    },
+    "markscheme_points_json": [
+      "physical devices connected to the internet"
+    ],
+    "explanation": "IoT refers to connected physical devices such as sensors and smart home equipment.",
+    "source_ref": "U1 DT 2025 Q8(a) + MS",
+    "tags_json": [
+      "iot"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Bluetooth is a ____-range wireless technology.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "short",
+        "short-range",
+        "short range",
+        "short-range wireless technology",
+        "short range wireless communication technology"
+      ]
+    },
+    "markscheme_points_json": [
+      "short-range wireless technology"
+    ],
+    "explanation": "Bluetooth is commonly used for links such as phone-to-headphones or watch-to-phone.",
+    "source_ref": "U1 DT 2025 Q8(c) + MS",
+    "tags_json": [
+      "bluetooth"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A smart TV usually connects to a home network using ____.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "Wi-Fi",
+        "WiFi",
+        "wireless",
+        "wireless network access in homes/schools",
+        "wireless local network access",
+        "connect devices wirelessly to a local network"
+      ]
+    },
+    "markscheme_points_json": [
+      "wireless network access in homes/schools"
+    ],
+    "explanation": "Wi-Fi provides wireless access to a local network and internet.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS",
+    "tags_json": [
+      "wifi"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Fibre-optic cables carry data as ____ signals.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "light",
+        "light signals",
+        "pulses of light",
+        "data transmitted as light"
+      ]
+    },
+    "markscheme_points_json": [
+      "light signals"
+    ],
+    "explanation": "Fibre-optic cables use pulses of light to carry data.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_signals"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Fibre-optic cable has ____ bandwidth.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "high",
+        "high bandwidth",
+        "has a high bandwidth"
+      ]
+    },
+    "markscheme_points_json": [
+      "high bandwidth"
+    ],
+    "explanation": "Fibre is designed to carry large amounts of data quickly.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_bandwidth"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Fibre-optic cable is less susceptible to ____.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "interference",
+        "less susceptible to interference",
+        "low interference",
+        "less affected by interference"
+      ]
+    },
+    "markscheme_points_json": [
+      "less susceptible to interference"
+    ],
+    "explanation": "Fibre is less affected by electromagnetic interference than copper cables.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_interference"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Data on fibre is generally ____ to intercept than copper.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "harder",
+        "more difficult",
+        "harder to intercept than copper",
+        "not easier to intercept than copper",
+        "more secure than copper for interception"
+      ]
+    },
+    "markscheme_points_json": [
+      "harder to intercept than copper"
+    ],
+    "explanation": "Fibre is typically harder to tap without detection than copper cabling.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_security"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Accessing company files while travelling often uses ____.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "5G",
+        "5 g"
+      ]
+    },
+    "markscheme_points_json": [
+      "5G"
+    ],
+    "explanation": "Mobile broadband such as 5G is used when travelling away from fixed networks.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS",
+    "tags_json": [
+      "mobile_5g"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A ____ connects a LAN to the internet.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "router",
+        "connects networks and routes packets",
+        "joins two or more networks",
+        "forwards packets from one network to another"
+      ]
+    },
+    "markscheme_points_json": [
+      "connects networks and routes packets"
+    ],
+    "explanation": "Routers direct traffic between networks, including between a LAN and the internet.",
+    "source_ref": "U1 DT 2021 Q6(2), 2023 Q6(b) + MS",
+    "tags_json": [
+      "router"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: On a wired LAN, each device connects to a ____ using Ethernet cables.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "switch",
+        "network switch",
+        "wired connection to switch",
+        "devices connect to a switch with ethernet cables",
+        "ethernet cable to switch"
+      ]
+    },
+    "markscheme_points_json": [
+      "wired connection to switch"
+    ],
+    "explanation": "In wired LANs, Ethernet cabling links network devices to switches.",
+    "source_ref": "U1 DT 2023 Q6(b) + MS",
+    "tags_json": [
+      "ethernet_switch"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A NIC allows a device to ____ and communicate on a network.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "connect",
+        "join",
+        "connect to and communicate on a network",
+        "allows device to connect to a network",
+        "network connection and communication"
+      ]
+    },
+    "markscheme_points_json": [
+      "connect to and communicate on a network"
+    ],
+    "explanation": "A network interface card provides the hardware interface for network access.",
+    "source_ref": "U1 DT 2023 Q7(e) + MS",
+    "tags_json": [
+      "nic"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: In a bus topology, the main cable is called the ____.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "backbone",
+        "backbone cable",
+        "main cable in bus network",
+        "main cable",
+        "bus main cable"
+      ]
+    },
+    "markscheme_points_json": [
+      "main cable in bus network"
+    ],
+    "explanation": "All devices in a bus topology connect to the backbone cable.",
+    "source_ref": "U1 DT 2023 Q7(b)(iii), 2025 Q13 + MS",
+    "tags_json": [
+      "backbone"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A ____ is fitted at each end of a bus cable.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "terminator",
+        "terminators",
+        "stop signal bounce on bus cable",
+        "stops signal returning down the backbone",
+        "absorbs signal to reduce collisions"
+      ]
+    },
+    "markscheme_points_json": [
+      "stop signal bounce on bus cable"
+    ],
+    "explanation": "Terminators absorb signals at cable ends to reduce distortion and data loss.",
+    "source_ref": "U1 DT 2023 Q7(b)(iii) + MS",
+    "tags_json": [
+      "terminator"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A closed-loop network is a ____ topology.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "ring",
+        "ring topology"
+      ]
+    },
+    "markscheme_points_json": [
+      "ring"
+    ],
+    "explanation": "In ring topology, each node is connected in a closed path.",
+    "source_ref": "U1 DT 2022 Q7(a)(i) + MS",
+    "tags_json": [
+      "topology_ring_name"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A network with one backbone cable is a ____ topology.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "bus",
+        "bus topology",
+        "bus network"
+      ]
+    },
+    "markscheme_points_json": [
+      "bus"
+    ],
+    "explanation": "Bus topology is identified by a shared backbone cable.",
+    "source_ref": "U1 DT 2023 Q7(b)(i) + MS",
+    "tags_json": [
+      "topology_bus_name"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A network with one central connection point is a ____ topology.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "star",
+        "star topology",
+        "star network"
+      ]
+    },
+    "markscheme_points_json": [
+      "star"
+    ],
+    "explanation": "Star topology uses a central node and separate device links.",
+    "source_ref": "U1 DT 2019 Q6(d)(i), 2024 Q6(a) + MS",
+    "tags_json": [
+      "topology_star_name"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Connect phone to wireless headphones",
+          "right": "Bluetooth"
+        },
+        {
+          "left": "Access cloud files while travelling",
+          "right": "5G"
+        },
+        {
+          "left": "Connect a smart TV to home network",
+          "right": "Wi-Fi"
+        },
+        {
+          "left": "Connect business LAN to internet",
+          "right": "Fibre-optic"
+        }
+      ],
+      "choices": [
+        "Bluetooth",
+        "5G",
+        "Wi-Fi",
+        "Fibre-optic"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Connect phone to wireless headphones": "Bluetooth",
+        "Access cloud files while travelling": "5G",
+        "Connect a smart TV to home network": "Wi-Fi",
+        "Connect business LAN to internet": "Fibre-optic"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Phone-headphones uses Bluetooth, travelling cloud access uses 5G, home smart TV uses Wi-Fi, and business LAN internet often uses fibre.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS",
+    "tags_json": [
+      "easy_match_media"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "LAN",
+          "right": "Small geographical network"
+        },
+        {
+          "left": "WAN",
+          "right": "Large geographical network"
+        },
+        {
+          "left": "Internet",
+          "right": "Global network of networks"
+        },
+        {
+          "left": "Intranet",
+          "right": "Private organisational network"
+        }
+      ],
+      "choices": [
+        "Collection of linked pages",
+        "Private organisational network",
+        "Global network of networks",
+        "Large geographical network",
+        "Small geographical network"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "LAN": "Small geographical network",
+        "WAN": "Large geographical network",
+        "Internet": "Global network of networks",
+        "Intranet": "Private organisational network"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "LAN and WAN are network sizes, internet is global public infrastructure, and intranet is private organisational access.",
+    "source_ref": "U1 DT 2019 Q6(a), 2024 Q1(b)(c), 2025 Q8(b) + MS",
+    "tags_json": [
+      "easy_match_terms"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Connects networks",
+          "right": "Router"
+        },
+        {
+          "left": "Connects devices in one LAN",
+          "right": "Switch"
+        },
+        {
+          "left": "Lets a computer join a network",
+          "right": "NIC"
+        },
+        {
+          "left": "Stores shared files",
+          "right": "File server"
+        }
+      ],
+      "choices": [
+        "Router",
+        "Switch",
+        "NIC",
+        "File server",
+        "Terminator"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Connects networks": "Router",
+        "Connects devices in one LAN": "Switch",
+        "Lets a computer join a network": "NIC",
+        "Stores shared files": "File server"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Router joins networks, switch manages LAN traffic, NIC enables connection, and file server stores shared files.",
+    "source_ref": "U1 DT 2021 Q6, 2023 Q6(b), 2023 Q7(e) + MS",
+    "tags_json": [
+      "easy_match_device_roles"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Fibre has high bandwidth",
+          "right": "True"
+        },
+        {
+          "left": "Fibre transmits data as electrical signals",
+          "right": "False"
+        },
+        {
+          "left": "Fibre is less susceptible to interference",
+          "right": "True"
+        },
+        {
+          "left": "Fibre data is easier to intercept than copper",
+          "right": "False"
+        }
+      ],
+      "choices": [
+        "False",
+        "True"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Fibre has high bandwidth": "True",
+        "Fibre transmits data as electrical signals": "False",
+        "Fibre is less susceptible to interference": "True",
+        "Fibre data is easier to intercept than copper": "False"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "CCEA fibre facts: high bandwidth, light transmission, lower interference, and not easier to intercept than copper.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "easy_match_fibre_true_false"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Devices connect to one central point",
+          "right": "Star"
+        },
+        {
+          "left": "All nodes share one backbone cable",
+          "right": "Bus"
+        },
+        {
+          "left": "Devices form a closed loop",
+          "right": "Ring"
+        },
+        {
+          "left": "Terminators needed at both ends",
+          "right": "Bus"
+        }
+      ],
+      "choices": [
+        "Star",
+        "Bus",
+        "Ring",
+        "LAN"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Devices connect to one central point": "Star",
+        "All nodes share one backbone cable": "Bus",
+        "Devices form a closed loop": "Ring",
+        "Terminators needed at both ends": "Bus"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Star means central point; bus means shared backbone and terminators; ring means closed loop.",
+    "source_ref": "U1 DT 2019 Q6, 2022 Q7(a), 2023 Q7(b)(c), 2024 Q6(a) + MS",
+    "tags_json": [
+      "easy_match_topology"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Connect phone to wireless headphones",
+          "right": "Bluetooth"
+        },
+        {
+          "left": "Access cloud files while travelling",
+          "right": "5G"
+        },
+        {
+          "left": "Connect a smart TV to home network",
+          "right": "Wi-Fi"
+        },
+        {
+          "left": "Connect business LAN to internet",
+          "right": "Fibre-optic"
+        }
+      ],
+      "choices": [
+        "Fibre-optic",
+        "Wi-Fi",
+        "5G",
+        "Bluetooth"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Connect phone to wireless headphones": "Bluetooth",
+        "Access cloud files while travelling": "5G",
+        "Connect a smart TV to home network": "Wi-Fi",
+        "Connect business LAN to internet": "Fibre-optic"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Phone-headphones uses Bluetooth, travelling cloud access uses 5G, home smart TV uses Wi-Fi, and business LAN internet often uses fibre.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS",
+    "tags_json": [
+      "easy_match_media"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "LAN",
+          "right": "Small geographical network"
+        },
+        {
+          "left": "WAN",
+          "right": "Large geographical network"
+        },
+        {
+          "left": "Internet",
+          "right": "Global network of networks"
+        },
+        {
+          "left": "Intranet",
+          "right": "Private organisational network"
+        }
+      ],
+      "choices": [
+        "Small geographical network",
+        "Large geographical network",
+        "Global network of networks",
+        "Private organisational network",
+        "Collection of linked pages"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "LAN": "Small geographical network",
+        "WAN": "Large geographical network",
+        "Internet": "Global network of networks",
+        "Intranet": "Private organisational network"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "LAN and WAN are network sizes, internet is global public infrastructure, and intranet is private organisational access.",
+    "source_ref": "U1 DT 2019 Q6(a), 2024 Q1(b)(c), 2025 Q8(b) + MS",
+    "tags_json": [
+      "easy_match_terms"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Connects networks",
+          "right": "Router"
+        },
+        {
+          "left": "Connects devices in one LAN",
+          "right": "Switch"
+        },
+        {
+          "left": "Lets a computer join a network",
+          "right": "NIC"
+        },
+        {
+          "left": "Stores shared files",
+          "right": "File server"
+        }
+      ],
+      "choices": [
+        "Terminator",
+        "File server",
+        "NIC",
+        "Switch",
+        "Router"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Connects networks": "Router",
+        "Connects devices in one LAN": "Switch",
+        "Lets a computer join a network": "NIC",
+        "Stores shared files": "File server"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Router joins networks, switch manages LAN traffic, NIC enables connection, and file server stores shared files.",
+    "source_ref": "U1 DT 2021 Q6, 2023 Q6(b), 2023 Q7(e) + MS",
+    "tags_json": [
+      "easy_match_device_roles"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Fibre has high bandwidth",
+          "right": "True"
+        },
+        {
+          "left": "Fibre transmits data as electrical signals",
+          "right": "False"
+        },
+        {
+          "left": "Fibre is less susceptible to interference",
+          "right": "True"
+        },
+        {
+          "left": "Fibre data is easier to intercept than copper",
+          "right": "False"
+        }
+      ],
+      "choices": [
+        "True",
+        "False"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Fibre has high bandwidth": "True",
+        "Fibre transmits data as electrical signals": "False",
+        "Fibre is less susceptible to interference": "True",
+        "Fibre data is easier to intercept than copper": "False"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "CCEA fibre facts: high bandwidth, light transmission, lower interference, and not easier to intercept than copper.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "easy_match_fibre_true_false"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "easy",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Devices connect to one central point",
+          "right": "Star"
+        },
+        {
+          "left": "All nodes share one backbone cable",
+          "right": "Bus"
+        },
+        {
+          "left": "Devices form a closed loop",
+          "right": "Ring"
+        },
+        {
+          "left": "Terminators needed at both ends",
+          "right": "Bus"
+        }
+      ],
+      "choices": [
+        "LAN",
+        "Ring",
+        "Bus",
+        "Star"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Devices connect to one central point": "Star",
+        "All nodes share one backbone cable": "Bus",
+        "Devices form a closed loop": "Ring",
+        "Terminators needed at both ends": "Bus"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Star means central point; bus means shared backbone and terminators; ring means closed loop.",
+    "source_ref": "U1 DT 2019 Q6, 2022 Q7(a), 2023 Q7(b)(c), 2024 Q6(a) + MS",
+    "tags_json": [
+      "easy_match_topology"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Choose the best description of LAN.",
+    "options_json": {
+      "choices": [
+        "Ring",
+        "Intranet",
+        "LAN",
+        "WAN"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "LAN"
+    },
+    "markscheme_points_json": [
+      "LAN"
+    ],
+    "explanation": "A LAN usually serves a local site such as a school, home, or office building.",
+    "source_ref": "U1 DT 2024 Q1(c) + MS",
+    "tags_json": [
+      "lan"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Which option is correct for WAN?",
+    "options_json": {
+      "choices": [
+        "World area network",
+        "WAN",
+        "LAN",
+        "Wired applications network"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "WAN"
+    },
+    "markscheme_points_json": [
+      "WAN"
+    ],
+    "explanation": "A WAN spans large distances, often connecting sites in different towns or countries.",
+    "source_ref": "U1 DT 2024 Q1(b) + MS",
+    "tags_json": [
+      "wan"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Select the accurate option for internet.",
+    "options_json": {
+      "choices": [
+        "collection of linked web pages",
+        "private organisational network",
+        "single network in one building",
+        "global network of networks"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "global network of networks"
+    },
+    "markscheme_points_json": [
+      "global network of networks"
+    ],
+    "explanation": "The internet links many networks together worldwide.",
+    "source_ref": "U1 DT 2025 Q8(b) + MS",
+    "tags_json": [
+      "internet_definition"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Choose the best description of World Wide Web.",
+    "options_json": {
+      "choices": [
+        "private internal staff network",
+        "device-to-device short-range link",
+        "global physical cable backbone",
+        "collection of linked web pages on web servers"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "collection of linked web pages on web servers"
+    },
+    "markscheme_points_json": [
+      "collection of linked web pages on web servers"
+    ],
+    "explanation": "The web is one service that runs on the internet and provides linked pages.",
+    "source_ref": "U1 DT 2025 Q8(b) + MS",
+    "tags_json": [
+      "www_definition"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Which option is correct for internet vs world wide web?",
+    "options_json": {
+      "choices": [
+        "internet is network; web is application",
+        "both terms mean exactly the same",
+        "web is hardware",
+        "internet is only email"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "internet is network; web is application"
+    },
+    "markscheme_points_json": [
+      "internet is network; web is application"
+    ],
+    "explanation": "The internet is the infrastructure; the web is one service that uses it.",
+    "source_ref": "U1 DT 2025 Q8(c) + MS",
+    "tags_json": [
+      "internet_vs_www"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Select the accurate option for IoT.",
+    "options_json": {
+      "choices": [
+        "printed barcodes on paper",
+        "only social media accounts",
+        "physical devices connected to the internet",
+        "only desktop computers"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "physical devices connected to the internet"
+    },
+    "markscheme_points_json": [
+      "physical devices connected to the internet"
+    ],
+    "explanation": "IoT refers to connected physical devices such as sensors and smart home equipment.",
+    "source_ref": "U1 DT 2025 Q8(a) + MS",
+    "tags_json": [
+      "iot"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Choose the best description of Wi-Fi.",
+    "options_json": {
+      "choices": [
+        "wireless network access in homes/schools",
+        "main cable in a bus network",
+        "light-based long-distance cable system",
+        "short-range personal pairing only"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "wireless network access in homes/schools"
+    },
+    "markscheme_points_json": [
+      "wireless network access in homes/schools"
+    ],
+    "explanation": "Wi-Fi provides wireless access to a local network and internet.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS",
+    "tags_json": [
+      "wifi"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Which option is correct for Bluetooth?",
+    "options_json": {
+      "choices": [
+        "long-distance fixed cable backbone",
+        "global network of networks",
+        "main cable in a bus topology",
+        "short-range wireless technology"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "short-range wireless technology"
+    },
+    "markscheme_points_json": [
+      "short-range wireless technology"
+    ],
+    "explanation": "Bluetooth is commonly used for links such as phone-to-headphones or watch-to-phone.",
+    "source_ref": "U1 DT 2025 Q8(c) + MS",
+    "tags_json": [
+      "bluetooth"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Select the accurate option for optical fibre.",
+    "options_json": {
+      "choices": [
+        "audio waves",
+        "electrical signals",
+        "magnetic tape",
+        "light signals"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "light signals"
+    },
+    "markscheme_points_json": [
+      "light signals"
+    ],
+    "explanation": "Fibre-optic cables use pulses of light to carry data.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_signals"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Choose the best description of optical fibre security.",
+    "options_json": {
+      "choices": [
+        "easier to intercept than copper",
+        "cannot be made secure",
+        "harder to intercept than copper",
+        "always publicly broadcast"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "harder to intercept than copper"
+    },
+    "markscheme_points_json": [
+      "harder to intercept than copper"
+    ],
+    "explanation": "Fibre is typically harder to tap without detection than copper cabling.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS",
+    "tags_json": [
+      "optical_fibre_security"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Which option is correct for best medium while travelling?",
+    "options_json": {
+      "choices": [
+        "5G",
+        "Bluetooth",
+        "Wi-Fi",
+        "Fibre-optic"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "5G"
+    },
+    "markscheme_points_json": [
+      "5G"
+    ],
+    "explanation": "Mobile broadband such as 5G is used when travelling away from fixed networks.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS",
+    "tags_json": [
+      "mobile_5g"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Select the accurate option for NIC purpose.",
+    "options_json": {
+      "choices": [
+        "connect to and communicate on a network",
+        "prints paper documents",
+        "stores shared files",
+        "creates topology diagrams"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "connect to and communicate on a network"
+    },
+    "markscheme_points_json": [
+      "connect to and communicate on a network"
+    ],
+    "explanation": "A network interface card provides the hardware interface for network access.",
+    "source_ref": "U1 DT 2023 Q7(e) + MS",
+    "tags_json": [
+      "nic"
+    ],
+    "source_type": "adapted_exam",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Choose the best description of switch function.",
+    "options_json": {
+      "choices": [
+        "connects devices in a lan and forwards data",
+        "connects countries globally",
+        "creates wireless signals only",
+        "stores files for all users"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "connects devices in a lan and forwards data"
+    },
+    "markscheme_points_json": [
+      "connects devices in a lan and forwards data"
+    ],
+    "explanation": "A switch operates inside a LAN, sending traffic to the correct destination.",
+    "source_ref": "U1 DT 2021 Q6(1) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "switch"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Which option is correct for router function?",
+    "options_json": {
+      "choices": [
+        "connects networks and routes packets",
+        "joins nodes to one backbone cable",
+        "stores documents centrally",
+        "acts as a workstation"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "connects networks and routes packets"
+    },
+    "markscheme_points_json": [
+      "connects networks and routes packets"
+    ],
+    "explanation": "Routers direct traffic between networks, including between a LAN and the internet.",
+    "source_ref": "U1 DT 2021 Q6(2), 2023 Q6(b) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "router"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Select the accurate option for file server purpose.",
+    "options_json": {
+      "choices": [
+        "ends a bus cable",
+        "routes internet packets",
+        "pairs bluetooth accessories",
+        "stores shared files for network users"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "stores shared files for network users"
+    },
+    "markscheme_points_json": [
+      "stores shared files for network users"
+    ],
+    "explanation": "A file server gives centralised access to shared resources in a network.",
+    "source_ref": "U1 DT 2021 Q6(1) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "file_server"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Choose the best description of bus topology structure.",
+    "options_json": {
+      "choices": [
+        "all nodes connect to central switch",
+        "nodes connect in a closed ring",
+        "every node connects to every node",
+        "all nodes connect to one backbone cable"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "all nodes connect to one backbone cable"
+    },
+    "markscheme_points_json": [
+      "all nodes connect to one backbone cable"
+    ],
+    "explanation": "Bus topology uses one main cable shared by all connected nodes.",
+    "source_ref": "U1 DT 2023 Q7(b)(i), Q7(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "bus_topology"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Which option is correct for bus topology disadvantages?",
+    "options_json": {
+      "choices": [
+        "no collisions occur",
+        "if backbone cable fails network fails",
+        "performance always improves with more nodes",
+        "one cable fault affects only one workstation"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "if backbone cable fails network fails"
+    },
+    "markscheme_points_json": [
+      "if backbone cable fails network fails"
+    ],
+    "explanation": "A single backbone fault can stop communication for the whole bus network.",
+    "source_ref": "U1 DT 2023 Q7(b)(ii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "bus_disadvantage"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Select the accurate option for ring topology.",
+    "options_json": {
+      "choices": [
+        "no cables are used",
+        "data passes from one node/workstation to another",
+        "all devices share one backbone only",
+        "all devices connect to central switch"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "data passes from one node/workstation to another"
+    },
+    "markscheme_points_json": [
+      "data passes from one node/workstation to another"
+    ],
+    "explanation": "Ring topology sends data around the loop via each connected node.",
+    "source_ref": "U1 DT 2023 Q7(c), 2022 Q7(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "ring_topology"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Choose the best description of star topology structure.",
+    "options_json": {
+      "choices": [
+        "devices connect in one circle",
+        "all devices connect to central server/switch/hub",
+        "no central device is used",
+        "devices share one backbone cable"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "all devices connect to central server/switch/hub"
+    },
+    "markscheme_points_json": [
+      "all devices connect to central server/switch/hub"
+    ],
+    "explanation": "Star networks use a central point with separate links to each workstation.",
+    "source_ref": "U1 DT 2019 Q6(d)(i), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "star_topology"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "mcq",
+    "stem": "Which option is correct for star disadvantage?",
+    "options_json": {
+      "choices": [
+        "no cabling cost",
+        "if central device fails network fails",
+        "no setup required",
+        "cannot connect printers"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "if central device fails network fails"
+    },
+    "markscheme_points_json": [
+      "if central device fails network fails"
+    ],
+    "explanation": "The central switch/server is a dependency in star topology.",
+    "source_ref": "U1 DT 2019 Q6(d)(iii), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "star_disadvantage"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Fibre-optic cables carry data as ____ signals.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "light",
+        "light signals",
+        "pulses of light",
+        "data transmitted as light"
+      ]
+    },
+    "markscheme_points_json": [
+      "light signals"
+    ],
+    "explanation": "Fibre-optic cables use pulses of light to carry data.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "optical_fibre_signals"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Fibre-optic cable has ____ bandwidth.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "high",
+        "high bandwidth",
+        "has a high bandwidth"
+      ]
+    },
+    "markscheme_points_json": [
+      "high bandwidth"
+    ],
+    "explanation": "Fibre is designed to carry large amounts of data quickly.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "optical_fibre_bandwidth"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Fibre-optic cable is less susceptible to ____.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "interference",
+        "less susceptible to interference",
+        "low interference",
+        "less affected by interference"
+      ]
+    },
+    "markscheme_points_json": [
+      "less susceptible to interference"
+    ],
+    "explanation": "Fibre is less affected by electromagnetic interference than copper cables.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "optical_fibre_interference"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Data on fibre is generally ____ to intercept than copper.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "harder",
+        "more difficult",
+        "harder to intercept than copper",
+        "not easier to intercept than copper",
+        "more secure than copper for interception"
+      ]
+    },
+    "markscheme_points_json": [
+      "harder to intercept than copper"
+    ],
+    "explanation": "Fibre is typically harder to tap without detection than copper cabling.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "optical_fibre_security"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: Accessing company files while travelling often uses ____.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "5G",
+        "5 g"
+      ]
+    },
+    "markscheme_points_json": [
+      "5G"
+    ],
+    "explanation": "Mobile broadband such as 5G is used when travelling away from fixed networks.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "mobile_5g"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A ____ connects a LAN to the internet.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "router",
+        "connects networks and routes packets",
+        "joins two or more networks",
+        "forwards packets from one network to another"
+      ]
+    },
+    "markscheme_points_json": [
+      "connects networks and routes packets"
+    ],
+    "explanation": "Routers direct traffic between networks, including between a LAN and the internet.",
+    "source_ref": "U1 DT 2021 Q6(2), 2023 Q6(b) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "router"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: On a wired LAN, each device connects to a ____ using Ethernet cables.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "switch",
+        "network switch",
+        "wired connection to switch",
+        "devices connect to a switch with ethernet cables",
+        "ethernet cable to switch"
+      ]
+    },
+    "markscheme_points_json": [
+      "wired connection to switch"
+    ],
+    "explanation": "In wired LANs, Ethernet cabling links network devices to switches.",
+    "source_ref": "U1 DT 2023 Q6(b) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "ethernet_switch"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A NIC allows a device to ____ and communicate on a network.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "connect",
+        "join",
+        "connect to and communicate on a network",
+        "allows device to connect to a network",
+        "network connection and communication"
+      ]
+    },
+    "markscheme_points_json": [
+      "connect to and communicate on a network"
+    ],
+    "explanation": "A network interface card provides the hardware interface for network access.",
+    "source_ref": "U1 DT 2023 Q7(e) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "nic"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: In a bus topology, the main cable is called the ____.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "backbone",
+        "backbone cable",
+        "main cable in bus network",
+        "main cable",
+        "bus main cable"
+      ]
+    },
+    "markscheme_points_json": [
+      "main cable in bus network"
+    ],
+    "explanation": "All devices in a bus topology connect to the backbone cable.",
+    "source_ref": "U1 DT 2023 Q7(b)(iii), 2025 Q13 + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "backbone"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A ____ is fitted at each end of a bus cable.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "terminator",
+        "terminators",
+        "stop signal bounce on bus cable",
+        "stops signal returning down the backbone",
+        "absorbs signal to reduce collisions"
+      ]
+    },
+    "markscheme_points_json": [
+      "stop signal bounce on bus cable"
+    ],
+    "explanation": "Terminators absorb signals at cable ends to reduce distortion and data loss.",
+    "source_ref": "U1 DT 2023 Q7(b)(iii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "terminator"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A closed-loop network is a ____ topology.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "ring",
+        "ring topology"
+      ]
+    },
+    "markscheme_points_json": [
+      "ring"
+    ],
+    "explanation": "In ring topology, each node is connected in a closed path.",
+    "source_ref": "U1 DT 2022 Q7(a)(i) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "topology_ring_name"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A network with one backbone cable is a ____ topology.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "bus",
+        "bus topology",
+        "bus network"
+      ]
+    },
+    "markscheme_points_json": [
+      "bus"
+    ],
+    "explanation": "Bus topology is identified by a shared backbone cable.",
+    "source_ref": "U1 DT 2023 Q7(b)(i) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "topology_bus_name"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: A network with one central connection point is a ____ topology.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "star",
+        "star topology",
+        "star network"
+      ]
+    },
+    "markscheme_points_json": [
+      "star"
+    ],
+    "explanation": "Star topology uses a central node and separate device links.",
+    "source_ref": "U1 DT 2019 Q6(d)(i), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "topology_star_name"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: One advantage of networking is ____ files and hardware.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "sharing",
+        "share",
+        "share files hardware and communication",
+        "share files and hardware",
+        "share software and communicate",
+        "access files from any networked computer"
+      ]
+    },
+    "markscheme_points_json": [
+      "share files hardware and communication"
+    ],
+    "explanation": "Typical network benefits are resource sharing and easier collaboration.",
+    "source_ref": "U1 DT 2019 Q6(a)(ii), 2025 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "network_advantages"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "fill_gap",
+    "stem": "Fill the gap: In a ring network, data passes from one ____ to another.",
+    "options_json": null,
+    "correct_answer_json": {
+      "accepted": [
+        "node",
+        "workstation",
+        "device",
+        "data passes from one node/workstation to another",
+        "data passes workstation to workstation",
+        "data travels around the ring through each node"
+      ]
+    },
+    "markscheme_points_json": [
+      "data passes from one node/workstation to another"
+    ],
+    "explanation": "Ring topology sends data around the loop via each connected node.",
+    "source_ref": "U1 DT 2023 Q7(c), 2022 Q7(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "ring_topology"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Backbone cable fails",
+          "right": "Bus communication fails"
+        },
+        {
+          "left": "Single workstation fails in star",
+          "right": "Other nodes usually continue"
+        },
+        {
+          "left": "Central device fails in star",
+          "right": "Whole star may stop"
+        },
+        {
+          "left": "Cable/node fails in ring",
+          "right": "Ring can be disrupted"
+        }
+      ],
+      "choices": [
+        "Bus communication fails",
+        "Other nodes usually continue",
+        "Whole star may stop",
+        "Ring can be disrupted",
+        "No effect on any topology"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Backbone cable fails": "Bus communication fails",
+        "Single workstation fails in star": "Other nodes usually continue",
+        "Central device fails in star": "Whole star may stop",
+        "Cable/node fails in ring": "Ring can be disrupted"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Bus depends on its backbone, star isolates single workstation faults but depends on the central device, and ring can be disrupted by single faults.",
+    "source_ref": "U1 DT 2019 Q6(d), 2022 Q7(a), 2023 Q7(b), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_topology_effects"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Main cable",
+          "right": "Backbone"
+        },
+        {
+          "left": "End component",
+          "right": "Terminator"
+        },
+        {
+          "left": "Connected device",
+          "right": "Node/Workstation"
+        },
+        {
+          "left": "Typical issue if overloaded",
+          "right": "Collisions"
+        }
+      ],
+      "choices": [
+        "Switch",
+        "Collisions",
+        "Node/Workstation",
+        "Terminator",
+        "Backbone"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Main cable": "Backbone",
+        "End component": "Terminator",
+        "Connected device": "Node/Workstation",
+        "Typical issue if overloaded": "Collisions"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "A bus network uses a backbone with terminators, connected nodes, and can suffer collisions.",
+    "source_ref": "U1 DT 2023 Q7(b)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_bus_parts"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Global network of networks",
+          "right": "Internet"
+        },
+        {
+          "left": "Collection of linked web pages",
+          "right": "WWW"
+        },
+        {
+          "left": "Private organisational network",
+          "right": "Intranet"
+        },
+        {
+          "left": "Physical connected devices online",
+          "right": "IoT"
+        }
+      ],
+      "choices": [
+        "Internet",
+        "WWW",
+        "Intranet",
+        "IoT",
+        "LAN"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Global network of networks": "Internet",
+        "Collection of linked web pages": "WWW",
+        "Private organisational network": "Intranet",
+        "Physical connected devices online": "IoT"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Internet is infrastructure, WWW is service/content, intranet is private, and IoT is connected physical devices.",
+    "source_ref": "U1 DT 2025 Q8(a)(b)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_internet_www"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Watch to smartphone",
+          "right": "Bluetooth"
+        },
+        {
+          "left": "Smart TV to home router",
+          "right": "Wi-Fi"
+        },
+        {
+          "left": "Travelling user to cloud",
+          "right": "5G"
+        },
+        {
+          "left": "Business LAN to internet",
+          "right": "Fibre-optic"
+        }
+      ],
+      "choices": [
+        "Backbone",
+        "Fibre-optic",
+        "5G",
+        "Wi-Fi",
+        "Bluetooth"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Watch to smartphone": "Bluetooth",
+        "Smart TV to home router": "Wi-Fi",
+        "Travelling user to cloud": "5G",
+        "Business LAN to internet": "Fibre-optic"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Each scenario maps to the most suitable communication medium from CCEA-style questions.",
+    "source_ref": "U1 DT 2023 Q6(a), 2025 Q8(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_media_scenarios"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Sends LAN data to destination device",
+          "right": "Switch"
+        },
+        {
+          "left": "Forwards data between networks",
+          "right": "Router"
+        },
+        {
+          "left": "Allows physical/wireless network interface",
+          "right": "NIC"
+        },
+        {
+          "left": "Provides central file storage",
+          "right": "File server"
+        }
+      ],
+      "choices": [
+        "Switch",
+        "Router",
+        "NIC",
+        "File server",
+        "Terminator"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Sends LAN data to destination device": "Switch",
+        "Forwards data between networks": "Router",
+        "Allows physical/wireless network interface": "NIC",
+        "Provides central file storage": "File server"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Switch, router, NIC, and file server all play separate roles in network operation.",
+    "source_ref": "U1 DT 2021 Q6, 2023 Q6(b), 2023 Q7(e) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_device_jobs"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Backbone cable fails",
+          "right": "Bus communication fails"
+        },
+        {
+          "left": "Single workstation fails in star",
+          "right": "Other nodes usually continue"
+        },
+        {
+          "left": "Central device fails in star",
+          "right": "Whole star may stop"
+        },
+        {
+          "left": "Cable/node fails in ring",
+          "right": "Ring can be disrupted"
+        }
+      ],
+      "choices": [
+        "No effect on any topology",
+        "Ring can be disrupted",
+        "Whole star may stop",
+        "Other nodes usually continue",
+        "Bus communication fails"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Backbone cable fails": "Bus communication fails",
+        "Single workstation fails in star": "Other nodes usually continue",
+        "Central device fails in star": "Whole star may stop",
+        "Cable/node fails in ring": "Ring can be disrupted"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Bus depends on its backbone, star isolates single workstation faults but depends on the central device, and ring can be disrupted by single faults.",
+    "source_ref": "U1 DT 2019 Q6(d), 2022 Q7(a), 2023 Q7(b), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_topology_effects"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Main cable",
+          "right": "Backbone"
+        },
+        {
+          "left": "End component",
+          "right": "Terminator"
+        },
+        {
+          "left": "Connected device",
+          "right": "Node/Workstation"
+        },
+        {
+          "left": "Typical issue if overloaded",
+          "right": "Collisions"
+        }
+      ],
+      "choices": [
+        "Backbone",
+        "Terminator",
+        "Node/Workstation",
+        "Collisions",
+        "Switch"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Main cable": "Backbone",
+        "End component": "Terminator",
+        "Connected device": "Node/Workstation",
+        "Typical issue if overloaded": "Collisions"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "A bus network uses a backbone with terminators, connected nodes, and can suffer collisions.",
+    "source_ref": "U1 DT 2023 Q7(b)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_bus_parts"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Global network of networks",
+          "right": "Internet"
+        },
+        {
+          "left": "Collection of linked web pages",
+          "right": "WWW"
+        },
+        {
+          "left": "Private organisational network",
+          "right": "Intranet"
+        },
+        {
+          "left": "Physical connected devices online",
+          "right": "IoT"
+        }
+      ],
+      "choices": [
+        "LAN",
+        "IoT",
+        "Intranet",
+        "WWW",
+        "Internet"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Global network of networks": "Internet",
+        "Collection of linked web pages": "WWW",
+        "Private organisational network": "Intranet",
+        "Physical connected devices online": "IoT"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Internet is infrastructure, WWW is service/content, intranet is private, and IoT is connected physical devices.",
+    "source_ref": "U1 DT 2025 Q8(a)(b)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_internet_www"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Watch to smartphone",
+          "right": "Bluetooth"
+        },
+        {
+          "left": "Smart TV to home router",
+          "right": "Wi-Fi"
+        },
+        {
+          "left": "Travelling user to cloud",
+          "right": "5G"
+        },
+        {
+          "left": "Business LAN to internet",
+          "right": "Fibre-optic"
+        }
+      ],
+      "choices": [
+        "Bluetooth",
+        "Wi-Fi",
+        "5G",
+        "Fibre-optic",
+        "Backbone"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Watch to smartphone": "Bluetooth",
+        "Smart TV to home router": "Wi-Fi",
+        "Travelling user to cloud": "5G",
+        "Business LAN to internet": "Fibre-optic"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Each scenario maps to the most suitable communication medium from CCEA-style questions.",
+    "source_ref": "U1 DT 2023 Q6(a), 2025 Q8(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_media_scenarios"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Sends LAN data to destination device",
+          "right": "Switch"
+        },
+        {
+          "left": "Forwards data between networks",
+          "right": "Router"
+        },
+        {
+          "left": "Allows physical/wireless network interface",
+          "right": "NIC"
+        },
+        {
+          "left": "Provides central file storage",
+          "right": "File server"
+        }
+      ],
+      "choices": [
+        "Terminator",
+        "File server",
+        "NIC",
+        "Router",
+        "Switch"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Sends LAN data to destination device": "Switch",
+        "Forwards data between networks": "Router",
+        "Allows physical/wireless network interface": "NIC",
+        "Provides central file storage": "File server"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Switch, router, NIC, and file server all play separate roles in network operation.",
+    "source_ref": "U1 DT 2021 Q6, 2023 Q6(b), 2023 Q7(e) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "medium_match_device_jobs"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order the typical path from a school workstation to a web server.",
+    "options_json": {
+      "items": [
+        "Workstation/NIC",
+        "Router",
+        "Internet",
+        "Switch",
+        "Web server"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Workstation/NIC",
+        "Switch",
+        "Router",
+        "Internet",
+        "Web server"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "A typical request leaves the LAN via switch and router before reaching internet services.",
+    "source_ref": "Network_Technologies_Notes.docx + U1 DT 2021 Q6 + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_web_request_path"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order a common Bluetooth pairing sequence.",
+    "options_json": {
+      "items": [
+        "Enable Bluetooth on both devices",
+        "Confirm pairing code",
+        "Search for nearby devices",
+        "Select the target device",
+        "Start audio/data transfer"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Enable Bluetooth on both devices",
+        "Search for nearby devices",
+        "Select the target device",
+        "Confirm pairing code",
+        "Start audio/data transfer"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Bluetooth communication starts only after successful pairing.",
+    "source_ref": "U1 DT 2025 Q8(c) + Notes; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_bluetooth_pairing"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order the setup steps for a basic bus network.",
+    "options_json": {
+      "items": [
+        "Test communication",
+        "Connect nodes/workstations",
+        "Lay backbone cable",
+        "Attach terminators at both ends"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Lay backbone cable",
+        "Connect nodes/workstations",
+        "Attach terminators at both ends",
+        "Test communication"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Terminators must be fitted before final communication testing.",
+    "source_ref": "U1 DT 2023 Q7(c), 2025 Q13 + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_bus_setup"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order what happens when data travels on a ring network.",
+    "options_json": {
+      "items": [
+        "Destination workstation receives data",
+        "Source workstation sends data",
+        "Data continues around the ring",
+        "Data moves to the next node"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Source workstation sends data",
+        "Data moves to the next node",
+        "Data continues around the ring",
+        "Destination workstation receives data"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Ring traffic passes through nodes around the loop to reach the destination.",
+    "source_ref": "U1 DT 2022 Q7(a), 2023 Q7(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_ring_flow"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order a simple star-network setup and check routine.",
+    "options_json": {
+      "items": [
+        "Test communication from each workstation",
+        "Verify each cable connection",
+        "Simulate one workstation failure to check isolation",
+        "Connect each workstation to central switch/server"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Connect each workstation to central switch/server",
+        "Verify each cable connection",
+        "Test communication from each workstation",
+        "Simulate one workstation failure to check isolation"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Star networks should keep working if one workstation fails.",
+    "source_ref": "U1 DT 2024 Q6(a), 2019 Q6(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_star_checks"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order the main steps for connecting a new wired workstation to a LAN.",
+    "options_json": {
+      "items": [
+        "Install/enable NIC",
+        "Plug into switch",
+        "Connect Ethernet cable",
+        "Test network communication"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Install/enable NIC",
+        "Connect Ethernet cable",
+        "Plug into switch",
+        "Test network communication"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "A wired LAN connection needs a NIC and Ethernet link to a switch before communication tests.",
+    "source_ref": "U1 DT 2023 Q6(b), Q7(e) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_wired_lan"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order the best process for accessing company cloud files while travelling.",
+    "options_json": {
+      "items": [
+        "Download or edit required files",
+        "Open cloud service",
+        "Enable mobile data",
+        "Connect to 5G service"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Enable mobile data",
+        "Connect to 5G service",
+        "Open cloud service",
+        "Download or edit required files"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Travelling access normally depends on mobile data such as 5G before cloud access.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_cloud_travel"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order the steps to connect a smart TV to a home network.",
+    "options_json": {
+      "items": [
+        "Turn on Wi-Fi on the TV",
+        "Confirm connection and test streaming",
+        "Enter network credentials",
+        "Select home network SSID"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Turn on Wi-Fi on the TV",
+        "Select home network SSID",
+        "Enter network credentials",
+        "Confirm connection and test streaming"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Home smart TV networking is a Wi-Fi connection process followed by connectivity testing.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_smart_tv_home"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order a sensible response after a bus network stops communicating.",
+    "options_json": {
+      "items": [
+        "Repair/replace faulty cable component",
+        "Retest communication",
+        "Inspect terminators at both ends",
+        "Check whether backbone cable is damaged"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Check whether backbone cable is damaged",
+        "Inspect terminators at both ends",
+        "Repair/replace faulty cable component",
+        "Retest communication"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Bus faults are often traced to backbone/terminator issues before retesting.",
+    "source_ref": "U1 DT 2023 Q7(b)(ii)(iii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_bus_fault"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order the process for adding a new workstation to a star network.",
+    "options_json": {
+      "items": [
+        "Configure workstation network settings",
+        "Run cable from new workstation",
+        "Test communication",
+        "Connect to central switch/server"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Run cable from new workstation",
+        "Connect to central switch/server",
+        "Configure workstation network settings",
+        "Test communication"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Star networks allow device addition via the central point without full shutdown.",
+    "source_ref": "U1 DT 2024 Q6(a), 2019 Q6(d)(ii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_star_expansion"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order these statements from infrastructure to service use.",
+    "options_json": {
+      "items": [
+        "Internet provides global connectivity",
+        "Users view web content",
+        "Browsers request pages",
+        "Web servers host linked pages"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Internet provides global connectivity",
+        "Web servers host linked pages",
+        "Browsers request pages",
+        "Users view web content"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Internet infrastructure supports web services that users access through browsers.",
+    "source_ref": "U1 DT 2025 Q8(b)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_internet_www_logic"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order the clues to identify a bus topology in a diagram question.",
+    "options_json": {
+      "items": [
+        "Check nodes connect to that cable",
+        "Look for terminators at both ends",
+        "Conclude it is a bus topology",
+        "Spot one shared main cable"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Spot one shared main cable",
+        "Check nodes connect to that cable",
+        "Look for terminators at both ends",
+        "Conclude it is a bus topology"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "CCEA bus diagram marking expects backbone, nodes, and terminators.",
+    "source_ref": "U1 DT 2023 Q7(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_topology_identification"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order the data path in a typical wired LAN reaching the internet.",
+    "options_json": {
+      "items": [
+        "Switch forwards packet in LAN",
+        "Remote service responds",
+        "Device sends packet via NIC",
+        "Router forwards packet to internet"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Device sends packet via NIC",
+        "Switch forwards packet in LAN",
+        "Router forwards packet to internet",
+        "Remote service responds"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "NIC->switch->router is the standard progression from local to external network.",
+    "source_ref": "U1 DT 2021 Q6 + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_router_switch_roles"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order this reasoning chain about why fibre is often chosen.",
+    "options_json": {
+      "items": [
+        "Choose fibre-optic medium",
+        "Transmit data as light",
+        "Need high-capacity reliable link",
+        "Gain high bandwidth and low interference"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Need high-capacity reliable link",
+        "Choose fibre-optic medium",
+        "Transmit data as light",
+        "Gain high bandwidth and low interference"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Fibre is selected for high bandwidth and lower interference risk.",
+    "source_ref": "U1 DT 2022 Q8(d), 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_fibre_reasoning"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "medium",
+    "format": "drag_drop",
+    "stem": "Order a basic smart-home device connection flow.",
+    "options_json": {
+      "items": [
+        "Send/receive data over internet",
+        "Power on IoT device",
+        "Connect device to home network",
+        "Link device to control app"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Power on IoT device",
+        "Connect device to home network",
+        "Link device to control app",
+        "Send/receive data over internet"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "IoT devices rely on network connection before they can exchange data online.",
+    "source_ref": "U1 DT 2025 Q8(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "drag_iot_setup_logic"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A school network only covers one building. Which option best describes this network type?",
+    "options_json": {
+      "choices": [
+        "Ring",
+        "LAN",
+        "WAN",
+        "Intranet"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "LAN"
+    },
+    "markscheme_points_json": [
+      "LAN"
+    ],
+    "explanation": "A LAN covers a small geographical area such as one building.",
+    "source_ref": "U1 DT 2024 Q1(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_lan",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A company links offices in Belfast and Derry. Which option best describes the network type?",
+    "options_json": {
+      "choices": [
+        "LAN",
+        "WAN",
+        "Intranet",
+        "Bus"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "WAN"
+    },
+    "markscheme_points_json": [
+      "WAN"
+    ],
+    "explanation": "A WAN connects networks over large geographical areas.",
+    "source_ref": "U1 DT 2024 Q1(b) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_wan",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "Staff can access an internal site, but the public cannot. Which option is correct?",
+    "options_json": {
+      "choices": [
+        "Internet",
+        "Intranet",
+        "IoT",
+        "WWW"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Intranet"
+    },
+    "markscheme_points_json": [
+      "Intranet"
+    ],
+    "explanation": "An intranet is a private organisational network for authorised users.",
+    "source_ref": "U1 DT 2019 Q6(a)(iii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_intranet",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A student opens linked pages in a browser. Which option names this service running on the internet?",
+    "options_json": {
+      "choices": [
+        "Router",
+        "LAN",
+        "Backbone",
+        "World Wide Web"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "World Wide Web"
+    },
+    "markscheme_points_json": [
+      "World Wide Web"
+    ],
+    "explanation": "The World Wide Web is a collection of linked pages on web servers.",
+    "source_ref": "U1 DT 2025 Q8(b)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_www",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A smart thermostat sends data online so it can be monitored remotely. Which option describes this?",
+    "options_json": {
+      "choices": [
+        "Bus topology",
+        "IoT",
+        "WAN",
+        "Intranet"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "IoT"
+    },
+    "markscheme_points_json": [
+      "IoT"
+    ],
+    "explanation": "IoT refers to physical devices connected to the internet.",
+    "source_ref": "U1 DT 2025 Q8(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_iot",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A student links wireless headphones to a phone. Which option is the most suitable communication technology?",
+    "options_json": {
+      "choices": [
+        "Bluetooth",
+        "Fibre-optic",
+        "5G",
+        "Wi-Fi"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Bluetooth"
+    },
+    "markscheme_points_json": [
+      "Bluetooth"
+    ],
+    "explanation": "Bluetooth is designed for short-range personal device links.",
+    "source_ref": "U1 DT 2023 Q6(a), 2025 Q8(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_bluetooth",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A smart TV is being connected to the home network in the living room. Which option is best?",
+    "options_json": {
+      "choices": [
+        "Bluetooth",
+        "Wi-Fi",
+        "5G",
+        "Backbone cable"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Wi-Fi"
+    },
+    "markscheme_points_json": [
+      "Wi-Fi"
+    ],
+    "explanation": "Wi-Fi is the typical medium for local wireless network access.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_wifi",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "An employee needs cloud files while travelling between sites. Which option is most suitable?",
+    "options_json": {
+      "choices": [
+        "Bluetooth",
+        "Terminator",
+        "Wi-Fi",
+        "5G"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "5G"
+    },
+    "markscheme_points_json": [
+      "5G"
+    ],
+    "explanation": "5G is used for mobile data access away from fixed networks.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_5g",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A business needs a high-capacity fixed link from LAN to internet. Which option is most suitable?",
+    "options_json": {
+      "choices": [
+        "Wi-Fi",
+        "Bluetooth",
+        "Fibre-optic",
+        "5G"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Fibre-optic"
+    },
+    "markscheme_points_json": [
+      "Fibre-optic"
+    ],
+    "explanation": "Fibre-optic is commonly used for high-capacity fixed connectivity.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_fibre",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A school must connect its internal network to the internet. Which device option is required?",
+    "options_json": {
+      "choices": [
+        "Router",
+        "Switch",
+        "NIC",
+        "Terminator"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Router"
+    },
+    "markscheme_points_json": [
+      "Router"
+    ],
+    "explanation": "A router connects networks and forwards packets between them.",
+    "source_ref": "U1 DT 2021 Q6(2), 2023 Q6(b) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_router",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "In a wired LAN, each workstation needs to connect to a central LAN device. Which option is correct?",
+    "options_json": {
+      "choices": [
+        "File server",
+        "Router",
+        "Backbone",
+        "Switch"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Switch"
+    },
+    "markscheme_points_json": [
+      "Switch"
+    ],
+    "explanation": "On a wired network, each device connects to a switch using Ethernet cables.",
+    "source_ref": "U1 DT 2023 Q6(b) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_switch",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A computer cannot join the network until one hardware component is present. Which option is it?",
+    "options_json": {
+      "choices": [
+        "NIC",
+        "WAN",
+        "Router",
+        "Terminator"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "NIC"
+    },
+    "markscheme_points_json": [
+      "NIC"
+    ],
+    "explanation": "A NIC is needed for a device to connect and communicate on a network.",
+    "source_ref": "U1 DT 2023 Q7(e) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_nic",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A school wants central storage so all staff can access shared files. Which option is best?",
+    "options_json": {
+      "choices": [
+        "Router",
+        "NIC",
+        "Switch",
+        "File server"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "File server"
+    },
+    "markscheme_points_json": [
+      "File server"
+    ],
+    "explanation": "A file server stores shared files for network users.",
+    "source_ref": "U1 DT 2021 Q6(1) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_file_server",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "In a bus topology, the main cable breaks. Which option best describes what happens next?",
+    "options_json": {
+      "choices": [
+        "Network becomes a ring automatically",
+        "Performance improves",
+        "Only one workstation is affected",
+        "Communication across the bus network fails"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Communication across the bus network fails"
+    },
+    "markscheme_points_json": [
+      "Communication across the bus network fails"
+    ],
+    "explanation": "If the backbone cable fails, communication on a bus network can fail.",
+    "source_ref": "U1 DT 2023 Q7(b)(ii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_bus_failure",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A teacher labels both ends of a bus cable. Which option explains the role of these end components?",
+    "options_json": {
+      "choices": [
+        "They store shared files",
+        "They route internet traffic",
+        "They stop signal bounce/return on the cable",
+        "They increase wireless range"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "They stop signal bounce/return on the cable"
+    },
+    "markscheme_points_json": [
+      "They stop signal bounce/return on the cable"
+    ],
+    "explanation": "Terminators absorb the signal and reduce bounce/collision issues.",
+    "source_ref": "U1 DT 2023 Q7(b)(iii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_terminator",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "One workstation in a star network fails. Which option is most accurate?",
+    "options_json": {
+      "choices": [
+        "Other workstations can usually continue",
+        "Whole network always stops",
+        "Network turns into bus topology",
+        "Backbone cable fails"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Other workstations can usually continue"
+    },
+    "markscheme_points_json": [
+      "Other workstations can usually continue"
+    ],
+    "explanation": "In star topology, single workstation failures are often isolated.",
+    "source_ref": "U1 DT 2024 Q6(a), 2019 Q6(d)(ii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_star_advantage",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "The central switch/server in a star topology fails. Which option is most accurate?",
+    "options_json": {
+      "choices": [
+        "It improves security",
+        "The network can fail because the central point is critical",
+        "No effect on communication",
+        "Only one workstation fails"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "The network can fail because the central point is critical"
+    },
+    "markscheme_points_json": [
+      "The network can fail because the central point is critical"
+    ],
+    "explanation": "A star network depends on the central device.",
+    "source_ref": "U1 DT 2019 Q6(d)(iii), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_star_disadvantage",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A node or cable fails in a ring network. Which option best matches this risk?",
+    "options_json": {
+      "choices": [
+        "The ring can be disrupted",
+        "No disruption because there is a central controller",
+        "Terminators absorb the issue",
+        "Only one device is affected for sure"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "The ring can be disrupted"
+    },
+    "markscheme_points_json": [
+      "The ring can be disrupted"
+    ],
+    "explanation": "Ring communication can be disrupted by a single node/cable failure.",
+    "source_ref": "U1 DT 2022 Q7(a)(ii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_ring_disadvantage",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "Which option correctly distinguishes internet and World Wide Web?",
+    "options_json": {
+      "choices": [
+        "WWW is the physical cable network",
+        "Internet is the network; WWW is an application/service running on it",
+        "Both terms mean the same thing",
+        "Internet is only email"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Internet is the network; WWW is an application/service running on it"
+    },
+    "markscheme_points_json": [
+      "Internet is the network; WWW is an application/service running on it"
+    ],
+    "explanation": "CCEA expects internet infrastructure and WWW service to be distinguished.",
+    "source_ref": "U1 DT 2025 Q8(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_internet_www_compare",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A student is labelling a bus topology diagram. Which option lists essential labels?",
+    "options_json": {
+      "choices": [
+        "Switch and ring token",
+        "Nodes/workstations, backbone cable, terminators at both ends",
+        "One workstation only",
+        "Router and cloud only"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Nodes/workstations, backbone cable, terminators at both ends"
+    },
+    "markscheme_points_json": [
+      "Nodes/workstations, backbone cable, terminators at both ends"
+    ],
+    "explanation": "Bus diagram marking points include nodes, backbone, and two terminators.",
+    "source_ref": "U1 DT 2023 Q7(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_bus_labels",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "Which option about fibre-optic transmission is correct?",
+    "options_json": {
+      "choices": [
+        "It transmits data as electrical signals only",
+        "It cannot carry network data",
+        "It transmits data using light",
+        "It is a wireless medium"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "It transmits data using light"
+    },
+    "markscheme_points_json": [
+      "It transmits data using light"
+    ],
+    "explanation": "Fibre-optic data is carried as pulses of light.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_fibre_signals",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A company needs a high-bandwidth medium. Which option is most suitable from this topic?",
+    "options_json": {
+      "choices": [
+        "Bus topology",
+        "Intranet",
+        "Fibre-optic",
+        "Bluetooth"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Fibre-optic"
+    },
+    "markscheme_points_json": [
+      "Fibre-optic"
+    ],
+    "explanation": "Fibre-optic cable has high bandwidth.",
+    "source_ref": "U1 DT 2022 Q8(d), 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_fibre_bandwidth",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "Which option best describes interception risk on fibre compared with copper?",
+    "options_json": {
+      "choices": [
+        "Both are always equally easy to intercept",
+        "Fibre is generally harder to intercept",
+        "Fibre is easier to intercept",
+        "Interception depends only on topology name"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Fibre is generally harder to intercept"
+    },
+    "markscheme_points_json": [
+      "Fibre is generally harder to intercept"
+    ],
+    "explanation": "CCEA mark schemes accept that fibre is generally harder to intercept than copper.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_fibre_intercept",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A school asks why computers should be networked. Which option gives a valid advantage?",
+    "options_json": {
+      "choices": [
+        "Guarantee no failures",
+        "Eliminate all maintenance",
+        "Share files/hardware and communicate",
+        "Remove need for updates"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Share files/hardware and communicate"
+    },
+    "markscheme_points_json": [
+      "Share files/hardware and communicate"
+    ],
+    "explanation": "Networking advantages include sharing resources and communication.",
+    "source_ref": "U1 DT 2019 Q6(a)(ii), 2025 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_network_advantage",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "mcq",
+    "stem": "A diagram shows all nodes connected to one backbone cable with terminators at both ends. Which option is correct?",
+    "options_json": {
+      "choices": [
+        "Ring topology",
+        "Star topology",
+        "WAN",
+        "Bus topology"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Bus topology"
+    },
+    "markscheme_points_json": [
+      "Bus topology"
+    ],
+    "explanation": "This is the defining structure of a bus topology.",
+    "source_ref": "U1 DT 2023 Q7(b)(i)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "scenario_topology_name",
+      "expert_scenario"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this star-network diagram, which option best identifies number 1?",
+    "options_json": {
+      "diagram_key": "star_topology",
+      "marker": "1",
+      "choices": [
+        "Terminator",
+        "Workstation",
+        "Backbone cable",
+        "Router"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Workstation",
+      "accepted": [
+        "Workstation",
+        "workstation"
+      ]
+    },
+    "markscheme_points_json": [
+      "Workstation"
+    ],
+    "explanation": "Marker 1 marks an end-user workstation in the star diagram.",
+    "source_ref": "U1 DT 2019 Q6(d)(i) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_star_ws",
+      "diagram_star_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this star-network diagram, which option best identifies number 2?",
+    "options_json": {
+      "diagram_key": "star_topology",
+      "marker": "2",
+      "choices": [
+        "Router",
+        "Switch/Server",
+        "Terminator",
+        "Intranet"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Switch/Server",
+      "accepted": [
+        "Switch/Server",
+        "switch/server"
+      ]
+    },
+    "markscheme_points_json": [
+      "Switch/Server"
+    ],
+    "explanation": "Marker 2 is the central switch/server in a star topology.",
+    "source_ref": "U1 DT 2019 Q6(d)(i), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_star_central",
+      "diagram_star_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this star-network diagram, which option best identifies number 3?",
+    "options_json": {
+      "diagram_key": "star_topology",
+      "marker": "3",
+      "choices": [
+        "Printer",
+        "Router",
+        "Backbone cable",
+        "NIC"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Printer",
+      "accepted": [
+        "Printer",
+        "printer"
+      ]
+    },
+    "markscheme_points_json": [
+      "Printer"
+    ],
+    "explanation": "Marker 3 points to a shared network printer.",
+    "source_ref": "U1 DT 2019 Q6(d)(i) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_star_printer",
+      "diagram_star_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this star-network diagram, which option best identifies number 4?",
+    "options_json": {
+      "diagram_key": "star_topology",
+      "marker": "4",
+      "choices": [
+        "WAN",
+        "Terminator",
+        "Cable",
+        "WWW"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Cable",
+      "accepted": [
+        "Cable",
+        "cable"
+      ]
+    },
+    "markscheme_points_json": [
+      "Cable"
+    ],
+    "explanation": "Marker 4 indicates the physical cable link in the star.",
+    "source_ref": "U1 DT 2019 Q6(d)(i) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_star_cable",
+      "diagram_star_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this bus-network diagram, which option best identifies number 1?",
+    "options_json": {
+      "diagram_key": "bus_topology",
+      "marker": "1",
+      "choices": [
+        "Router",
+        "NIC",
+        "Terminator",
+        "Switch"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Terminator",
+      "accepted": [
+        "Terminator",
+        "terminator"
+      ]
+    },
+    "markscheme_points_json": [
+      "Terminator"
+    ],
+    "explanation": "Marker 1 labels the end component that absorbs signals on a bus cable.",
+    "source_ref": "U1 DT 2023 Q7(b)(iii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_bus_terminator",
+      "diagram_bus_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this bus-network diagram, which option best identifies number 2?",
+    "options_json": {
+      "diagram_key": "bus_topology",
+      "marker": "2",
+      "choices": [
+        "Ring cable",
+        "Switch",
+        "5G link",
+        "Backbone cable"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Backbone cable",
+      "accepted": [
+        "Backbone cable",
+        "backbone cable"
+      ]
+    },
+    "markscheme_points_json": [
+      "Backbone cable"
+    ],
+    "explanation": "Marker 2 is the main shared cable in bus topology.",
+    "source_ref": "U1 DT 2023 Q7(b)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_bus_backbone",
+      "diagram_bus_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this bus-network diagram, which option best identifies number 3?",
+    "options_json": {
+      "diagram_key": "bus_topology",
+      "marker": "3",
+      "choices": [
+        "Node/Workstation",
+        "Backbone cable",
+        "Terminator",
+        "Router"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Node/Workstation",
+      "accepted": [
+        "Node/Workstation",
+        "node/workstation"
+      ]
+    },
+    "markscheme_points_json": [
+      "Node/Workstation"
+    ],
+    "explanation": "Marker 3 points to a connected node/workstation.",
+    "source_ref": "U1 DT 2023 Q7(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_bus_node",
+      "diagram_bus_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this ring-network diagram, which option best identifies number 1?",
+    "options_json": {
+      "diagram_key": "ring_topology",
+      "marker": "1",
+      "choices": [
+        "Backbone cable",
+        "File server",
+        "Node/Workstation",
+        "Terminator"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Node/Workstation",
+      "accepted": [
+        "Node/Workstation",
+        "node/workstation"
+      ]
+    },
+    "markscheme_points_json": [
+      "Node/Workstation"
+    ],
+    "explanation": "Marker 1 identifies a workstation/node in the ring.",
+    "source_ref": "U1 DT 2022 Q7(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_ring_node",
+      "diagram_ring_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this ring-network diagram, which option best identifies number 2?",
+    "options_json": {
+      "diagram_key": "ring_topology",
+      "marker": "2",
+      "choices": [
+        "Ring data path/cable",
+        "Switch",
+        "Router",
+        "NIC"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Ring data path/cable",
+      "accepted": [
+        "Ring data path/cable",
+        "ring data path/cable"
+      ]
+    },
+    "markscheme_points_json": [
+      "Ring data path/cable"
+    ],
+    "explanation": "Marker 2 marks the loop path used for ring communication.",
+    "source_ref": "U1 DT 2022 Q7(a), 2023 Q7(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_ring_path",
+      "diagram_ring_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this ring-network diagram, which option best identifies number 3?",
+    "options_json": {
+      "diagram_key": "ring_topology",
+      "marker": "3",
+      "choices": [
+        "Central switch control",
+        "Wireless broadcast only",
+        "Data passes node to node",
+        "Backbone terminator"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Data passes node to node",
+      "accepted": [
+        "Data passes node to node",
+        "data passes node to node"
+      ]
+    },
+    "markscheme_points_json": [
+      "Data passes node to node"
+    ],
+    "explanation": "Ring communication passes data between nodes around the loop.",
+    "source_ref": "U1 DT 2022 Q7(a), 2023 Q7(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_ring_flow",
+      "diagram_ring_topology",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this LAN-to-internet path diagram, which option best identifies number 1?",
+    "options_json": {
+      "diagram_key": "lan_internet_path",
+      "marker": "1",
+      "choices": [
+        "Workstation/NIC",
+        "Internet",
+        "Terminator",
+        "Router"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Workstation/NIC",
+      "accepted": [
+        "Workstation/NIC",
+        "workstation/nic"
+      ]
+    },
+    "markscheme_points_json": [
+      "Workstation/NIC"
+    ],
+    "explanation": "Marker 1 marks the source device and network interface.",
+    "source_ref": "U1 DT 2021 Q6, 2023 Q7(e) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_path_nic",
+      "diagram_lan_internet_path",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this LAN-to-internet path diagram, which option best identifies number 2?",
+    "options_json": {
+      "diagram_key": "lan_internet_path",
+      "marker": "2",
+      "choices": [
+        "Backbone cable",
+        "Router",
+        "Switch",
+        "Intranet"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Switch",
+      "accepted": [
+        "Switch",
+        "switch"
+      ]
+    },
+    "markscheme_points_json": [
+      "Switch"
+    ],
+    "explanation": "Marker 2 labels the switch handling LAN traffic.",
+    "source_ref": "U1 DT 2021 Q6(1), 2023 Q6(b) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_path_switch",
+      "diagram_lan_internet_path",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this LAN-to-internet path diagram, which option best identifies number 3?",
+    "options_json": {
+      "diagram_key": "lan_internet_path",
+      "marker": "3",
+      "choices": [
+        "Router",
+        "NIC",
+        "Switch",
+        "Terminator"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Router",
+      "accepted": [
+        "Router",
+        "router"
+      ]
+    },
+    "markscheme_points_json": [
+      "Router"
+    ],
+    "explanation": "Marker 3 labels the router connecting LAN to internet.",
+    "source_ref": "U1 DT 2021 Q6(2), 2023 Q6(b) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_path_router",
+      "diagram_lan_internet_path",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this LAN-to-internet path diagram, which option best identifies number 4?",
+    "options_json": {
+      "diagram_key": "lan_internet_path",
+      "marker": "4",
+      "choices": [
+        "Intranet",
+        "Bus backbone",
+        "Internet/Web server",
+        "Bluetooth"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Internet/Web server",
+      "accepted": [
+        "Internet/Web server",
+        "internet/web server"
+      ]
+    },
+    "markscheme_points_json": [
+      "Internet/Web server"
+    ],
+    "explanation": "Marker 4 is the external internet service destination.",
+    "source_ref": "U1 DT 2025 Q8(b)(c), 2021 Q6 + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_path_internet",
+      "diagram_lan_internet_path",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this communication-media diagram, which option best identifies number 1?",
+    "options_json": {
+      "diagram_key": "media_links",
+      "marker": "1",
+      "choices": [
+        "Wi-Fi link",
+        "5G link",
+        "Fibre-optic link",
+        "Bluetooth link"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Bluetooth link",
+      "accepted": [
+        "Bluetooth link",
+        "bluetooth link"
+      ]
+    },
+    "markscheme_points_json": [
+      "Bluetooth link"
+    ],
+    "explanation": "Marker 1 is the phone-to-headphones short-range connection.",
+    "source_ref": "U1 DT 2023 Q6(a), 2025 Q8(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_media_bluetooth",
+      "diagram_media_links",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this communication-media diagram, which option best identifies number 2?",
+    "options_json": {
+      "diagram_key": "media_links",
+      "marker": "2",
+      "choices": [
+        "Wi-Fi link",
+        "5G link",
+        "Backbone cable",
+        "Bluetooth link"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Wi-Fi link",
+      "accepted": [
+        "Wi-Fi link",
+        "wi-fi link"
+      ]
+    },
+    "markscheme_points_json": [
+      "Wi-Fi link"
+    ],
+    "explanation": "Marker 2 shows home smart-TV local wireless access.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_media_wifi",
+      "diagram_media_links",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this communication-media diagram, which option best identifies number 3?",
+    "options_json": {
+      "diagram_key": "media_links",
+      "marker": "3",
+      "choices": [
+        "Bluetooth link",
+        "Terminator",
+        "5G link",
+        "Wi-Fi link"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "5G link",
+      "accepted": [
+        "5G link",
+        "5g link"
+      ]
+    },
+    "markscheme_points_json": [
+      "5G link"
+    ],
+    "explanation": "Marker 3 indicates travelling mobile cloud access.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_media_5g",
+      "diagram_media_links",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this communication-media diagram, which option best identifies number 4?",
+    "options_json": {
+      "diagram_key": "media_links",
+      "marker": "4",
+      "choices": [
+        "5G link",
+        "Bluetooth link",
+        "Fibre-optic link",
+        "Wi-Fi link"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Fibre-optic link",
+      "accepted": [
+        "Fibre-optic link",
+        "fibre-optic link"
+      ]
+    },
+    "markscheme_points_json": [
+      "Fibre-optic link"
+    ],
+    "explanation": "Marker 4 marks business LAN fixed high-capacity internet link.",
+    "source_ref": "U1 DT 2023 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_media_fibre",
+      "diagram_media_links",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this fibre-properties diagram, which option best identifies number 1?",
+    "options_json": {
+      "diagram_key": "fibre_properties",
+      "marker": "1",
+      "choices": [
+        "No signal transmission",
+        "Data carried as light",
+        "Wireless radio broadcast",
+        "Data carried as electricity"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "Data carried as light",
+      "accepted": [
+        "Data carried as light",
+        "data carried as light"
+      ]
+    },
+    "markscheme_points_json": [
+      "Data carried as light"
+    ],
+    "explanation": "Fibre-optic transmits data using pulses of light.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_fibre_light",
+      "diagram_fibre_properties",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "diagram_label",
+    "stem": "In this fibre-properties diagram, which option best identifies number 2?",
+    "options_json": {
+      "diagram_key": "fibre_properties",
+      "marker": "2",
+      "choices": [
+        "Low bandwidth",
+        "No network capacity",
+        "Topology name",
+        "High bandwidth"
+      ]
+    },
+    "correct_answer_json": {
+      "choice": "High bandwidth",
+      "accepted": [
+        "High bandwidth",
+        "high bandwidth"
+      ]
+    },
+    "markscheme_points_json": [
+      "High bandwidth"
+    ],
+    "explanation": "A key fibre property is high bandwidth.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "diagram_fibre_bandwidth",
+      "diagram_fibre_properties",
+      "diagram_label"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "One workstation fails, others still run",
+          "right": "Star advantage"
+        },
+        {
+          "left": "All communication stops after one main cable break",
+          "right": "Bus disadvantage"
+        },
+        {
+          "left": "No central controller, node fault disrupts traffic",
+          "right": "Ring disadvantage"
+        },
+        {
+          "left": "Central device failure causes full outage",
+          "right": "Star disadvantage"
+        }
+      ],
+      "choices": [
+        "Star advantage",
+        "Bus disadvantage",
+        "Ring disadvantage",
+        "Star disadvantage",
+        "WAN advantage"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "One workstation fails, others still run": "Star advantage",
+        "All communication stops after one main cable break": "Bus disadvantage",
+        "No central controller, node fault disrupts traffic": "Ring disadvantage",
+        "Central device failure causes full outage": "Star disadvantage"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "These are standard topology reasoning points from CCEA mark schemes.",
+    "source_ref": "U1 DT 2019 Q6, 2022 Q7(a), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_failure_reasoning"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Main cable in a bus diagram",
+          "right": "Backbone"
+        },
+        {
+          "left": "Label at each bus cable end",
+          "right": "Terminator"
+        },
+        {
+          "left": "Central device in star diagram",
+          "right": "Switch/Server"
+        },
+        {
+          "left": "Network card in a workstation",
+          "right": "NIC"
+        }
+      ],
+      "choices": [
+        "WAN",
+        "NIC",
+        "Switch/Server",
+        "Terminator",
+        "Backbone"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Main cable in a bus diagram": "Backbone",
+        "Label at each bus cable end": "Terminator",
+        "Central device in star diagram": "Switch/Server",
+        "Network card in a workstation": "NIC"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Correct diagram labels depend on topology structure and device function.",
+    "source_ref": "U1 DT 2019 Q6(d), 2023 Q7(c), 2025 Q13 + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_diagram_roles"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Carries data as light",
+          "right": "Fibre-optic"
+        },
+        {
+          "left": "Supports high bandwidth",
+          "right": "Fibre-optic"
+        },
+        {
+          "left": "Lower interference risk",
+          "right": "Fibre-optic"
+        },
+        {
+          "left": "Harder to intercept than copper",
+          "right": "Fibre-optic"
+        }
+      ],
+      "choices": [
+        "Fibre-optic",
+        "Bluetooth",
+        "Wi-Fi",
+        "5G"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Carries data as light": "Fibre-optic",
+        "Supports high bandwidth": "Fibre-optic",
+        "Lower interference risk": "Fibre-optic",
+        "Harder to intercept than copper": "Fibre-optic"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "All four statements are fibre-optic properties from the CCEA true/false style content.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_inference"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Staff-only internal website",
+          "right": "Intranet"
+        },
+        {
+          "left": "Global public infrastructure",
+          "right": "Internet"
+        },
+        {
+          "left": "Linked pages viewed in browser",
+          "right": "WWW"
+        },
+        {
+          "left": "Physical connected devices",
+          "right": "IoT"
+        }
+      ],
+      "choices": [
+        "LAN",
+        "IoT",
+        "WWW",
+        "Internet",
+        "Intranet"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Staff-only internal website": "Intranet",
+        "Global public infrastructure": "Internet",
+        "Linked pages viewed in browser": "WWW",
+        "Physical connected devices": "IoT"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "These terms are often confused, so expert level requires precise distinction.",
+    "source_ref": "U1 DT 2019 Q6(a)(iii), 2025 Q8(a)(b)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_task_selection"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Connect mobile phone to wireless headphones",
+          "right": "Bluetooth"
+        },
+        {
+          "left": "Connect smart TV to home network",
+          "right": "Wi-Fi"
+        },
+        {
+          "left": "Access company files while travelling",
+          "right": "5G"
+        },
+        {
+          "left": "Connect business LAN to internet",
+          "right": "Fibre-optic"
+        }
+      ],
+      "choices": [
+        "Bluetooth",
+        "Wi-Fi",
+        "5G",
+        "Fibre-optic",
+        "Terminator"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Connect mobile phone to wireless headphones": "Bluetooth",
+        "Connect smart TV to home network": "Wi-Fi",
+        "Access company files while travelling": "5G",
+        "Connect business LAN to internet": "Fibre-optic"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Expert level still uses objective mapping, but with realistic mixed scenarios.",
+    "source_ref": "U1 DT 2023 Q6(a), 2025 Q8(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_network_design"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "One workstation fails, others still run",
+          "right": "Star advantage"
+        },
+        {
+          "left": "All communication stops after one main cable break",
+          "right": "Bus disadvantage"
+        },
+        {
+          "left": "No central controller, node fault disrupts traffic",
+          "right": "Ring disadvantage"
+        },
+        {
+          "left": "Central device failure causes full outage",
+          "right": "Star disadvantage"
+        }
+      ],
+      "choices": [
+        "WAN advantage",
+        "Star disadvantage",
+        "Ring disadvantage",
+        "Bus disadvantage",
+        "Star advantage"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "One workstation fails, others still run": "Star advantage",
+        "All communication stops after one main cable break": "Bus disadvantage",
+        "No central controller, node fault disrupts traffic": "Ring disadvantage",
+        "Central device failure causes full outage": "Star disadvantage"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "These are standard topology reasoning points from CCEA mark schemes.",
+    "source_ref": "U1 DT 2019 Q6, 2022 Q7(a), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_failure_reasoning"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Main cable in a bus diagram",
+          "right": "Backbone"
+        },
+        {
+          "left": "Label at each bus cable end",
+          "right": "Terminator"
+        },
+        {
+          "left": "Central device in star diagram",
+          "right": "Switch/Server"
+        },
+        {
+          "left": "Network card in a workstation",
+          "right": "NIC"
+        }
+      ],
+      "choices": [
+        "Backbone",
+        "Terminator",
+        "Switch/Server",
+        "NIC",
+        "WAN"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Main cable in a bus diagram": "Backbone",
+        "Label at each bus cable end": "Terminator",
+        "Central device in star diagram": "Switch/Server",
+        "Network card in a workstation": "NIC"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Correct diagram labels depend on topology structure and device function.",
+    "source_ref": "U1 DT 2019 Q6(d), 2023 Q7(c), 2025 Q13 + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_diagram_roles"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Carries data as light",
+          "right": "Fibre-optic"
+        },
+        {
+          "left": "Supports high bandwidth",
+          "right": "Fibre-optic"
+        },
+        {
+          "left": "Lower interference risk",
+          "right": "Fibre-optic"
+        },
+        {
+          "left": "Harder to intercept than copper",
+          "right": "Fibre-optic"
+        }
+      ],
+      "choices": [
+        "5G",
+        "Wi-Fi",
+        "Bluetooth",
+        "Fibre-optic"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Carries data as light": "Fibre-optic",
+        "Supports high bandwidth": "Fibre-optic",
+        "Lower interference risk": "Fibre-optic",
+        "Harder to intercept than copper": "Fibre-optic"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "All four statements are fibre-optic properties from the CCEA true/false style content.",
+    "source_ref": "U1 DT 2022 Q8(d) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_inference"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Staff-only internal website",
+          "right": "Intranet"
+        },
+        {
+          "left": "Global public infrastructure",
+          "right": "Internet"
+        },
+        {
+          "left": "Linked pages viewed in browser",
+          "right": "WWW"
+        },
+        {
+          "left": "Physical connected devices",
+          "right": "IoT"
+        }
+      ],
+      "choices": [
+        "Intranet",
+        "Internet",
+        "WWW",
+        "IoT",
+        "LAN"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Staff-only internal website": "Intranet",
+        "Global public infrastructure": "Internet",
+        "Linked pages viewed in browser": "WWW",
+        "Physical connected devices": "IoT"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "These terms are often confused, so expert level requires precise distinction.",
+    "source_ref": "U1 DT 2019 Q6(a)(iii), 2025 Q8(a)(b)(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_task_selection"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "match_table",
+    "stem": "Match each item to the correct term or definition.",
+    "options_json": {
+      "pairs": [
+        {
+          "left": "Connect mobile phone to wireless headphones",
+          "right": "Bluetooth"
+        },
+        {
+          "left": "Connect smart TV to home network",
+          "right": "Wi-Fi"
+        },
+        {
+          "left": "Access company files while travelling",
+          "right": "5G"
+        },
+        {
+          "left": "Connect business LAN to internet",
+          "right": "Fibre-optic"
+        }
+      ],
+      "choices": [
+        "Terminator",
+        "Fibre-optic",
+        "5G",
+        "Wi-Fi",
+        "Bluetooth"
+      ]
+    },
+    "correct_answer_json": {
+      "pairs": {
+        "Connect mobile phone to wireless headphones": "Bluetooth",
+        "Connect smart TV to home network": "Wi-Fi",
+        "Access company files while travelling": "5G",
+        "Connect business LAN to internet": "Fibre-optic"
+      }
+    },
+    "markscheme_points_json": [
+      "All pairings correct"
+    ],
+    "explanation": "Expert level still uses objective mapping, but with realistic mixed scenarios.",
+    "source_ref": "U1 DT 2023 Q6(a), 2025 Q8(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_match_network_design"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "drag_drop",
+    "stem": "Order the best troubleshooting sequence for a complete bus network outage.",
+    "options_json": {
+      "items": [
+        "Confirm all nodes lost communication",
+        "Check both terminators are fitted",
+        "Replace faulty segment/component",
+        "Inspect backbone cable continuity",
+        "Retest end-to-end communication"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Confirm all nodes lost communication",
+        "Inspect backbone cable continuity",
+        "Check both terminators are fitted",
+        "Replace faulty segment/component",
+        "Retest end-to-end communication"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "A bus-wide outage usually points first to backbone or terminator faults.",
+    "source_ref": "U1 DT 2023 Q7(b)(ii)(iii) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_drag_bus_outage"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "drag_drop",
+    "stem": "Order the decision process for connecting a new school building to the existing network.",
+    "options_json": {
+      "items": [
+        "Recognise distance exceeds one-building LAN scope",
+        "Test inter-building communication",
+        "Select WAN-style inter-site connection",
+        "Use router links between sites",
+        "Verify shared resources across sites"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Recognise distance exceeds one-building LAN scope",
+        "Select WAN-style inter-site connection",
+        "Use router links between sites",
+        "Test inter-building communication",
+        "Verify shared resources across sites"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Inter-building expansion needs network-type and routing decisions before validation.",
+    "source_ref": "U1 DT 2024 Q1(b)(c), 2021 Q6 + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_drag_school_extension"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "drag_drop",
+    "stem": "Order the matching logic for choosing communication media in mixed scenarios.",
+    "options_json": {
+      "items": [
+        "Identify short-range personal device task",
+        "Map home LAN device access to Wi-Fi",
+        "Map to 5G",
+        "Map to Bluetooth",
+        "Identify travelling cloud-access task"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Identify short-range personal device task",
+        "Map to Bluetooth",
+        "Identify travelling cloud-access task",
+        "Map to 5G",
+        "Map home LAN device access to Wi-Fi"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Expert tasks require selecting media by scenario constraints rather than memorising terms.",
+    "source_ref": "U1 DT 2023 Q6(a), 2025 Q8(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_drag_media_selection"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "drag_drop",
+    "stem": "Order this reasoning process for selecting a robust topology for a school lab.",
+    "options_json": {
+      "items": [
+        "Test that one workstation fault does not stop others",
+        "Need fault isolation for single workstation failures",
+        "Connect all devices to central switch",
+        "Choose star topology structure",
+        "Document central-device failure risk"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Need fault isolation for single workstation failures",
+        "Choose star topology structure",
+        "Connect all devices to central switch",
+        "Test that one workstation fault does not stop others",
+        "Document central-device failure risk"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Star gives isolation benefits but still has a central point dependency.",
+    "source_ref": "U1 DT 2019 Q6(d), 2024 Q6(a) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_drag_topology_choice"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  },
+  {
+    "difficulty": "expert",
+    "format": "drag_drop",
+    "stem": "Order the analysis of a ring network failure where traffic stops.",
+    "options_json": {
+      "items": [
+        "Restore loop continuity",
+        "Locate break/fault point in loop",
+        "Check each ring cable segment and node",
+        "Retest full ring data flow",
+        "Identify loss of node-to-node circulation"
+      ]
+    },
+    "correct_answer_json": {
+      "order": [
+        "Identify loss of node-to-node circulation",
+        "Check each ring cable segment and node",
+        "Locate break/fault point in loop",
+        "Restore loop continuity",
+        "Retest full ring data flow"
+      ]
+    },
+    "markscheme_points_json": [
+      "Sequence correct"
+    ],
+    "explanation": "Ring communication depends on a complete loop path through nodes.",
+    "source_ref": "U1 DT 2022 Q7(a)(ii), 2023 Q7(c) + MS; Network_Technologies_Notes.docx",
+    "tags_json": [
+      "expert_drag_ring_fault"
+    ],
+    "source_type": "new_original",
+    "qa_status": "published",
+    "is_active": true
+  }
+]
