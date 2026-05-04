@@ -38,6 +38,13 @@ function normalizeBlockText(value: unknown) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
 
+function repeatsStemContext(text: string, stemText: string) {
+  if (!text || !stemText) {
+    return false;
+  }
+  return text === stemText || stemText.includes(text) || text.includes(stemText);
+}
+
 function getAssetUrl(asset: RuntimeAsset) {
   const directUrl = typeof asset.url === "string" ? asset.url : typeof asset.public_url === "string" ? asset.public_url : "";
   if (directUrl) {
@@ -91,7 +98,7 @@ function renderRuntimePrompt(question: RuntimeSessionQuestion) {
 
     if (kind === "text") {
       const text = normalizeBlockText(block.text || block.body);
-      if (!text || text === stemText) {
+      if (!text || repeatsStemContext(text, stemText)) {
         return [];
       }
       return [<p className="question-helper" key={`text-${index}`}>{text}</p>];
@@ -111,7 +118,9 @@ function renderRuntimePrompt(question: RuntimeSessionQuestion) {
     }
 
     const text = normalizeBlockText(block.text || block.body || block.title || block.caption);
-    return text && text !== stemText ? [<p className="question-helper" key={`block-${index}`}>{text}</p>] : [];
+    return text && !repeatsStemContext(text, stemText)
+      ? [<p className="question-helper" key={`block-${index}`}>{text}</p>]
+      : [];
   });
 
   const unmatchedAssets = assets.filter((asset, index) => {
