@@ -1,6 +1,7 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { Session, User } from "@supabase/supabase-js";
 import { supabase } from "../lib/supabase";
+import { getErrorMessage, withTimeout } from "../lib/request";
 import type { Profile, Role } from "../lib/types";
 
 interface AuthContextValue {
@@ -9,9 +10,11 @@ interface AuthContextValue {
   profile: Profile | null;
   role: Role | null;
   loading: boolean;
+  authError: string | null;
   loginWithIdentifier: (identifier: string, password: string) => Promise<void>;
   logout: () => Promise<void>;
   refreshProfile: () => Promise<void>;
+  retryAuth: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
@@ -30,14 +33,17 @@ function toEmailIdentifier(raw: string): string {
 }
 
 async function getProfile(userId: string): Promise<Profile | null> {
-  const { data, error } = await supabase
-    .from("profiles")
-    .select("id, role, display_name, is_active, can_edit_questions")
-    .eq("id", userId)
-    .single();
+  const { data, error } = await withTimeout(
+    supabase
+      .from("profiles")
+      .select("id, role, display_name, is_active, can_edit_questions")
+      .eq("id", userId)
+      .single(),
+    "Loading your account profile"
+  );
 
   if (error) {
-    return null;
+    throw error;
   }
 
   return data as Profile;
@@ -47,74 +53,130 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [booting, setBooting] = useState(true);
+  const [profileLoading, setProfileLoading] = useState(false);
+  const [authError, setAuthError] = useState<string | null>(null);
+  const profileRequestRef = useRef(0);
 
   const refreshProfile = useCallback(async () => {
     if (!user) {
+      profileRequestRef.current += 1;
       setProfile(null);
+      setProfileLoading(false);
+      setAuthError(null);
       return;
     }
 
-    const next = await getProfile(user.id);
-    setProfile(next);
+    const requestId = profileRequestRef.current + 1;
+    profileRequestRef.current = requestId;
+    setProfileLoading(true);
+    setAuthError(null);
+
+    try {
+      const next = await getProfile(user.id);
+
+      if (profileRequestRef.current !== requestId) {
+        return;
+      }
+
+      if (!next) {
+        throw new Error("We could not load your account access. Please try again.");
+      }
+
+      setProfile(next);
+    } catch (error) {
+      if (profileRequestRef.current !== requestId) {
+        return;
+      }
+
+      setProfile(null);
+      setAuthError(getErrorMessage(error, "We could not load your account access. Please try again."));
+    } finally {
+      if (profileRequestRef.current === requestId) {
+        setProfileLoading(false);
+      }
+    }
   }, [user]);
+
+  const retryAuth = useCallback(async () => {
+    setBooting(true);
+    setAuthError(null);
+    profileRequestRef.current += 1;
+    setProfile(null);
+    setProfileLoading(false);
+
+    try {
+      const {
+        data: { session: activeSession }
+      } = await withTimeout(supabase.auth.getSession(), "Checking your saved sign-in");
+
+      setSession(activeSession);
+      setUser(activeSession?.user ?? null);
+    } catch (error) {
+      setSession(null);
+      setUser(null);
+      setProfile(null);
+      setAuthError(getErrorMessage(error, "Could not restore your sign-in session."));
+    } finally {
+      setBooting(false);
+    }
+  }, []);
 
   useEffect(() => {
     let mounted = true;
 
-    async function boot() {
-      const {
-        data: { session: activeSession }
-      } = await supabase.auth.getSession();
+    void retryAuth();
 
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, nextSession) => {
       if (!mounted) {
         return;
       }
 
-      setSession(activeSession);
-      setUser(activeSession?.user ?? null);
-
-      if (activeSession?.user) {
-        const next = await getProfile(activeSession.user.id);
-        if (mounted) {
-          setProfile(next);
-        }
-      }
-
-      if (mounted) {
-        setLoading(false);
-      }
-    }
-
-    boot();
-
-    const { data: listener } = supabase.auth.onAuthStateChange(async (_event, nextSession) => {
+      profileRequestRef.current += 1;
       setSession(nextSession);
       setUser(nextSession?.user ?? null);
+      setAuthError(null);
+      setProfile(null);
 
       if (nextSession?.user) {
-        const next = await getProfile(nextSession.user.id);
-        setProfile(next);
+        setProfileLoading(true);
       } else {
-        setProfile(null);
+        setProfileLoading(false);
       }
-
-      setLoading(false);
     });
 
     return () => {
       mounted = false;
+      profileRequestRef.current += 1;
       listener.subscription.unsubscribe();
     };
-  }, []);
+  }, [retryAuth]);
+
+  useEffect(() => {
+    if (booting) {
+      return;
+    }
+
+    if (!user) {
+      setProfile(null);
+      setProfileLoading(false);
+      return;
+    }
+
+    void refreshProfile();
+  }, [booting, refreshProfile, user]);
 
   const loginWithIdentifier = useCallback(async (identifier: string, password: string) => {
     const email = toEmailIdentifier(identifier);
+    setAuthError(null);
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password
-    });
+    const { error } = await withTimeout(
+      supabase.auth.signInWithPassword({
+        email,
+        password
+      }),
+      "Signing you in"
+    );
 
     if (error) {
       throw error;
@@ -122,11 +184,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const logout = useCallback(async () => {
-    const { error } = await supabase.auth.signOut();
+    const { error } = await withTimeout(supabase.auth.signOut(), "Signing you out");
     if (error) {
       throw error;
     }
+
+    setProfile(null);
+    setAuthError(null);
   }, []);
+
+  const loading = booting || profileLoading;
 
   const value = useMemo<AuthContextValue>(
     () => ({
@@ -135,11 +202,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       profile,
       role: profile?.role ?? null,
       loading,
+      authError,
       loginWithIdentifier,
       logout,
-      refreshProfile
+      refreshProfile,
+      retryAuth
     }),
-    [loading, loginWithIdentifier, logout, profile, refreshProfile, session, user]
+    [authError, loading, loginWithIdentifier, logout, profile, refreshProfile, retryAuth, session, user]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

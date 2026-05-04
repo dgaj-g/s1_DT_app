@@ -14,6 +14,7 @@ import {
   toggleTopicEnabled
 } from "../lib/api";
 import { useAuth } from "../hooks/useAuth";
+import { getErrorMessage } from "../lib/request";
 import type { AcademicYear, Difficulty, QuestionFormat, Topic } from "../lib/types";
 
 interface EdgeCsvResponse {
@@ -280,6 +281,7 @@ export function AdminDashboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
 
   const [reviewDifficulty, setReviewDifficulty] = useState<string>("all");
   const [reviewFormat, setReviewFormat] = useState<string>("all");
@@ -295,14 +297,23 @@ export function AdminDashboardPage() {
   const canEditQuestionContent = Boolean(profile?.can_edit_questions);
 
   useEffect(() => {
+    let cancelled = false;
+
     async function load() {
       try {
-        setLoading(true);
+        if (!cancelled) {
+          setLoading(true);
+          setError(null);
+        }
         const [yearRows, topicRows, adminRows] = await Promise.all([getAllAcademicYears(), getTopics(), getAdminAccounts()]);
 
         const networkTopic = topicRows.find((topic) => topic.slug === "network-technologies");
         const selectedTopicId = networkTopic?.id || "";
         const active = yearRows.find((item) => item.is_active) || yearRows[0] || null;
+
+        if (cancelled) {
+          return;
+        }
 
         setYears(yearRows);
         setTopics(topicRows);
@@ -316,18 +327,28 @@ export function AdminDashboardPage() {
             getQuestionsForAdmin(selectedTopicId || undefined)
           ]);
 
-          setSummary(summaryData);
-          setQuestions((questionRows || []) as AdminQuestion[]);
+          if (!cancelled) {
+            setSummary(summaryData);
+            setQuestions((questionRows || []) as AdminQuestion[]);
+          }
         }
       } catch (caught) {
-        setError(caught instanceof Error ? caught.message : "Could not load admin dashboard.");
+        if (!cancelled) {
+          setError(getErrorMessage(caught, "Could not load admin dashboard."));
+        }
       } finally {
-        setLoading(false);
+        if (!cancelled) {
+          setLoading(false);
+        }
       }
     }
 
     void load();
-  }, []);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [reloadKey]);
 
   async function refreshSummary(yearId: string) {
     const [summaryData, topicRows, adminRows] = await Promise.all([
@@ -358,7 +379,7 @@ export function AdminDashboardPage() {
       await setActiveAcademicYear(activeYearId);
       await refreshSummary(activeYearId);
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "Could not set active year.");
+      setError(getErrorMessage(caught, "Could not set active year."));
     } finally {
       setBusy(null);
     }
@@ -377,7 +398,7 @@ export function AdminDashboardPage() {
       const csvLines = ["username,password", ...data.rows.map((row) => `${row.username},${row.password}`)];
       downloadText(`student-passwords-${yearCode}.csv`, `${csvLines.join("\n")}\n`, "text/csv");
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "Could not rotate passwords.");
+      setError(getErrorMessage(caught, "Could not rotate passwords."));
     } finally {
       setBusy(null);
     }
@@ -402,7 +423,7 @@ export function AdminDashboardPage() {
 
       downloadText(data.filename, data.csv, "text/csv");
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "Could not export CSV.");
+      setError(getErrorMessage(caught, "Could not export CSV."));
     } finally {
       setBusy(null);
     }
@@ -427,7 +448,7 @@ export function AdminDashboardPage() {
 
       downloadText(data.filename, data.csv, "text/csv");
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "Could not export detailed report CSV.");
+      setError(getErrorMessage(caught, "Could not export detailed report CSV."));
     } finally {
       setBusy(null);
     }
@@ -444,7 +465,7 @@ export function AdminDashboardPage() {
         prefix: "s1dt"
       });
     } catch (caught) {
-      setError(caught instanceof Error ? caught.message : "Could not repair student pool.");
+      setError(getErrorMessage(caught, "Could not repair student pool."));
     } finally {
       setBusy(null);
     }
@@ -590,11 +611,7 @@ export function AdminDashboardPage() {
       await refreshSummary(activeYearId);
       setSelectedQuestionId(selectedQuestion.id);
     } catch (caught) {
-      if (caught instanceof Error) {
-        setError(caught.message);
-      } else {
-        setError("Could not save question content.");
-      }
+      setError(getErrorMessage(caught, "Could not save question content."));
     } finally {
       setBusy(null);
     }
@@ -626,6 +643,13 @@ export function AdminDashboardPage() {
         <h2>Department Admin</h2>
         <p>Manage academic years, credentials, reporting, and question availability for student sessions.</p>
         {error ? <div className="error-box">{error}</div> : null}
+        {error ? (
+          <div className="inline-actions">
+            <button className="primary-btn" onClick={() => setReloadKey((value) => value + 1)}>
+              Retry Admin Load
+            </button>
+          </div>
+        ) : null}
       </section>
 
       <section className="panel stack gap-sm">

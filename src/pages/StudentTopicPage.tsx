@@ -12,6 +12,7 @@ import {
   getTopics
 } from "../lib/api";
 import { localDateISO } from "../lib/date";
+import { getErrorMessage } from "../lib/request";
 import { DEFAULT_TIMEZONE } from "../lib/supabase";
 import { computeStreak } from "../lib/scoring";
 import type { Difficulty, SessionRecord, Topic } from "../lib/types";
@@ -28,15 +29,31 @@ export function StudentTopicPage() {
   const [caps, setCaps] = useState<Record<Difficulty, number>>({ easy: 0, medium: 0, expert: 0 });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
+    let cancelled = false;
+
     async function load() {
       if (!user) {
+        if (!cancelled) {
+          setTopicList([]);
+          setStudentId(null);
+          setYear(null);
+          setSessions([]);
+          setTagStats([]);
+          setCaps({ easy: 0, medium: 0, expert: 0 });
+          setError(null);
+          setLoading(false);
+        }
         return;
       }
 
       try {
-        setLoading(true);
+        if (!cancelled) {
+          setLoading(true);
+          setError(null);
+        }
         const [topics, activeYear] = await Promise.all([getTopics(), getActiveAcademicYear()]);
         if (!activeYear) {
           throw new Error("No active academic year configured.");
@@ -84,14 +101,22 @@ export function StudentTopicPage() {
           }))
         );
       } catch (caught) {
-        setError(caught instanceof Error ? caught.message : "Could not load student dashboard.");
+        if (!cancelled) {
+          setError(getErrorMessage(caught, "Could not load student dashboard."));
+        }
       } finally {
-        setLoading(false);
+        if (!cancelled) {
+          setLoading(false);
+        }
       }
     }
 
     void load();
-  }, [user]);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [reloadKey, user]);
 
   const streak = useMemo(() => computeStreak(sessions), [sessions]);
 
@@ -110,7 +135,16 @@ export function StudentTopicPage() {
   }
 
   if (error) {
-    return <div className="error-box">{error}</div>;
+    return (
+      <div className="panel stack gap-md">
+        <div className="error-box">{error}</div>
+        <div className="inline-actions">
+          <button className="primary-btn" onClick={() => setReloadKey((value) => value + 1)}>
+            Retry Dashboard Load
+          </button>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -134,7 +168,7 @@ export function StudentTopicPage() {
         ))}
       </section>
 
-      <StudentStatsPanel sessions={sessions} tagBreakdown={tagStats} streak={streak} />
+      <StudentStatsPanel sessions={sessions} tagBreakdown={tagStats} streak={streak} topics={topicList} />
     </div>
   );
 }

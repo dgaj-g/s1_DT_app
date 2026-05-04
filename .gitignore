@@ -5,5 +5,8 @@ dist
 .env.*
 !.env.example
 coverage
+*.tsbuildinfo
+* 2.tsx
 supabase/.branches
 supabase/.temp
+supabase/manual/

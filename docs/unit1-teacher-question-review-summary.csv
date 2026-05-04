@@ -1,0 +1,13 @@
+topic_slug,topic_title,total_questions,easy,medium,expert,mcq,match_table,fill_gap,true_false,short_text,drag_drop,questions_with_assets,asset_count,high_priority,medium_priority,low_priority,transformed_exam_item,practice_question_needs_source_normalization,supplementary_derived_item
+changes-in-employment-opportunities-skills-requirements-and-work-practices,"Changes in employment opportunities, skills requirements and work practices",37,17,10,10,15,8,4,4,6,0,0,0,6,30,1,6,19,11
+cloud-technology,Cloud technology,41,14,17,10,33,2,1,4,1,0,0,0,19,22,0,19,15,7
+computer-hardware,Computer hardware,80,30,30,20,52,9,7,4,8,0,5,5,29,32,19,29,32,0
+cyberspace-network-security-and-data-transfer,"Cyberspace, network security and data transfer",88,36,29,23,61,10,9,6,2,0,0,0,32,42,14,32,40,2
+database-applications,Database applications,120,61,48,11,82,9,10,5,14,0,5,5,39,64,17,39,64,0
+digital-applications,Digital applications,55,32,13,10,33,3,3,4,12,0,0,0,12,42,1,12,35,7
+digital-data,Digital data,177,108,46,23,112,16,20,16,12,1,7,7,21,120,36,21,120,0
+ethical-legal-and-environmental-impact,"Ethical, legal and environmental impact",54,19,25,10,38,5,5,5,1,0,0,0,19,22,13,19,20,2
+health-and-safety,Health and safety,37,16,11,10,26,4,3,4,0,0,0,0,9,25,3,9,19,6
+network-technologies,Network technologies,84,32,33,19,50,12,9,4,9,0,4,4,29,34,21,29,34,0
+software,Software,58,33,14,11,30,10,10,4,4,0,0,0,7,40,11,7,35,5
+spreadsheet-applications,Spreadsheet applications,107,46,49,12,79,9,9,5,5,0,8,8,41,50,16,41,50,0

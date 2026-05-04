@@ -1,0 +1,16 @@
+{
+  "source_payload": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/imports/unit1_stage4_staging_payload.json",
+  "manifest_csv": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/unit1-stage5-asset-upload-manifest.csv",
+  "summary": {
+    "source_root": "/Users/damiengartland/Desktop/Codex Work/GCSE Unit 1 Revision Project",
+    "output_dir": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/imports/question_assets_upload",
+    "asset_reference_count": 29,
+    "unique_storage_file_count": 25,
+    "status_counts": {
+      "packaged": 29
+    },
+    "bucket_counts": {
+      "question-imports": 29
+    }
+  }
+}

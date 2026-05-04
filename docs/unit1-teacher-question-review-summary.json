@@ -1,0 +1,36 @@
+{
+  "source_payload": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/imports/unit1_stage4_staging_payload.json",
+  "detail_report": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/unit1-teacher-question-review.csv",
+  "summary_csv": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/unit1-teacher-question-review-summary.csv",
+  "overall": {
+    "total_questions": 938,
+    "asset_count": 29,
+    "questions_with_assets": 29,
+    "difficulty_counts": {
+      "medium": 325,
+      "expert": 169,
+      "easy": 444
+    },
+    "format_counts": {
+      "mcq": 611,
+      "match_table": 97,
+      "short_text": 74,
+      "fill_gap": 90,
+      "true_false": 65,
+      "drag_drop": 1
+    },
+    "priority_counts": {
+      "low": 152,
+      "high": 263,
+      "medium": 523
+    },
+    "flag_counts": {
+      "transformed_exam_item": 263,
+      "supplementary_derived_item": 40,
+      "practice_question_needs_source_normalization": 483
+    },
+    "staging_status_counts": {
+      "ready_for_review": 938
+    }
+  }
+}

@@ -1,0 +1,749 @@
+CLAUDE CODE HANDOFF PROMPT
+==========================
+
+You are continuing work on an existing project called "S1 CCEA Network Technologies Revision App".
+
+Treat content accuracy as the highest priority. This app is for S1 students and is intended to teach and revise the Network Technologies topic from CCEA Unit 1 Digital Technology. Do not drift into other Unit 1 topics unless explicitly asked. In particular, do not leak cyberspace/network security/data transfer content into the Network Technologies bank unless the user explicitly decides to broaden the scope again.
+
+Work from the existing codebase and preserve the current architecture unless there is a strong reason to change it:
+
+- Frontend: React + TypeScript + Vite
+- Backend: Supabase Postgres + RLS + Edge Functions
+- Hosting: GitHub Pages
+- Repo: https://github.com/dgaj-g/s1_DT_app
+- Working directory: /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app
+- Supabase project ref: omksuffrkbnoekszrgcq
+- GitHub Pages URL: https://dgaj-g.github.io/s1_DT_app/
+
+Important operating rules:
+
+- Preserve historical session data. Previous refreshes deactivate old question rows instead of deleting them because `session_questions.question_id` has a foreign-key relationship to `questions.id`.
+- Do not break the student scoring model. The user strongly prefers objectively marked questions only. Long free-text answers were rejected because they cannot be marked predictably without AI.
+- Keep the difficulty split obvious:
+  - Easy: very accessible, mostly objective, low writing load, highly scaffolded.
+  - Medium: mixed formats, more reasoning, still objectively markable.
+  - Expert: scenario-based, diagram-based, applied reasoning, but still objectively markable.
+- Diagram questions must not give away the answer inside the diagram itself.
+- If you touch content generation, preserve provenance and the distinction between `adapted_exam` and `new_original`.
+- If you touch deployment/admin issues, remember the frontend is deployed on GitHub Pages but admin actions depend on live Supabase Edge Functions and secrets.
+
+Before making major content changes, read these files first:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/pages/AdminDashboardPage.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/pages/StudentSessionPage.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/QuestionRenderer.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/NetworkDiagram.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/api.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/scoring.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/scripts/generate_questions.py
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/seed/network_questions.json
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/config.toml
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/functions/
+
+Primary source material used for content creation and review:
+
+- /Users/damiengartland/Desktop/Codex Work/Network_Technologies_Notes.docx
+- /Users/damiengartland/Desktop/Codex Work/Networks_Updated 2026.pptx
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2018 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2018 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2019 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2019 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2021 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2021 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2022 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2022 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2023 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2023 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2024 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2024 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2025 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2025 MS.pdf
+
+The user specifically trusted the PowerPoint slide ranges they hand-picked:
+
+- Slides 8-13
+- Slides 25-30
+- Slides 36-40
+
+Those slides were used as a style/reference filter for exam-style questions.
+
+Current likely issue to investigate if admin actions fail on the public site:
+
+- GitHub Pages deploy is separate from Supabase Edge Functions.
+- The frontend already sends a Bearer token in `callEdgeFunction()` in `/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/api.ts`.
+- `supabase/config.toml` currently has `verify_jwt = true` for all admin functions.
+- If online admin buttons return "Edge Function returned a non-2xx status code", first inspect live Supabase Edge Function logs and confirm the deployed function code/secrets match local code.
+- This may be fixable by redeploying Edge Functions and ensuring function secrets are set correctly in Supabase, without touching GitHub Pages.
+
+For any future content pass, do not regenerate blindly. Read the forensic history below first because there were several rounds of teacher feedback, especially around wording, scope control, objective scoring, and diagram question quality.
+
+
+FORENSIC PROJECT DOSSIER
+========================
+
+1. Project goal and teaching intent
+-----------------------------------
+
+The app was built as a web-based adaptive revision tool for S1 students studying the CCEA Unit 1 Digital Technology topic "Network Technologies". The user wanted:
+
+- a fun, engaging website-like app rather than a plain quiz
+- three clear difficulty levels: Easy, Medium, Expert
+- accurate content tied closely to CCEA resources
+- adaptive-teaching-friendly progression while still allowing student choice
+- 35 usernames/passwords initially, later expanded to a fixed future-proof pool of 100 usernames (`s1dt001` to `s1dt100`)
+- year-based tracking without storing student names in the app
+- an admin area for academic year management, student-account handling, question review, exports, and content control
+- student stats presented visually and clearly
+- GitHub-hosted frontend with Supabase for data/auth/admin operations
+
+The user repeatedly stressed that content quality determines whether the project is a success or a failure.
+
+
+2. Absolute project locations
+-----------------------------
+
+Primary repo:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app
+
+Key external source material used while building the question bank:
+
+- /Users/damiengartland/Desktop/Codex Work/Network_Technologies_Notes.docx
+- /Users/damiengartland/Desktop/Codex Work/Networks_Updated 2026.pptx
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2018 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2018 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2019 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2019 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2021 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2021 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2022 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2022 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2023 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2023 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2024 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2024 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2025 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2025 MS.pdf
+
+Observed note:
+
+- A 2020 QP/MS pair was not present in the working folder when this handoff was prepared.
+
+
+3. High-level architecture
+--------------------------
+
+Frontend stack:
+
+- React 18
+- TypeScript
+- Vite
+- React Router
+- Recharts
+- Supabase JS client
+
+Backend stack:
+
+- Supabase Postgres
+- Row Level Security
+- Supabase Auth
+- Supabase Edge Functions for sensitive admin actions
+
+Deployment:
+
+- GitHub repo: https://github.com/dgaj-g/s1_DT_app
+- GitHub Pages site: https://dgaj-g.github.io/s1_DT_app/
+
+Critical environment variables:
+
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY`
+- `VITE_DEFAULT_TIMEZONE`
+- `VITE_BASE_PATH` is injected during GitHub Pages build
+
+
+4. Important repo files and what they do
+----------------------------------------
+
+Frontend app shell and routes:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/App.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/main.tsx
+
+`src/main.tsx` is important because GitHub Pages blank-page issues were fixed by using:
+
+- `BrowserRouter basename={import.meta.env.BASE_URL}`
+
+Main pages:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/pages/LoginPage.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/pages/StudentTopicPage.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/pages/StudentSessionPage.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/pages/StudentSummaryPage.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/pages/AdminDashboardPage.tsx
+
+Key components:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/QuestionRenderer.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/NetworkDiagram.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/StudentStatsPanel.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/ProtectedRoute.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/AppShell.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/TopicCard.tsx
+
+Core client-side logic:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/api.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/scoring.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/supabase.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/types.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/date.ts
+
+Auth context:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/hooks/useAuth.tsx
+
+Styling:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/styles/global.css
+
+Question generation and seeded data:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/scripts/generate_questions.py
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/seed/network_questions.json
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/seed/network_questions.sql
+
+Deployment workflow:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/.github/workflows/deploy.yml
+
+Env templates:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/.env.example
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/.env.example
+
+Review artifact:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/network-question-bank-review.csv
+
+
+5. Supabase database and backend design
+---------------------------------------
+
+Supabase project:
+
+- Project ref: `omksuffrkbnoekszrgcq`
+- Expected project URL pattern: `https://omksuffrkbnoekszrgcq.supabase.co`
+
+Main database tables from the initial schema:
+
+- `academic_years`
+- `profiles`
+- `student_accounts`
+- `topics`
+- `questions`
+- `sessions`
+- `session_questions`
+- `daily_caps`
+- `achievements`
+- `student_achievements`
+- `admin_events`
+
+Enums:
+
+- `app_role`
+- `difficulty_level`
+- `question_format`
+- `question_source`
+
+Important modelling decisions:
+
+- `student_accounts.username` must match `^s1dt[0-9]{3}$`
+- `student_accounts.account_number` is constrained to `1..100`
+- questions are never hard-deleted when historical session data points at them
+- question rows carry:
+  - difficulty
+  - format
+  - stem
+  - options JSON
+  - correct answer JSON
+  - markscheme points JSON
+  - explanation
+  - source type
+  - source reference
+  - tags JSON
+  - `qa_status`
+  - `is_active`
+
+Important operational distinction:
+
+- `qa_status` is review workflow metadata
+- `is_active` controls whether a question is available to student sessions
+
+Historically, these drifted out of sync, which is why the alignment migration was later added.
+
+
+6. Supabase migrations and why they exist
+-----------------------------------------
+
+Migration files in order:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260214170000_init_schema.sql
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260214171000_seed_network_questions.sql
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260214223000_replace_network_questions_scope.sql
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260214235000_refresh_network_questions_teacher_feedback.sql
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260215003000_option_wording_and_difficulty_tuning.sql
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260215013000_objective_content_refresh.sql
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260215024500_diagram_marker_qa_and_picker.sql
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260215160000_expert_diagram_guarantee.sql
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260215184500_question_editor_permissions.sql
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260215193000_align_draft_question_session_availability.sql
+
+Practical meaning of each round:
+
+- `init_schema`
+  - created the full database structure and types
+
+- `seed_network_questions`
+  - first 180-question network bank
+
+- `replace_network_questions_scope`
+  - replaced question content after discovering out-of-scope material had leaked in
+  - preserved history by deactivating old rows instead of deleting them
+
+- `refresh_network_questions_teacher_feedback`
+  - another content refresh after teacher review of wording/quality
+
+- `option_wording_and_difficulty_tuning`
+  - wording cleanup and difficulty split improvements after classroom-style feedback
+
+- `objective_content_refresh`
+  - another major cleanup focused on objective marking and better UX
+
+- `diagram_marker_qa_and_picker`
+  - improved diagram quality and question picking variety
+  - reduced repeated diagram-family questions in a single session
+
+- `expert_diagram_guarantee`
+  - ensured expert sessions include at least one diagram question when available
+
+- `question_editor_permissions`
+  - added owner-only editing controls via `profiles.can_edit_questions`
+
+- `align_draft_question_session_availability`
+  - forced `draft` questions to `is_active = false` so drafts are not still live for students
+
+Why the admin review table once showed 900 questions:
+
+- each bank refresh deactivated old rows and inserted a new set
+- the total visible count included inactive historical versions
+- the active bank should still be the current live set, while inactive rows preserve session integrity
+
+
+7. Supabase Edge Functions
+--------------------------
+
+Function directories:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/functions/admin_seed_or_repair_student_pool/index.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/functions/admin_bulk_rotate_student_passwords/index.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/functions/admin_export_stats_csv/index.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/functions/admin_export_detailed_question_report_csv/index.ts
+
+What they do:
+
+- `admin_seed_or_repair_student_pool`
+  - creates or repairs the fixed `s1dt001` to `s1dt100` student pool
+  - creates auth users as `username@students.local`
+  - returns generated passwords for newly created users
+
+- `admin_bulk_rotate_student_passwords`
+  - rotates passwords for all active student accounts
+  - returns CSV-friendly credential output
+
+- `admin_export_stats_csv`
+  - exports session-level progress rows including:
+    - username
+    - difficulty
+    - score
+    - accuracy_pct
+    - points_earned
+    - streak_after
+    - topic
+    - academic_year
+    - completed_at
+
+- `admin_export_detailed_question_report_csv`
+  - exports question-level detail per completed session including:
+    - username
+    - session ID
+    - question position
+    - question ID
+    - topic
+    - difficulty
+    - question format
+    - question stem
+    - correct answer JSON
+    - student answer JSON
+    - is_correct
+    - response_time_ms
+    - hint_used
+    - tags JSON
+    - source_ref
+    - academic_year
+    - completed_at
+
+Current auth expectation:
+
+- local `supabase/config.toml` currently sets `verify_jwt = true` for all admin functions
+- frontend `callEdgeFunction()` sends the current session access token as Bearer auth
+- if the public site gets admin function failures, first suspect live function deployment mismatch or missing/up-to-date secrets in Supabase
+
+
+8. How question content was generated and refined
+-------------------------------------------------
+
+Question generation script:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/scripts/generate_questions.py
+
+Important facts:
+
+- the script writes:
+  - `supabase/seed/network_questions.json`
+  - `supabase/seed/network_questions.sql`
+- it includes a banned-scope guardrail intended to stop leakage from other topics
+- banned terms include:
+  - firewall
+  - encryption
+  - malware
+  - hacking
+  - phishing
+  - ftp
+  - http
+  - https
+  - levels of access
+  - cyber
+  - password
+  - protocol
+
+That guardrail was added after the user found out-of-scope material showing up in the wrong topic.
+
+Content sourcing policy that emerged during the conversation:
+
+- use CCEA notes and relevant past-paper/mark-scheme material as the source of truth
+- use the user-selected PowerPoint slide ranges as a trusted style and relevance filter
+- only include material genuinely inside the Network Technologies topic
+- tag questions with `source_type`
+- keep a `source_ref` for traceability
+
+
+9. Major problems encountered and what was done
+-----------------------------------------------
+
+Initial machine/setup problems:
+
+- Node and npm were initially missing on the Mac mini
+- Homebrew PATH needed to be set correctly
+- project dependencies had to be installed
+- Supabase CLI had to be installed/authenticated/linked
+- local Supabase config major version was updated to match remote expectations
+
+Database seed migration failure:
+
+- `supabase db push` originally failed because generated SQL tuples were missing commas
+- root cause was in `scripts/generate_questions.py`
+- generator was fixed to output comma-separated fields
+- question seed migration then applied successfully
+
+JWT / Edge Function auth problem:
+
+- admin UI originally got `401 Invalid JWT`
+- frontend had not been sending Authorization Bearer headers
+- `src/lib/api.ts` was updated so `callEdgeFunction()` pulls the current session and sends the access token
+- at one earlier development point, `verify_jwt` had temporarily been relaxed for testing
+- later, security was tightened back to `verify_jwt = true`
+
+MCQ layout bug:
+
+- student option text was rendered incorrectly in the UI
+- option text was visible far off to the right rather than inside option boxes
+- that was fixed in the student session UI rendering
+
+Content accuracy failures caught by the user:
+
+- some early questions repeated the answer inside the stem
+- out-of-scope cyberspace/network-security/data-transfer content appeared in Network Technologies
+- easy fill-gap questions were nonsensical
+- some expert questions effectively gave away the answer
+- strict free-text marking made correct answers fail because exact wording was not matched
+
+Teacher-led content corrections:
+
+- the user rejected vague or nonsensical fill-gap prompts
+- the user rejected off-spec topic leakage
+- the user wanted question wording improved in many places
+- the user wanted clear Easy / Medium / Expert separation
+- the user did not want AI-dependent marking
+- the user wanted only objectively scoreable questions
+- the user liked strong match-table and ordering questions, but wanted difficulty placement discussed carefully
+
+Diagram question problems:
+
+- some diagram items used labels inside the diagram that gave away the answer
+- wording such as "what does callout X label?" was criticised as poor and unnatural
+- later expert diagram work improved some questions, but the user still found recurring issues where labels inside the diagram made the answer obvious
+- further clean-up was requested and approved
+
+Teacher review/admin UX work:
+
+- original "Question Content" and "Advance QA" admin wording felt unclear and not valuable
+- this was reworked into a more readable teacher review table
+- publish buttons were renamed into plainer language:
+  - `Use in Student Sessions`
+  - `Remove from Student Sessions`
+- a question editor was added for the owner/admin only
+- later the user asked for the edit area to jump into view when editing a question
+- QA/session alignment became a separate concern because draft items were still showing as in use
+
+GitHub deployment problems:
+
+- user initially hit terminal paste errors and Git auth problems
+- `gh` CLI was installed and used to authenticate GitHub
+- initial GitHub Pages deploy succeeded but the site was blank
+- that blank-page issue was fixed by setting the React Router basename to `import.meta.env.BASE_URL`
+
+
+10. Current pedagogical rules that emerged from feedback
+--------------------------------------------------------
+
+These rules were not casual preferences. They came from repeated teacher review and should be treated as requirements unless the user explicitly changes them.
+
+Content rules:
+
+- stay inside the Network Technologies topic
+- do not leak cyberspace/network security/data transfer content
+- every answer must be accurate and teachable
+- every question must make sense when read cold by a student
+- avoid wording that sounds artificial, vague, or circular
+
+Scoring rules:
+
+- student-marked answers must be objective and predictable
+- do not rely on AI marking
+- avoid long free-text answers for scored items
+- after answer submission, the selected choice should not feel ambiguous or changeable in a way that risks score confusion
+
+Difficulty rules:
+
+- Easy should feel genuinely accessible
+- Medium should be a clear step up
+- Expert should be demanding but fair, not obscure or self-defeating
+
+Diagram rules:
+
+- diagrams should support the question, not answer it for the student
+- labels or embedded text must not reveal the intended answer
+- question wording around diagram references should sound natural
+
+Feedback rules:
+
+- "Not quite right" explanations should explain what was wrong clearly
+- generic explanation lines were criticised if they did not help the student understand the actual mistake
+
+
+11. Important teacher review/admin decisions
+--------------------------------------------
+
+The user questioned the value of the original QA/publish model.
+
+Important nuance:
+
+- the code still contains `qa_status` because it helps structure the admin review/editor workflow
+- however, the user did not want vague or meaningless admin labels
+- "publish/unpublish" language was changed into plainer classroom/admin language
+
+Practical current meaning:
+
+- `qa_status = draft`
+  - not ready
+  - should not be live for students
+
+- `qa_status = reviewed`
+  - teacher-reviewed / ready candidate
+
+- `qa_status = published`
+  - final-ready state in the QA sense
+
+- `is_active = true`
+  - currently included in student sessions
+
+- `is_active = false`
+  - not currently included in student sessions
+
+The user also asked for owner-only editing:
+
+- not every admin should be able to edit question content
+- the codebase added `profiles.can_edit_questions`
+- this should be reviewed before expanding permissions
+
+
+12. Student-session behaviour and scoring
+-----------------------------------------
+
+Student flow:
+
+- login
+- choose topic
+- choose difficulty
+- receive a 10-question session
+- answer each question with immediate feedback
+- see a summary page with score, accuracy, streak, and question review
+
+Daily caps:
+
+- max 3 completed sessions per difficulty per day
+- timezone default is Europe/London
+
+Stats:
+
+- student stats are visible graphically
+- session summary includes score, accuracy, and streak info
+
+Question selection:
+
+- the session picker logic was tuned to avoid poor repetition
+- expert mode was later adjusted to guarantee a diagram question when possible
+
+
+13. Git and deployment status at handoff time
+---------------------------------------------
+
+Repo status when this handoff was prepared:
+
+- branch: `main`
+- tracking: `origin/main`
+- working tree: no uncommitted changes shown by `git status --short --branch`
+
+Recent commits:
+
+- `668453d` Fix GitHub Pages routing basename
+- `50d6a23` Deploy ready: admin review + secure editor + QA/session alignment
+
+GitHub Actions deploy workflow:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/.github/workflows/deploy.yml
+
+That workflow:
+
+- runs on push to `main`
+- installs dependencies
+- builds the Vite app with injected env vars/secrets
+- uploads `dist`
+- deploys to GitHub Pages
+
+Secrets expected in GitHub Actions:
+
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY`
+
+
+14. Public deployment issue still relevant
+------------------------------------------
+
+After public deployment, the user reported that admin functionality online returned:
+
+- "Edge Function returned a non-2xx status code"
+
+Important interpretation:
+
+- this is not automatically a GitHub Pages problem
+- the likely failure point is the live Supabase side
+- local code shows:
+  - `callEdgeFunction()` includes a Bearer token
+  - `verify_jwt = true` is expected
+
+Recommended investigation order for whoever continues this:
+
+1. Check live Supabase Edge Function logs for the failing function call.
+2. Confirm live deployed function code matches local code.
+3. Confirm required function secrets exist in Supabase:
+   - `SUPABASE_URL`
+   - `SUPABASE_ANON_KEY`
+   - `SUPABASE_SERVICE_ROLE_KEY`
+4. Confirm admin profile exists and is active in `profiles`.
+5. Redeploy Edge Functions if needed.
+6. Only redeploy GitHub Pages if frontend code changed.
+
+
+15. Mac setup instructions that were already worked through
+-----------------------------------------------------------
+
+These were discussed because the user wanted the same working app-building setup on a MacBook Pro.
+
+Typical install sequence used/recommended:
+
+- install Xcode Command Line Tools
+- install Homebrew
+- add Homebrew to PATH
+- install:
+  - git
+  - gh
+  - node
+  - python
+  - supabase CLI
+
+Typical verification commands:
+
+- `git --version`
+- `gh --version`
+- `node -v`
+- `npm -v`
+- `python3 --version`
+- `supabase --version`
+
+Typical project setup on another Mac:
+
+- clone repo
+- run `npm install`
+- create `.env` from `.env.example`
+- set:
+  - `VITE_SUPABASE_URL`
+  - `VITE_SUPABASE_ANON_KEY`
+  - `VITE_DEFAULT_TIMEZONE=Europe/London`
+- run `npm run dev`
+- authenticate with Supabase CLI and link to the project ref
+
+
+16. Things Claude Code should be careful about immediately
+----------------------------------------------------------
+
+- Do not assume that a question is good just because it exists in the bank.
+- The user reviewed this app carefully and caught many subtle content/UX issues.
+- If you change question-bank generation, inspect actual sample questions in each difficulty.
+- If you modify diagram questions, visually inspect them and make sure the answer is not printed inside the diagram.
+- If you touch admin QA/publish workflow, keep the language teacher-friendly.
+- If you touch Supabase data migrations, preserve historical integrity.
+- If you see multiple historical copies of similar questions, that is expected because earlier refreshes deactivated old banks rather than deleting rows.
+
+
+17. Best next steps for a new agent
+-----------------------------------
+
+If continuing work from here, the safest order is:
+
+1. Read the files listed at the top of this handoff.
+2. Check the currently active question bank in the admin review UI or directly in Supabase.
+3. Verify the live public admin failure in Supabase logs before changing deployment code.
+4. Only then decide whether the next work item is:
+   - content refinement
+   - admin/deployment repair
+   - question editor UX improvement
+   - diagram-bank improvement
+
+
+18. Honest note about this document
+-----------------------------------
+
+This is a detailed forensic reconstruction of the conversation, decisions, implementation work, and current state. It is intended to function as a high-trust handoff document for another coding agent. It is not a literal raw export of every message in the original chat thread, but it captures the important technical history, user feedback, constraints, paths, architecture, migrations, deployment details, and unresolved issues needed to continue safely.

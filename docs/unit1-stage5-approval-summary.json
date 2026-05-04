@@ -1,0 +1,92 @@
+{
+  "generated_at_utc": "2026-05-04T12:12:55+00:00",
+  "source_staging_payload": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/imports/unit1_stage4_staging_payload.json",
+  "source_review_csv": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/unit1-teacher-question-review.csv",
+  "approved_staging_payload": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/imports/unit1_stage5_approved_staging_payload.json",
+  "approved_live_payload": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/imports/unit1_stage5_approved_live_payload.json",
+  "summary_json": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/unit1-stage5-approval-summary.json",
+  "bucket_csv": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/unit1-stage5-approval-bucket-summary.csv",
+  "report_md": "/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/stage-5-approval-gate-2026-05-04.md",
+  "source_question_count": 938,
+  "approved_question_count": 938,
+  "approved_asset_count": 29,
+  "decision_counts": {
+    "approved": 938
+  },
+  "topic_decision_counts": {
+    "changes-in-employment-opportunities-skills-requirements-and-work-practices": {
+      "approved": 37
+    },
+    "cloud-technology": {
+      "approved": 41
+    },
+    "computer-hardware": {
+      "approved": 80
+    },
+    "cyberspace-network-security-and-data-transfer": {
+      "approved": 88
+    },
+    "database-applications": {
+      "approved": 120
+    },
+    "digital-applications": {
+      "approved": 55
+    },
+    "digital-data": {
+      "approved": 177
+    },
+    "ethical-legal-and-environmental-impact": {
+      "approved": 54
+    },
+    "health-and-safety": {
+      "approved": 37
+    },
+    "network-technologies": {
+      "approved": 84
+    },
+    "software": {
+      "approved": 58
+    },
+    "spreadsheet-applications": {
+      "approved": 107
+    }
+  },
+  "validation_errors": [],
+  "min_per_bucket": 10,
+  "underfilled_bucket_count": 0,
+  "underfilled_buckets": [],
+  "live_payload_summary": {
+    "staged_question_count": 938,
+    "promoted_question_count": 938,
+    "rejected_question_count": 0,
+    "promoted_format_counts": {
+      "mcq": 611,
+      "match_table": 97,
+      "short_text": 74,
+      "fill_gap": 90,
+      "true_false": 65,
+      "drag_drop": 1
+    },
+    "topic_promoted_counts": {
+      "digital-data": 177,
+      "software": 58,
+      "database-applications": 120,
+      "spreadsheet-applications": 107,
+      "computer-hardware": 80,
+      "network-technologies": 84,
+      "cyberspace-network-security-and-data-transfer": 88,
+      "cloud-technology": 41,
+      "ethical-legal-and-environmental-impact": 54,
+      "changes-in-employment-opportunities-skills-requirements-and-work-practices": 37,
+      "health-and-safety": 37,
+      "digital-applications": 55
+    },
+    "topic_rejected_counts": {},
+    "rejection_reason_counts": {},
+    "question_asset_count": 29,
+    "question_asset_link_count": 29,
+    "question_objective_link_count": 1035,
+    "question_source_link_count": 938
+  },
+  "live_rejection_reason_counts": {}
+}

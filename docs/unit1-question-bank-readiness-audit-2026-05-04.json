@@ -1,0 +1,702 @@
+{
+  "generated_on": "2026-05-04",
+  "total_questions": 938,
+  "asset_count": 29,
+  "questions_with_assets": 29,
+  "difficulty_counts": {
+    "medium": 325,
+    "expert": 169,
+    "easy": 444
+  },
+  "format_counts": {
+    "mcq": 611,
+    "match_table": 97,
+    "short_text": 74,
+    "fill_gap": 90,
+    "true_false": 65,
+    "drag_drop": 1
+  },
+  "priority_counts": {
+    "low": 152,
+    "high": 263,
+    "medium": 523
+  },
+  "status_counts": {
+    "ready_for_review": 938
+  },
+  "flag_counts": {
+    "transformed_exam_item": 263,
+    "supplementary_derived_item": 40,
+    "practice_question_needs_source_normalization": 483
+  },
+  "topic_summaries": [
+    {
+      "topic_slug": "changes-in-employment-opportunities-skills-requirements-and-work-practices",
+      "topic_title": "Changes in employment opportunities, skills requirements and work practices",
+      "total": 37,
+      "difficulty_counts": {
+        "medium": 10,
+        "expert": 10,
+        "easy": 17
+      },
+      "format_counts": {
+        "short_text": 6,
+        "mcq": 15,
+        "fill_gap": 4,
+        "true_false": 4,
+        "match_table": 8
+      },
+      "priority_counts": {
+        "high": 6,
+        "low": 1,
+        "medium": 30
+      },
+      "flag_counts": {
+        "transformed_exam_item": 6,
+        "practice_question_needs_source_normalization": 19,
+        "supplementary_derived_item": 11
+      },
+      "questions_with_assets": 0,
+      "asset_count": 0
+    },
+    {
+      "topic_slug": "cloud-technology",
+      "topic_title": "Cloud technology",
+      "total": 41,
+      "difficulty_counts": {
+        "medium": 17,
+        "expert": 10,
+        "easy": 14
+      },
+      "format_counts": {
+        "mcq": 33,
+        "true_false": 4,
+        "fill_gap": 1,
+        "match_table": 2,
+        "short_text": 1
+      },
+      "priority_counts": {
+        "high": 19,
+        "medium": 22
+      },
+      "flag_counts": {
+        "transformed_exam_item": 19,
+        "supplementary_derived_item": 7,
+        "practice_question_needs_source_normalization": 15
+      },
+      "questions_with_assets": 0,
+      "asset_count": 0
+    },
+    {
+      "topic_slug": "computer-hardware",
+      "topic_title": "Computer hardware",
+      "total": 80,
+      "difficulty_counts": {
+        "expert": 20,
+        "medium": 30,
+        "easy": 30
+      },
+      "format_counts": {
+        "mcq": 52,
+        "match_table": 9,
+        "short_text": 8,
+        "fill_gap": 7,
+        "true_false": 4
+      },
+      "priority_counts": {
+        "high": 29,
+        "low": 19,
+        "medium": 32
+      },
+      "flag_counts": {
+        "transformed_exam_item": 29,
+        "practice_question_needs_source_normalization": 32
+      },
+      "questions_with_assets": 5,
+      "asset_count": 5
+    },
+    {
+      "topic_slug": "cyberspace-network-security-and-data-transfer",
+      "topic_title": "Cyberspace, network security and data transfer",
+      "total": 88,
+      "difficulty_counts": {
+        "medium": 29,
+        "expert": 23,
+        "easy": 36
+      },
+      "format_counts": {
+        "mcq": 61,
+        "match_table": 10,
+        "fill_gap": 9,
+        "true_false": 6,
+        "short_text": 2
+      },
+      "priority_counts": {
+        "low": 14,
+        "high": 32,
+        "medium": 42
+      },
+      "flag_counts": {
+        "transformed_exam_item": 32,
+        "supplementary_derived_item": 2,
+        "practice_question_needs_source_normalization": 40
+      },
+      "questions_with_assets": 0,
+      "asset_count": 0
+    },
+    {
+      "topic_slug": "database-applications",
+      "topic_title": "Database applications",
+      "total": 120,
+      "difficulty_counts": {
+        "medium": 48,
+        "expert": 11,
+        "easy": 61
+      },
+      "format_counts": {
+        "mcq": 82,
+        "short_text": 14,
+        "match_table": 9,
+        "fill_gap": 10,
+        "true_false": 5
+      },
+      "priority_counts": {
+        "high": 39,
+        "low": 17,
+        "medium": 64
+      },
+      "flag_counts": {
+        "transformed_exam_item": 39,
+        "practice_question_needs_source_normalization": 64
+      },
+      "questions_with_assets": 5,
+      "asset_count": 5
+    },
+    {
+      "topic_slug": "digital-applications",
+      "topic_title": "Digital applications",
+      "total": 55,
+      "difficulty_counts": {
+        "medium": 13,
+        "easy": 32,
+        "expert": 10
+      },
+      "format_counts": {
+        "short_text": 12,
+        "mcq": 33,
+        "true_false": 4,
+        "fill_gap": 3,
+        "match_table": 3
+      },
+      "priority_counts": {
+        "high": 12,
+        "low": 1,
+        "medium": 42
+      },
+      "flag_counts": {
+        "transformed_exam_item": 12,
+        "practice_question_needs_source_normalization": 35,
+        "supplementary_derived_item": 7
+      },
+      "questions_with_assets": 0,
+      "asset_count": 0
+    },
+    {
+      "topic_slug": "digital-data",
+      "topic_title": "Digital data",
+      "total": 177,
+      "difficulty_counts": {
+        "medium": 46,
+        "expert": 23,
+        "easy": 108
+      },
+      "format_counts": {
+        "mcq": 112,
+        "match_table": 16,
+        "short_text": 12,
+        "fill_gap": 20,
+        "true_false": 16,
+        "drag_drop": 1
+      },
+      "priority_counts": {
+        "low": 36,
+        "high": 21,
+        "medium": 120
+      },
+      "flag_counts": {
+        "transformed_exam_item": 21,
+        "practice_question_needs_source_normalization": 120
+      },
+      "questions_with_assets": 7,
+      "asset_count": 7
+    },
+    {
+      "topic_slug": "ethical-legal-and-environmental-impact",
+      "topic_title": "Ethical, legal and environmental impact",
+      "total": 54,
+      "difficulty_counts": {
+        "medium": 25,
+        "expert": 10,
+        "easy": 19
+      },
+      "format_counts": {
+        "mcq": 38,
+        "fill_gap": 5,
+        "match_table": 5,
+        "true_false": 5,
+        "short_text": 1
+      },
+      "priority_counts": {
+        "low": 13,
+        "high": 19,
+        "medium": 22
+      },
+      "flag_counts": {
+        "transformed_exam_item": 19,
+        "supplementary_derived_item": 2,
+        "practice_question_needs_source_normalization": 20
+      },
+      "questions_with_assets": 0,
+      "asset_count": 0
+    },
+    {
+      "topic_slug": "health-and-safety",
+      "topic_title": "Health and safety",
+      "total": 37,
+      "difficulty_counts": {
+        "medium": 11,
+        "expert": 10,
+        "easy": 16
+      },
+      "format_counts": {
+        "mcq": 26,
+        "match_table": 4,
+        "true_false": 4,
+        "fill_gap": 3
+      },
+      "priority_counts": {
+        "low": 3,
+        "high": 9,
+        "medium": 25
+      },
+      "flag_counts": {
+        "transformed_exam_item": 9,
+        "practice_question_needs_source_normalization": 19,
+        "supplementary_derived_item": 6
+      },
+      "questions_with_assets": 0,
+      "asset_count": 0
+    },
+    {
+      "topic_slug": "network-technologies",
+      "topic_title": "Network technologies",
+      "total": 84,
+      "difficulty_counts": {
+        "expert": 19,
+        "medium": 33,
+        "easy": 32
+      },
+      "format_counts": {
+        "mcq": 50,
+        "match_table": 12,
+        "short_text": 9,
+        "fill_gap": 9,
+        "true_false": 4
+      },
+      "priority_counts": {
+        "high": 29,
+        "low": 21,
+        "medium": 34
+      },
+      "flag_counts": {
+        "transformed_exam_item": 29,
+        "practice_question_needs_source_normalization": 34
+      },
+      "questions_with_assets": 4,
+      "asset_count": 4
+    },
+    {
+      "topic_slug": "software",
+      "topic_title": "Software",
+      "total": 58,
+      "difficulty_counts": {
+        "expert": 11,
+        "medium": 14,
+        "easy": 33
+      },
+      "format_counts": {
+        "fill_gap": 10,
+        "mcq": 30,
+        "match_table": 10,
+        "short_text": 4,
+        "true_false": 4
+      },
+      "priority_counts": {
+        "high": 7,
+        "low": 11,
+        "medium": 40
+      },
+      "flag_counts": {
+        "transformed_exam_item": 7,
+        "practice_question_needs_source_normalization": 35,
+        "supplementary_derived_item": 5
+      },
+      "questions_with_assets": 0,
+      "asset_count": 0
+    },
+    {
+      "topic_slug": "spreadsheet-applications",
+      "topic_title": "Spreadsheet applications",
+      "total": 107,
+      "difficulty_counts": {
+        "medium": 49,
+        "expert": 12,
+        "easy": 46
+      },
+      "format_counts": {
+        "mcq": 79,
+        "match_table": 9,
+        "fill_gap": 9,
+        "short_text": 5,
+        "true_false": 5
+      },
+      "priority_counts": {
+        "high": 41,
+        "low": 16,
+        "medium": 50
+      },
+      "flag_counts": {
+        "transformed_exam_item": 41,
+        "practice_question_needs_source_normalization": 50
+      },
+      "questions_with_assets": 8,
+      "asset_count": 8
+    }
+  ],
+  "difficulty_readiness": [
+    {
+      "topic_slug": "changes-in-employment-opportunities-skills-requirements-and-work-practices",
+      "topic_title": "Changes in employment opportunities, skills requirements and work practices",
+      "difficulty": "easy",
+      "question_count": 17,
+      "family_count": 16,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "changes-in-employment-opportunities-skills-requirements-and-work-practices",
+      "topic_title": "Changes in employment opportunities, skills requirements and work practices",
+      "difficulty": "medium",
+      "question_count": 10,
+      "family_count": 10,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "changes-in-employment-opportunities-skills-requirements-and-work-practices",
+      "topic_title": "Changes in employment opportunities, skills requirements and work practices",
+      "difficulty": "expert",
+      "question_count": 10,
+      "family_count": 10,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "cloud-technology",
+      "topic_title": "Cloud technology",
+      "difficulty": "easy",
+      "question_count": 14,
+      "family_count": 10,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "cloud-technology",
+      "topic_title": "Cloud technology",
+      "difficulty": "medium",
+      "question_count": 17,
+      "family_count": 15,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "cloud-technology",
+      "topic_title": "Cloud technology",
+      "difficulty": "expert",
+      "question_count": 10,
+      "family_count": 9,
+      "status": "family_depth_risk",
+      "note": "At least 10 questions exist, but fewer than 10 families risks repeated question styles."
+    },
+    {
+      "topic_slug": "computer-hardware",
+      "topic_title": "Computer hardware",
+      "difficulty": "easy",
+      "question_count": 30,
+      "family_count": 30,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "computer-hardware",
+      "topic_title": "Computer hardware",
+      "difficulty": "medium",
+      "question_count": 30,
+      "family_count": 27,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "computer-hardware",
+      "topic_title": "Computer hardware",
+      "difficulty": "expert",
+      "question_count": 20,
+      "family_count": 14,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "cyberspace-network-security-and-data-transfer",
+      "topic_title": "Cyberspace, network security and data transfer",
+      "difficulty": "easy",
+      "question_count": 36,
+      "family_count": 36,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "cyberspace-network-security-and-data-transfer",
+      "topic_title": "Cyberspace, network security and data transfer",
+      "difficulty": "medium",
+      "question_count": 29,
+      "family_count": 28,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "cyberspace-network-security-and-data-transfer",
+      "topic_title": "Cyberspace, network security and data transfer",
+      "difficulty": "expert",
+      "question_count": 23,
+      "family_count": 17,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "database-applications",
+      "topic_title": "Database applications",
+      "difficulty": "easy",
+      "question_count": 61,
+      "family_count": 37,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "database-applications",
+      "topic_title": "Database applications",
+      "difficulty": "medium",
+      "question_count": 48,
+      "family_count": 18,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "database-applications",
+      "topic_title": "Database applications",
+      "difficulty": "expert",
+      "question_count": 11,
+      "family_count": 6,
+      "status": "family_depth_risk",
+      "note": "At least 10 questions exist, but fewer than 10 families risks repeated question styles."
+    },
+    {
+      "topic_slug": "digital-applications",
+      "topic_title": "Digital applications",
+      "difficulty": "easy",
+      "question_count": 32,
+      "family_count": 32,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "digital-applications",
+      "topic_title": "Digital applications",
+      "difficulty": "medium",
+      "question_count": 13,
+      "family_count": 9,
+      "status": "family_depth_risk",
+      "note": "At least 10 questions exist, but fewer than 10 families risks repeated question styles."
+    },
+    {
+      "topic_slug": "digital-applications",
+      "topic_title": "Digital applications",
+      "difficulty": "expert",
+      "question_count": 10,
+      "family_count": 10,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "digital-data",
+      "topic_title": "Digital data",
+      "difficulty": "easy",
+      "question_count": 108,
+      "family_count": 66,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "digital-data",
+      "topic_title": "Digital data",
+      "difficulty": "medium",
+      "question_count": 46,
+      "family_count": 33,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "digital-data",
+      "topic_title": "Digital data",
+      "difficulty": "expert",
+      "question_count": 23,
+      "family_count": 13,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "ethical-legal-and-environmental-impact",
+      "topic_title": "Ethical, legal and environmental impact",
+      "difficulty": "easy",
+      "question_count": 19,
+      "family_count": 19,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "ethical-legal-and-environmental-impact",
+      "topic_title": "Ethical, legal and environmental impact",
+      "difficulty": "medium",
+      "question_count": 25,
+      "family_count": 25,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "ethical-legal-and-environmental-impact",
+      "topic_title": "Ethical, legal and environmental impact",
+      "difficulty": "expert",
+      "question_count": 10,
+      "family_count": 9,
+      "status": "family_depth_risk",
+      "note": "At least 10 questions exist, but fewer than 10 families risks repeated question styles."
+    },
+    {
+      "topic_slug": "health-and-safety",
+      "topic_title": "Health and safety",
+      "difficulty": "easy",
+      "question_count": 16,
+      "family_count": 15,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "health-and-safety",
+      "topic_title": "Health and safety",
+      "difficulty": "medium",
+      "question_count": 11,
+      "family_count": 11,
+      "status": "thin_depth",
+      "note": "Usable for a session, but below the 30-question depth target for repeated revision."
+    },
+    {
+      "topic_slug": "health-and-safety",
+      "topic_title": "Health and safety",
+      "difficulty": "expert",
+      "question_count": 10,
+      "family_count": 8,
+      "status": "family_depth_risk",
+      "note": "At least 10 questions exist, but fewer than 10 families risks repeated question styles."
+    },
+    {
+      "topic_slug": "network-technologies",
+      "topic_title": "Network technologies",
+      "difficulty": "easy",
+      "question_count": 32,
+      "family_count": 19,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "network-technologies",
+      "topic_title": "Network technologies",
+      "difficulty": "medium",
+      "question_count": 33,
+      "family_count": 23,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "network-technologies",
+      "topic_title": "Network technologies",
+      "difficulty": "expert",
+      "question_count": 19,
+      "family_count": 9,
+      "status": "family_depth_risk",
+      "note": "At least 10 questions exist, but fewer than 10 families risks repeated question styles."
+    },
+    {
+      "topic_slug": "software",
+      "topic_title": "Software",
+      "difficulty": "easy",
+      "question_count": 33,
+      "family_count": 28,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "software",
+      "topic_title": "Software",
+      "difficulty": "medium",
+      "question_count": 14,
+      "family_count": 9,
+      "status": "family_depth_risk",
+      "note": "At least 10 questions exist, but fewer than 10 families risks repeated question styles."
+    },
+    {
+      "topic_slug": "software",
+      "topic_title": "Software",
+      "difficulty": "expert",
+      "question_count": 11,
+      "family_count": 6,
+      "status": "family_depth_risk",
+      "note": "At least 10 questions exist, but fewer than 10 families risks repeated question styles."
+    },
+    {
+      "topic_slug": "spreadsheet-applications",
+      "topic_title": "Spreadsheet applications",
+      "difficulty": "easy",
+      "question_count": 46,
+      "family_count": 30,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "spreadsheet-applications",
+      "topic_title": "Spreadsheet applications",
+      "difficulty": "medium",
+      "question_count": 49,
+      "family_count": 26,
+      "status": "healthy",
+      "note": "Meets the depth target for this difficulty."
+    },
+    {
+      "topic_slug": "spreadsheet-applications",
+      "topic_title": "Spreadsheet applications",
+      "difficulty": "expert",
+      "question_count": 12,
+      "family_count": 6,
+      "status": "family_depth_risk",
+      "note": "At least 10 questions exist, but fewer than 10 families risks repeated question styles."
+    }
+  ]
+}

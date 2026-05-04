@@ -1,10 +1,11 @@
 import { FormEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import { getErrorMessage } from "../lib/request";
 
 export function LoginPage() {
   const navigate = useNavigate();
-  const { loginWithIdentifier, role, loading } = useAuth();
+  const { authError, loading, loginWithIdentifier, retryAuth, role } = useAuth();
   const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -26,8 +27,8 @@ export function LoginPage() {
 
     try {
       await loginWithIdentifier(identifier, password);
-    } catch {
-      setError("Sign-in failed. Check your username/email and password.");
+    } catch (caught) {
+      setError(getErrorMessage(caught, "Sign-in failed. Check your username/email and password."));
     } finally {
       setBusy(false);
     }
@@ -66,10 +67,17 @@ export function LoginPage() {
           </label>
 
           {error ? <div className="error-box">{error}</div> : null}
+          {!error && authError ? <div className="error-box">{authError}</div> : null}
 
           <button type="submit" disabled={busy} className="primary-btn">
             {busy ? "Signing in..." : "Sign in"}
           </button>
+
+          {authError ? (
+            <button type="button" className="ghost-btn" onClick={() => void retryAuth()}>
+              Retry Connection
+            </button>
+          ) : null}
         </form>
       </div>
     </div>

@@ -221,6 +221,57 @@ input[type="checkbox"] {
   min-height: 110px;
 }
 
+.runtime-prompt {
+  margin-bottom: 0.85rem;
+}
+
+.question-helper {
+  color: #486581;
+  font-weight: 650;
+}
+
+.question-asset-card {
+  border: 1px solid #d6e3ef;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 0.75rem;
+  margin: 0;
+}
+
+.question-asset-card img {
+  display: block;
+  max-width: 100%;
+  max-height: 520px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.question-asset-card figcaption {
+  margin-top: 0.55rem;
+  color: #486581;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.question-prompt-list {
+  border: 1px solid #d6e3ef;
+  border-radius: 12px;
+  background: #f8fbfd;
+  padding: 0.7rem 0.9rem;
+}
+
+.question-prompt-list p {
+  margin-bottom: 0.35rem;
+  font-weight: 800;
+}
+
+.question-prompt-list ul {
+  margin-left: 1.2rem;
+}
+
 .error-box {
   padding: 0.7rem 0.8rem;
   background: #fdeaea;
@@ -284,10 +335,66 @@ input[type="checkbox"] {
   gap: 0.8rem;
 }
 
+.insight-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.warning-card {
+  background: linear-gradient(150deg, #fff 0%, #fff1f1 100%);
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .streak {
   font-size: 2.2rem;
   font-weight: 700;
   color: #9f4f06;
+}
+
+.responsive-table {
+  margin-top: 0.75rem;
+  overflow-x: auto;
+}
+
+.compact-table {
+  min-width: 760px;
+}
+
+.compact-table th {
+  background: #eef4fb;
+  text-align: left;
+}
+
+.compact-table td:nth-child(2),
+.compact-table td:nth-child(3) {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.skill-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.skill-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid #d6e0ea;
+  border-radius: 10px;
+  padding: 0.55rem 0.65rem;
+  background: #f8fbff;
 }
 
 .center-screen {

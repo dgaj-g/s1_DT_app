@@ -7,7 +7,176 @@ export type QuestionFormat =
   | "fill_gap"
   | "short_text"
   | "structured_response"
+  | "diagram_label"
+  | "multi_select"
+  | "true_false";
+
+export type RuntimeQuestionFormat =
+  | "mcq"
+  | "true_false"
+  | "match_table"
+  | "fill_gap"
+  | "short_text"
+  | "multi_select"
+  | "drag_drop"
   | "diagram_label";
+
+export interface RuntimeChoice {
+  id: string;
+  label: string;
+}
+
+export interface RuntimePromptBlock {
+  kind: string;
+  text?: string;
+  title?: string;
+  body?: string;
+  block_key?: string;
+  [key: string]: unknown;
+}
+
+export interface RuntimeAsset {
+  asset_id?: string;
+  role?: string;
+  kind?: string;
+  bucket?: string;
+  path?: string;
+  url?: string;
+  public_url?: string;
+  alt_text?: string;
+  caption?: string | null;
+  display_order?: number;
+  block_key?: string | null;
+}
+
+export interface RuntimeSingleChoiceSchema {
+  kind: "single_choice";
+  choices: RuntimeChoice[];
+}
+
+export interface RuntimeTrueFalseSchema {
+  kind: "true_false";
+  statement?: string;
+  true_label?: string;
+  false_label?: string;
+}
+
+export interface RuntimeMatchTableSchema {
+  kind: "match_table";
+  rows: Array<{ id: string; label: string }>;
+  choices: RuntimeChoice[];
+}
+
+export interface RuntimeFillGapSchema {
+  kind: "fill_gap";
+  gaps: Array<{ id: string; label: string }>;
+}
+
+export interface RuntimeShortTextSchema {
+  kind: "short_text";
+  placeholder?: string;
+  max_length?: number;
+}
+
+export interface RuntimeMultiSelectSchema {
+  kind: "multi_select";
+  choices: RuntimeChoice[];
+  min_select?: number;
+  max_select?: number;
+}
+
+export interface RuntimeOrderingSchema {
+  kind: "ordering";
+  items: RuntimeChoice[];
+}
+
+export interface RuntimeDiagramLabelSchema {
+  kind: "diagram_label";
+  input_mode?: "single_choice" | "text";
+  diagram_key?: string;
+  marker?: string;
+  choices?: RuntimeChoice[];
+  placeholder?: string;
+}
+
+export interface RuntimeUnsupportedSchema {
+  kind: "unsupported";
+}
+
+export type RuntimeResponseSchema =
+  | RuntimeSingleChoiceSchema
+  | RuntimeTrueFalseSchema
+  | RuntimeMatchTableSchema
+  | RuntimeFillGapSchema
+  | RuntimeShortTextSchema
+  | RuntimeMultiSelectSchema
+  | RuntimeOrderingSchema
+  | RuntimeDiagramLabelSchema
+  | RuntimeUnsupportedSchema;
+
+export interface RuntimeQuestionFeedback {
+  summary?: string;
+  corrections?: unknown[];
+  accepted_answer_preview?: unknown[];
+}
+
+export interface RuntimeQuestionResult {
+  result: "correct" | "partial" | "incorrect";
+  is_correct: boolean;
+  marks_awarded: number;
+  marks_available: number;
+  feedback: RuntimeQuestionFeedback;
+}
+
+export interface RuntimeQuestion {
+  session_item_id: string;
+  question_id: string;
+  topic_id: string;
+  difficulty: Difficulty;
+  adaptive_tier: "support" | "core" | "challenge";
+  format: RuntimeQuestionFormat;
+  max_marks: number;
+  family_code: string | null;
+  stem: string;
+  prompt_blocks: RuntimePromptBlock[];
+  assets: RuntimeAsset[];
+  response_schema: RuntimeResponseSchema;
+  autograde_rules: Record<string, unknown>;
+  explanation: string;
+  tags: string[];
+  objective_ids: string[];
+}
+
+export interface RuntimeSessionQuestion extends RuntimeQuestion {
+  position: number;
+  grading_status: "pending" | "graded";
+  student_answer: Record<string, unknown>;
+  is_correct: boolean | null;
+  marks_awarded: number;
+  marks_available: number;
+  feedback: RuntimeQuestionFeedback | null;
+}
+
+export interface RuntimeSessionState {
+  session_id: string;
+  topic_id: string;
+  difficulty: Difficulty;
+  academic_year_id: string;
+  started_at: string;
+  completed_at: string | null;
+  questions: RuntimeSessionQuestion[];
+  session_status?: "started" | "resumed";
+}
+
+export interface RuntimeSessionSummary {
+  session_id: string;
+  score: number;
+  points_earned: number;
+  points_available: number;
+  accuracy_pct: number;
+  streak_after: number;
+  completed_at: string;
+}
 
 export interface Profile {
   id: string;
@@ -53,6 +222,11 @@ export interface SessionRecord {
   student_id: string;
   academic_year_id: string;
   topic_id: string;
+  topics?: {
+    id: string;
+    slug: string;
+    title: string;
+  } | null;
   difficulty: Difficulty;
   started_at: string;
   completed_at: string | null;

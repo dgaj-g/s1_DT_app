@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { getSession, getSessionQuestions } from "../lib/api";
+import { getErrorMessage } from "../lib/request";
 import { getAdaptiveRecommendation } from "../lib/scoring";
 import type { Difficulty, SessionRecord } from "../lib/types";
 
@@ -16,28 +17,47 @@ export function StudentSummaryPage() {
   const [rows, setRows] = useState<Array<Record<string, unknown>>>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
+    let cancelled = false;
+
     async function load() {
       if (!sessionId) {
-        setError("Session missing");
-        setLoading(false);
+        if (!cancelled) {
+          setError("Session missing");
+          setLoading(false);
+        }
         return;
       }
 
       try {
+        if (!cancelled) {
+          setLoading(true);
+          setError(null);
+        }
         const [sessionRow, answerRows] = await Promise.all([getSession(sessionId), getSessionQuestions(sessionId)]);
-        setSession(sessionRow);
-        setRows(answerRows as Array<Record<string, unknown>>);
+        if (!cancelled) {
+          setSession(sessionRow);
+          setRows(answerRows as Array<Record<string, unknown>>);
+        }
       } catch (caught) {
-        setError(caught instanceof Error ? caught.message : "Could not load summary.");
+        if (!cancelled) {
+          setError(getErrorMessage(caught, "Could not load summary."));
+        }
       } finally {
-        setLoading(false);
+        if (!cancelled) {
+          setLoading(false);
+        }
       }
     }
 
     void load();
-  }, [sessionId]);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [reloadKey, sessionId]);
 
   const recommendation = useMemo(() => {
     if (!session) {
@@ -63,7 +83,19 @@ export function StudentSummaryPage() {
   }
 
   if (error || !session) {
-    return <div className="error-box">{error || "Session not found."}</div>;
+    return (
+      <div className="panel stack gap-md">
+        <div className="error-box">{error || "Session not found."}</div>
+        <div className="inline-actions">
+          <button className="primary-btn" onClick={() => setReloadKey((value) => value + 1)}>
+            Retry Summary Load
+          </button>
+          <button className="ghost-btn" onClick={() => navigate("/student")}>
+            Back to Student Home
+          </button>
+        </div>
+      </div>
+    );
   }
 
   const total = rows.length;

@@ -1,0 +1,67 @@
+Continue work on this existing project:
+
+- Project: S1 CCEA Network Technologies Revision App
+- Repo: https://github.com/dgaj-g/s1_DT_app
+- Working directory: /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app
+- Supabase project ref: omksuffrkbnoekszrgcq
+- Public site: https://dgaj-g.github.io/s1_DT_app/
+
+Read this full handoff first before changing anything:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/claude-code-forensic-handoff.txt
+
+Critical constraints:
+
+- Content accuracy is the highest priority.
+- Stay inside the CCEA Unit 1 Digital Technology topic "Network Technologies" unless explicitly told otherwise.
+- Do not leak cyberspace/network security/data transfer material into this topic.
+- Preserve historical session integrity. Old question banks were deactivated, not deleted.
+- Keep questions objectively markable. Do not introduce AI-marked or loosely marked free-text scoring.
+- Keep the Easy / Medium / Expert split clear and intentional.
+- Diagram questions must not reveal the answer inside the diagram.
+- Treat the user as the content authority. They reviewed the app in detail and care deeply about wording quality.
+
+Primary source files used to build and review the content:
+
+- /Users/damiengartland/Desktop/Codex Work/Network_Technologies_Notes.docx
+- /Users/damiengartland/Desktop/Codex Work/Networks_Updated 2026.pptx
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2018 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2018 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2019 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2019 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2021 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2021 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2022 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2022 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2023 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2023 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2024 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2024 MS.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2025 QP.pdf
+- /Users/damiengartland/Desktop/Codex Work/U1 DT 2025 MS.pdf
+
+PowerPoint slide ranges the user specifically trusted:
+
+- 8-13
+- 25-30
+- 36-40
+
+Most relevant code areas:
+
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/pages/AdminDashboardPage.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/pages/StudentSessionPage.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/QuestionRenderer.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/components/NetworkDiagram.tsx
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/api.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/src/lib/scoring.ts
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/scripts/generate_questions.py
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/seed/network_questions.json
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/
+- /Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/functions/
+
+Known live issue to investigate first if asked about deployment/admin problems:
+
+- GitHub Pages is live, but online admin actions have returned "Edge Function returned a non-2xx status code".
+- The frontend already sends Bearer auth in `callEdgeFunction()`.
+- Local `supabase/config.toml` expects `verify_jwt = true`.
+- Investigate live Supabase Edge Function logs, deployed function code, and function secrets before changing frontend deployment.
