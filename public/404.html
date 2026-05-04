@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting back to the revision app…</p>
+    <script>
+      (function () {
+        var basePath = "/s1_DT_app/";
+        var storageKey = "s1dt.githubPagesRedirect";
+        var path = window.location.pathname;
+        var route = "/";
+
+        if (path.indexOf(basePath) === 0) {
+          route = path.slice(basePath.length - 1) || "/";
+        }
+
+        route += window.location.search || "";
+        route += window.location.hash || "";
+
+        try {
+          window.sessionStorage.setItem(storageKey, route);
+        } catch (error) {
+          // If sessionStorage is blocked, still recover to the app shell.
+        }
+
+        window.location.replace(basePath);
+      })();
+    </script>
+  </body>
+</html>
