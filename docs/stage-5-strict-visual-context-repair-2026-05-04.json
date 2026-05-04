@@ -1,0 +1,1243 @@
+{
+  "summary": {
+    "asset_records": 45,
+    "strict_links": 122,
+    "original_payload_links": 29,
+    "effective_linked_questions_after_strict_repair": 118,
+    "quarantined_questions": 0,
+    "strict_link_reasons": {
+      "strict_exact_or_shared_context": 46,
+      "strict_shared_spreadsheet_database_context": 76
+    },
+    "links_by_topic": {
+      "digital-data": 11,
+      "database-applications": 43,
+      "spreadsheet-applications": 49,
+      "computer-hardware": 10,
+      "network-technologies": 9
+    }
+  },
+  "links": [
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q006",
+      "asset_external_id": "unit1.visual_context.image1",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image1.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q007",
+      "asset_external_id": "unit1.visual_context.image2",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image2.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q008",
+      "asset_external_id": "unit1.visual_context.image1",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image1.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q008",
+      "asset_external_id": "unit1.visual_context.image2",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image2.png",
+      "asset_role": "prompt",
+      "display_order": 2,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q013",
+      "asset_external_id": "unit1.visual_context.image3",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image3.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q014",
+      "asset_external_id": "unit1.visual_context.image3",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image3.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q017",
+      "asset_external_id": "unit1.visual_context.image4",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image4.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q018",
+      "asset_external_id": "unit1.visual_context.image4",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image4.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q019",
+      "asset_external_id": "unit1.visual_context.image4",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image4.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q037",
+      "asset_external_id": "unit1.visual_context.image5",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image5.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "digital-data.past_paper.topics_01_02.q038",
+      "asset_external_id": "unit1.visual_context.image5",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "digital-data/image5.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q001",
+      "asset_external_id": "unit1.visual_context.image6",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image6.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q002",
+      "asset_external_id": "unit1.visual_context.image6",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image6.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q003",
+      "asset_external_id": "unit1.visual_context.image6",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image6.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q004",
+      "asset_external_id": "unit1.visual_context.image6",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image6.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q005",
+      "asset_external_id": "unit1.visual_context.image6",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image6.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q007",
+      "asset_external_id": "unit1.visual_context.image7",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image7.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q008",
+      "asset_external_id": "unit1.visual_context.image7",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image7.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q009",
+      "asset_external_id": "unit1.visual_context.image7",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image7.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q010",
+      "asset_external_id": "unit1.visual_context.image7",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image7.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q012",
+      "asset_external_id": "unit1.visual_context.image8",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image8.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q013",
+      "asset_external_id": "unit1.visual_context.image8",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image8.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q015",
+      "asset_external_id": "unit1.visual_context.image9",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image9.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q016",
+      "asset_external_id": "unit1.visual_context.image10",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image10.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q017",
+      "asset_external_id": "unit1.visual_context.image10",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image10.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q018",
+      "asset_external_id": "unit1.visual_context.image11",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image11.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q019",
+      "asset_external_id": "unit1.visual_context.image11",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image11.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q020",
+      "asset_external_id": "unit1.visual_context.image11",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image11.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q021",
+      "asset_external_id": "unit1.visual_context.image12",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image12.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q023",
+      "asset_external_id": "unit1.visual_context.image13",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image13.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q024",
+      "asset_external_id": "unit1.visual_context.image14",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image14.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q025",
+      "asset_external_id": "unit1.visual_context.image10",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image10.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q029",
+      "asset_external_id": "unit1.visual_context.image15",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image15.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q030",
+      "asset_external_id": "unit1.visual_context.image15",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image15.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q031",
+      "asset_external_id": "unit1.visual_context.image15",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image15.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q032",
+      "asset_external_id": "unit1.visual_context.image15",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image15.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q033",
+      "asset_external_id": "unit1.visual_context.image16",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image16.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q035",
+      "asset_external_id": "unit1.visual_context.image17",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image17.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q036",
+      "asset_external_id": "unit1.visual_context.image17",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image17.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q037",
+      "asset_external_id": "unit1.visual_context.image17",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image17.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q038",
+      "asset_external_id": "unit1.visual_context.image17",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image17.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q039",
+      "asset_external_id": "unit1.visual_context.image18",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image18.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q040",
+      "asset_external_id": "unit1.visual_context.image18",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image18.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q041",
+      "asset_external_id": "unit1.visual_context.image18",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image18.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q042",
+      "asset_external_id": "unit1.visual_context.image18",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image18.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q043",
+      "asset_external_id": "unit1.visual_context.image19",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image19.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q044",
+      "asset_external_id": "unit1.visual_context.image18",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image18.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q045",
+      "asset_external_id": "unit1.visual_context.image20",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image20.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q046",
+      "asset_external_id": "unit1.visual_context.image20",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image20.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q047",
+      "asset_external_id": "unit1.visual_context.image18",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image18.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q052",
+      "asset_external_id": "unit1.visual_context.image21",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image21.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q053",
+      "asset_external_id": "unit1.visual_context.image21",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image21.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q054",
+      "asset_external_id": "unit1.visual_context.image21",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image21.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "database-applications.past_paper.topics_03_04.q055",
+      "asset_external_id": "unit1.visual_context.image21",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "database-applications/image21.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q001",
+      "asset_external_id": "unit1.visual_context.image22",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image22.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q002",
+      "asset_external_id": "unit1.visual_context.image22",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image22.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q003",
+      "asset_external_id": "unit1.visual_context.image22",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image22.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q004",
+      "asset_external_id": "unit1.visual_context.image22",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image22.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q005",
+      "asset_external_id": "unit1.visual_context.image22",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image22.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q007",
+      "asset_external_id": "unit1.visual_context.image22",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image22.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q011",
+      "asset_external_id": "unit1.visual_context.image23",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image23.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q012",
+      "asset_external_id": "unit1.visual_context.image23",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image23.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q013",
+      "asset_external_id": "unit1.visual_context.image23",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image23.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q014",
+      "asset_external_id": "unit1.visual_context.image23",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image23.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q014",
+      "asset_external_id": "unit1.visual_context.image24",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image24.png",
+      "asset_role": "prompt",
+      "display_order": 2,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q015",
+      "asset_external_id": "unit1.visual_context.image25",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image25.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q016",
+      "asset_external_id": "unit1.visual_context.image25",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image25.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q017",
+      "asset_external_id": "unit1.visual_context.image23",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image23.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q018",
+      "asset_external_id": "unit1.visual_context.image26",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image26.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q019",
+      "asset_external_id": "unit1.visual_context.image26",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image26.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q020",
+      "asset_external_id": "unit1.visual_context.image26",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image26.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q021",
+      "asset_external_id": "unit1.visual_context.image27",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image27.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q024",
+      "asset_external_id": "unit1.visual_context.image28",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image28.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q025",
+      "asset_external_id": "unit1.visual_context.image28",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image28.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q026",
+      "asset_external_id": "unit1.visual_context.image26",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image26.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q028",
+      "asset_external_id": "unit1.visual_context.image29",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image29.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q029",
+      "asset_external_id": "unit1.visual_context.image29",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image29.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q030",
+      "asset_external_id": "unit1.visual_context.image29",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image29.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q031",
+      "asset_external_id": "unit1.visual_context.image29",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image29.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q032",
+      "asset_external_id": "unit1.visual_context.image29",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image29.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q032",
+      "asset_external_id": "unit1.visual_context.image30",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image30.png",
+      "asset_role": "prompt",
+      "display_order": 2,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q033",
+      "asset_external_id": "unit1.visual_context.image29",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image29.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q034",
+      "asset_external_id": "unit1.visual_context.image31",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image31.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q035",
+      "asset_external_id": "unit1.visual_context.image32",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image32.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q036",
+      "asset_external_id": "unit1.visual_context.image33",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image33.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q037",
+      "asset_external_id": "unit1.visual_context.image33",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image33.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q038",
+      "asset_external_id": "unit1.visual_context.image33",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image33.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q040",
+      "asset_external_id": "unit1.visual_context.image33",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image33.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q041",
+      "asset_external_id": "unit1.visual_context.image34",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image34.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q042",
+      "asset_external_id": "unit1.visual_context.image33",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image33.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q044",
+      "asset_external_id": "unit1.visual_context.image35",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image35.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q045",
+      "asset_external_id": "unit1.visual_context.image35",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image35.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q046",
+      "asset_external_id": "unit1.visual_context.image35",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image35.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q048",
+      "asset_external_id": "unit1.visual_context.image35",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image35.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q049",
+      "asset_external_id": "unit1.visual_context.image35",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image35.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q050",
+      "asset_external_id": "unit1.visual_context.image35",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image35.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q050",
+      "asset_external_id": "unit1.visual_context.image36",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image36.png",
+      "asset_role": "prompt",
+      "display_order": 2,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q051",
+      "asset_external_id": "unit1.visual_context.image35",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image35.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q052",
+      "asset_external_id": "unit1.visual_context.image37",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image37.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q054",
+      "asset_external_id": "unit1.visual_context.image37",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image37.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q055",
+      "asset_external_id": "unit1.visual_context.image37",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image37.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q056",
+      "asset_external_id": "unit1.visual_context.image37",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image37.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "spreadsheet-applications.past_paper.topics_03_04.q057",
+      "asset_external_id": "unit1.visual_context.image38",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "spreadsheet-applications/image38.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_shared_spreadsheet_database_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q001",
+      "asset_external_id": "unit1.visual_context.image39",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image39.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q002",
+      "asset_external_id": "unit1.visual_context.image39",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image39.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q003",
+      "asset_external_id": "unit1.visual_context.image39",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image39.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q004",
+      "asset_external_id": "unit1.visual_context.image39",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image39.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q005",
+      "asset_external_id": "unit1.visual_context.image39",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image39.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q007",
+      "asset_external_id": "unit1.visual_context.image40",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image40.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q008",
+      "asset_external_id": "unit1.visual_context.image40",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image40.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q009",
+      "asset_external_id": "unit1.visual_context.image40",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image40.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q010",
+      "asset_external_id": "unit1.visual_context.image41",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image41.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "computer-hardware.past_paper.topics_05_06.q011",
+      "asset_external_id": "unit1.visual_context.image41",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "computer-hardware/image41.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "network-technologies.past_paper.topics_05_06.q010",
+      "asset_external_id": "unit1.visual_context.image42",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "network-technologies/image42.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "network-technologies.past_paper.topics_05_06.q011",
+      "asset_external_id": "unit1.visual_context.image42",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "network-technologies/image42.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "network-technologies.past_paper.topics_05_06.q012",
+      "asset_external_id": "unit1.visual_context.image42",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "network-technologies/image42.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "network-technologies.past_paper.topics_05_06.q014",
+      "asset_external_id": "unit1.visual_context.image43",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "network-technologies/image43.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "network-technologies.past_paper.topics_05_06.q015",
+      "asset_external_id": "unit1.visual_context.image43",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "network-technologies/image43.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "network-technologies.past_paper.topics_05_06.q016",
+      "asset_external_id": "unit1.visual_context.image43",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "network-technologies/image43.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "network-technologies.past_paper.topics_05_06.q020",
+      "asset_external_id": "unit1.visual_context.image44",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "network-technologies/image44.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "network-technologies.past_paper.topics_05_06.q021",
+      "asset_external_id": "unit1.visual_context.image44",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "network-technologies/image44.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    },
+    {
+      "question_external_id": "network-technologies.past_paper.topics_05_06.q040",
+      "asset_external_id": "unit1.visual_context.image45",
+      "asset_bucket": "question-imports",
+      "asset_storage_path": "network-technologies/image45.png",
+      "asset_role": "prompt",
+      "display_order": 1,
+      "block_key": null,
+      "link_reason": "strict_exact_or_shared_context"
+    }
+  ],
+  "quarantined": []
+}

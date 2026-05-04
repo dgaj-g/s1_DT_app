@@ -2336,3 +2336,54 @@ Verification result:
 - `25` unique storage files packaged
 - `0` missing source files
 - storage bucket represented: `question-imports`
+
+## Latest Visual-Context Repair (2026-05-04, Later Session)
+
+The user found a critical live-content failure in spreadsheet expert sessions:
+
+- A `Students Average Mark` chart-axis question appeared with no spreadsheet/table visual.
+- A VLOOKUP formula question appeared with no spreadsheet/table visual.
+- A sound-recording fill-gap question incorrectly displayed a JPG metadata image from a different subquestion.
+
+Root cause:
+
+- The original Unit 1 import carried only `29` explicit question-asset links.
+- The first visual repair migration (`20260504152000_repair_stage5_visual_context_links.sql`) linked many missing images, but its fallback rule was too broad: it could attach the first image from the same past-paper root even when sibling subquestions did not share context.
+- Active in-progress sessions store `session_questions.question_snapshot_json`, so sessions started before a repair can keep stale no-image payloads unless snapshots are refreshed.
+
+Corrective work completed:
+
+- Added `/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/scripts/strict_stage5_visual_context_links.py`.
+- Added `/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260504163500_strict_visual_context_links.sql`.
+- Added `/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/supabase/migrations/20260504165000_assert_strict_visual_context_links.sql`.
+- Added reports:
+  - `/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/stage-5-strict-visual-context-repair-2026-05-04.md`
+  - `/Users/damiengartland/Desktop/Codex Work/s1-network-revision-app/docs/stage-5-strict-visual-context-repair-2026-05-04.json`
+
+Strict repair behaviour:
+
+- Removes all `question_asset_links` marked with unsafe `stage5_visual_context_repair` metadata.
+- Rebuilds `122` strict visual-context links across the full Unit 1 bank.
+- Keeps exact visual matches across all topics.
+- Allows shared same-root visuals only for spreadsheet/database questions where the prompt depends on table/chart/query/cell/range/field/relationship context.
+- Does **not** infer shared visuals for digital-data sibling subquestions, preventing irrelevant image leakage.
+- Refreshes incomplete `session_questions.question_snapshot_json` so in-progress sessions receive corrected asset payloads.
+
+Remote Supabase status:
+
+- `supabase db push --yes` successfully applied `20260504163500_strict_visual_context_links.sql`.
+- `supabase db push --yes` successfully applied `20260504165000_assert_strict_visual_context_links.sql`.
+- The assertion migration verified on the remote database that:
+  - zero unsafe broad visual-context repair links remain;
+  - at least 100 strict visual-context links exist;
+  - `spreadsheet-applications.past_paper.topics_03_04.q026` links to `spreadsheet-applications/image26.png`;
+  - `spreadsheet-applications.past_paper.topics_03_04.q034` links to `spreadsheet-applications/image31.png`;
+  - `digital-data.past_paper.topics_01_02.q021` does **not** link to `digital-data/image4.png`.
+
+Build status:
+
+- `npm run build` passed after this repair.
+
+Important caution:
+
+- The three examples above are regression checks, not the whole fix. The repair is bank-wide, but the deeper product rule remains: every adaptive question must be meaningful as a standalone item. For future imports, the app/content pipeline should enforce a formal `requires_visual_context` or `context_group` validation gate before questions can enter student sessions.
