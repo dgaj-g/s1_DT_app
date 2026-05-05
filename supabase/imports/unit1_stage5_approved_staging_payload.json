@@ -49522,9 +49522,9 @@
       "row_number": 547,
       "topic_slug": "software",
       "topic_title": "Software",
-      "difficulty": "easy",
+      "difficulty": "medium",
       "format": "mcq",
-      "adaptive_tier": "support",
+      "adaptive_tier": "core",
       "question_family_code": "software.describes-library-programs.choose",
       "selection_weight": 1.0,
       "stem": "Which of the following best describes library programs?",
@@ -49597,7 +49597,8 @@
           "teacher_comment": "Owner approved full reviewed bank for technical import preparation on 2026-05-04.",
           "review_csv_row": "780",
           "applied_at_utc": "2026-05-04T12:12:55+00:00"
-        }
+        },
+        "difficulty_review_note": "Moved from easy to medium on 2026-05-05: source-backed by Software fact file, but not suitable for Easy recognition tier."
       }
     },
     {

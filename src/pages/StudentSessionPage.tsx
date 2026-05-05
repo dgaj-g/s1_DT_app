@@ -13,6 +13,7 @@ import {
   startSessionV2
 } from "../lib/api";
 import { localDateISO } from "../lib/date";
+import { cleanQuestionStemForDisplay } from "../lib/questionDisplay";
 import { getErrorMessage } from "../lib/request";
 import { computeStreak, evaluateAnswer, getMatchCorrections } from "../lib/scoring";
 import type {
@@ -103,7 +104,7 @@ function toRuntimeQuestionFromLegacy(question: Question, position: number): Runt
     case "true_false":
       responseSchema = {
         kind: "true_false",
-        statement: question.stem,
+        statement: cleanQuestionStemForDisplay(question.stem),
         true_label: "True",
         false_label: "False"
       };
@@ -121,7 +122,7 @@ function toRuntimeQuestionFromLegacy(question: Question, position: number): Runt
     format: question.format === "structured_response" ? "short_text" : (question.format as RuntimeSessionQuestion["format"]),
     max_marks: 1,
     family_code: null,
-    stem: question.stem,
+    stem: cleanQuestionStemForDisplay(question.stem),
     prompt_blocks: [],
     assets: [],
     response_schema: responseSchema,
@@ -538,7 +539,7 @@ export function StudentSessionPage() {
           <h2>{difficulty?.toUpperCase()} Session</h2>
           <span className="progress-pill">{progressLabel}</span>
         </div>
-        <p className="question-stem">{activeQuestion.stem}</p>
+        <p className="question-stem">{cleanQuestionStemForDisplay(activeQuestion.stem)}</p>
 
         <QuestionRenderer
           question={activeQuestion}

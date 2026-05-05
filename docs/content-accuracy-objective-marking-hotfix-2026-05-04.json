@@ -1,0 +1,24 @@
+{
+  "changed_count": 18,
+  "changed_question_external_ids": [
+    "changes-in-employment-opportunities-skills-requirements-and-work-practices.past_paper.topics_10_11_12.q001",
+    "changes-in-employment-opportunities-skills-requirements-and-work-practices.past_paper.topics_10_11_12.q002",
+    "digital-applications.past_paper.topics_10_11_12.q001",
+    "digital-applications.past_paper.topics_10_11_12.q002",
+    "digital-applications.past_paper.topics_10_11_12.q003",
+    "digital-applications.past_paper.topics_10_11_12.q005",
+    "digital-applications.past_paper.topics_10_11_12.q006",
+    "digital-applications.past_paper.topics_10_11_12.q008",
+    "digital-applications.past_paper.topics_10_11_12.q009",
+    "digital-applications.past_paper.topics_10_11_12.q010",
+    "digital-applications.past_paper.topics_10_11_12.q013",
+    "digital-data.practice_bank.topic_01_digital_data.q009",
+    "digital-data.practice_bank.topic_01_digital_data.q046",
+    "digital-data.practice_bank.topic_01_digital_data.q059",
+    "digital-data.practice_bank.topic_01_digital_data.q114",
+    "spreadsheet-applications.practice_bank.topic_04_spreadsheet.q041",
+    "computer-hardware.practice_bank.topic_05_06_hardware_networks.q032",
+    "network-technologies.practice_bank.topic_05_06_hardware_networks.q030"
+  ],
+  "migration": "supabase/migrations/20260504180500_objective_marking_reliability_hotfix.sql"
+}

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { getSession, getSessionQuestions } from "../lib/api";
+import { cleanQuestionStemForDisplay } from "../lib/questionDisplay";
 import { getErrorMessage } from "../lib/request";
 import { getAdaptiveRecommendation } from "../lib/scoring";
 import type { Difficulty, SessionRecord } from "../lib/types";
@@ -130,7 +131,7 @@ export function StudentSummaryPage() {
             const question = row.questions as Record<string, unknown> | null;
             return (
               <li key={String(row.id || index)}>
-                <strong>Q{index + 1}.</strong> {String(question?.stem || "Question")}
+                <strong>Q{index + 1}.</strong> {cleanQuestionStemForDisplay(question?.stem || "Question")}
                 <span className={row.is_correct ? "good" : "bad"}>{row.is_correct ? "Correct" : "Review"}</span>
               </li>
             );

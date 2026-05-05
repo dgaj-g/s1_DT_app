@@ -1,4 +1,5 @@
 import { NetworkDiagram } from "./NetworkDiagram";
+import { cleanQuestionStemForDisplay, isPublicHelperText } from "../lib/questionDisplay";
 import { supabase } from "../lib/supabase";
 import type {
   Question,
@@ -77,7 +78,7 @@ function renderRuntimePrompt(question: RuntimeSessionQuestion) {
   const promptBlocks = question.prompt_blocks || [];
   const assets = (question.assets || []).filter((asset) => (asset.role || "prompt") === "prompt");
   const usedAssetKeys = new Set<string>();
-  const stemText = normalizeBlockText(question.stem);
+  const stemText = normalizeBlockText(cleanQuestionStemForDisplay(question.stem));
 
   const blocks = promptBlocks.flatMap((block, index) => {
     const kind = normalizeBlockText(block.kind).toLowerCase();
@@ -98,7 +99,7 @@ function renderRuntimePrompt(question: RuntimeSessionQuestion) {
 
     if (kind === "text") {
       const text = normalizeBlockText(block.text || block.body);
-      if (!text || repeatsStemContext(text, stemText)) {
+      if (!text || isPublicHelperText(text) || repeatsStemContext(text, stemText)) {
         return [];
       }
       return [<p className="question-helper" key={`text-${index}`}>{text}</p>];
