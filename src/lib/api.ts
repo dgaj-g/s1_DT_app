@@ -533,6 +533,403 @@ export async function getAdminSummary(args: { academicYearId: string }) {
   };
 }
 
+export interface AdminActivitySession {
+  id: string;
+  username: string;
+  topicTitle: string;
+  topicSlug: string;
+  difficulty: Difficulty;
+  status: "completed" | "in_progress";
+  score: number | null;
+  accuracyPct: number | null;
+  pointsEarned: number | null;
+  streakAfter: number | null;
+  startedAt: string;
+  completedAt: string | null;
+}
+
+export interface AdminStudentActivity {
+  studentId: string;
+  username: string;
+  isActive: boolean;
+  sessionStarts: number;
+  completedSessions: number;
+  unfinishedSessions: number;
+  averageAccuracy: number | null;
+  bestTopic: string | null;
+  needsWorkTopic: string | null;
+  lastActivityAt: string | null;
+  lastCompletedAt: string | null;
+  latestStreak: number | null;
+  status: "no_activity" | "needs_support" | "building" | "steady" | "strong";
+}
+
+export interface AdminTopicActivity {
+  topicId: string;
+  topicTitle: string;
+  topicSlug: string;
+  sessionStarts: number;
+  completedSessions: number;
+  activeStudents: number;
+  averageAccuracy: number | null;
+  lastRevisedAt: string | null;
+  status: "no_activity" | "needs_attention" | "watch" | "steady" | "strong";
+}
+
+export interface AdminDifficultyActivity {
+  difficulty: Difficulty;
+  sessionStarts: number;
+  completedSessions: number;
+  averageAccuracy: number | null;
+}
+
+export interface AdminActivityAnalytics {
+  generatedAt: string;
+  totalStudents: number;
+  activeStudentAccounts: number;
+  studentsWithActivity: number;
+  studentsWithoutActivity: number;
+  sessionStarts: number;
+  completedSessions: number;
+  unfinishedSessions: number;
+  questionsAnswered: number;
+  averageAccuracy: number | null;
+  lastActivityAt: string | null;
+  recentSessions: AdminActivitySession[];
+  students: AdminStudentActivity[];
+  topics: AdminTopicActivity[];
+  difficulties: AdminDifficultyActivity[];
+  attention: {
+    noActivity: AdminStudentActivity[];
+    needsSupport: AdminStudentActivity[];
+    inactiveSevenDays: AdminStudentActivity[];
+  };
+}
+
+type RelatedRecord = Record<string, unknown> | Record<string, unknown>[] | null | undefined;
+
+function getRelatedObject(value: RelatedRecord): Record<string, unknown> {
+  if (Array.isArray(value)) {
+    return (value[0] || {}) as Record<string, unknown>;
+  }
+  if (value && typeof value === "object") {
+    return value as Record<string, unknown>;
+  }
+  return {};
+}
+
+function average(values: number[]): number | null {
+  if (!values.length) {
+    return null;
+  }
+  return Math.round((values.reduce((total, value) => total + value, 0) / values.length) * 10) / 10;
+}
+
+function newestIso(values: Array<string | null | undefined>): string | null {
+  let newest = 0;
+  let newestValue: string | null = null;
+
+  for (const value of values) {
+    if (!value) {
+      continue;
+    }
+    const time = new Date(value).getTime();
+    if (Number.isFinite(time) && time > newest) {
+      newest = time;
+      newestValue = value;
+    }
+  }
+
+  return newestValue;
+}
+
+function getStudentStatus(completedSessions: number, averageAccuracy: number | null): AdminStudentActivity["status"] {
+  if (completedSessions === 0) {
+    return "no_activity";
+  }
+  if (averageAccuracy !== null && averageAccuracy < 60) {
+    return "needs_support";
+  }
+  if (averageAccuracy !== null && averageAccuracy < 75) {
+    return "building";
+  }
+  if (completedSessions >= 2 && averageAccuracy !== null && averageAccuracy >= 85) {
+    return "strong";
+  }
+  return "steady";
+}
+
+function getTopicStatus(completedSessions: number, averageAccuracy: number | null): AdminTopicActivity["status"] {
+  if (completedSessions === 0) {
+    return "no_activity";
+  }
+  if (averageAccuracy !== null && averageAccuracy < 60) {
+    return "needs_attention";
+  }
+  if (averageAccuracy !== null && averageAccuracy < 75) {
+    return "watch";
+  }
+  if (averageAccuracy !== null && averageAccuracy >= 85) {
+    return "strong";
+  }
+  return "steady";
+}
+
+export async function getAdminActivityAnalytics(args: { academicYearId: string }): Promise<AdminActivityAnalytics> {
+  const { data: students, error: studentError } = await withTimeout(
+    supabase
+      .from("student_accounts")
+      .select("id, username, is_active")
+      .order("account_number", { ascending: true }),
+    "Loading class activity students"
+  );
+
+  if (studentError) {
+    throw studentError;
+  }
+
+  const sessions: Array<Record<string, unknown>> = [];
+  const pageSize = 1000;
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await withTimeout(
+      supabase
+        .from("sessions")
+        .select(
+          "id, student_id, difficulty, score, accuracy_pct, points_earned, streak_after, started_at, completed_at, topics:topic_id(id, title, slug)"
+        )
+        .eq("academic_year_id", args.academicYearId)
+        .order("started_at", { ascending: false })
+        .order("id", { ascending: true })
+        .range(from, from + pageSize - 1),
+      "Loading class activity sessions"
+    );
+
+    if (error) {
+      throw error;
+    }
+
+    const batch = (data || []) as Array<Record<string, unknown>>;
+    sessions.push(...batch);
+
+    if (batch.length < pageSize) {
+      break;
+    }
+
+    from += pageSize;
+  }
+
+  const { count: questionCount, error: questionCountError } = await withTimeout(
+    supabase
+      .from("session_questions")
+      .select("id, sessions:session_id!inner(academic_year_id)", { count: "exact", head: true })
+      .eq("sessions.academic_year_id", args.academicYearId),
+    "Counting answered questions"
+  );
+
+  const studentById = new Map<string, { id: string; username: string; is_active: boolean }>();
+  for (const row of students || []) {
+    studentById.set(String(row.id), {
+      id: String(row.id),
+      username: String(row.username),
+      is_active: Boolean(row.is_active)
+    });
+  }
+
+  const normalizedSessions: AdminActivitySession[] = sessions.map((row) => {
+    const topic = getRelatedObject(row.topics as RelatedRecord);
+    const student = studentById.get(String(row.student_id));
+    const completedAt = row.completed_at ? String(row.completed_at) : null;
+
+    return {
+      id: String(row.id),
+      username: student?.username || "unknown",
+      topicTitle: String(topic.title || "Unknown topic"),
+      topicSlug: String(topic.slug || ""),
+      difficulty: (row.difficulty || "easy") as Difficulty,
+      status: completedAt ? "completed" : "in_progress",
+      score: row.score === null || row.score === undefined ? null : Number(row.score),
+      accuracyPct: row.accuracy_pct === null || row.accuracy_pct === undefined ? null : Number(row.accuracy_pct),
+      pointsEarned: row.points_earned === null || row.points_earned === undefined ? null : Number(row.points_earned),
+      streakAfter: row.streak_after === null || row.streak_after === undefined ? null : Number(row.streak_after),
+      startedAt: String(row.started_at),
+      completedAt
+    };
+  });
+
+  const completed = normalizedSessions.filter((session) => session.status === "completed");
+  const completedAccuracy = completed
+    .map((session) => session.accuracyPct)
+    .filter((value): value is number => typeof value === "number" && Number.isFinite(value));
+
+  const studentsActivity: AdminStudentActivity[] = Array.from(studentById.values()).map((student) => {
+    const studentSessions = normalizedSessions.filter((session) => session.username === student.username);
+    const studentCompleted = studentSessions.filter((session) => session.status === "completed");
+    const studentAccuracy = studentCompleted
+      .map((session) => session.accuracyPct)
+      .filter((value): value is number => typeof value === "number" && Number.isFinite(value));
+
+    const topicStats = new Map<string, { title: string; accuracies: number[]; completed: number }>();
+    for (const session of studentCompleted) {
+      if (session.accuracyPct === null) {
+        continue;
+      }
+      const key = session.topicSlug || session.topicTitle;
+      const stat = topicStats.get(key) || { title: session.topicTitle, accuracies: [], completed: 0 };
+      stat.accuracies.push(session.accuracyPct);
+      stat.completed += 1;
+      topicStats.set(key, stat);
+    }
+
+    const rankedTopics = Array.from(topicStats.values())
+      .map((item) => ({ ...item, averageAccuracy: average(item.accuracies) ?? 0 }))
+      .filter((item) => item.completed > 0)
+      .sort((a, b) => b.averageAccuracy - a.averageAccuracy);
+
+    const averageAccuracy = average(studentAccuracy);
+    const lastCompleted = newestIso(studentCompleted.map((session) => session.completedAt));
+    const latestCompleted = [...studentCompleted].sort(
+      (a, b) => new Date(b.completedAt || "").getTime() - new Date(a.completedAt || "").getTime()
+    )[0];
+
+    return {
+      studentId: student.id,
+      username: student.username,
+      isActive: student.is_active,
+      sessionStarts: studentSessions.length,
+      completedSessions: studentCompleted.length,
+      unfinishedSessions: studentSessions.length - studentCompleted.length,
+      averageAccuracy,
+      bestTopic: rankedTopics[0]?.title || null,
+      needsWorkTopic: rankedTopics.length > 1 ? rankedTopics[rankedTopics.length - 1]?.title || null : null,
+      lastActivityAt: newestIso(studentSessions.map((session) => session.completedAt || session.startedAt)),
+      lastCompletedAt: lastCompleted,
+      latestStreak: latestCompleted?.streakAfter ?? null,
+      status: getStudentStatus(studentCompleted.length, averageAccuracy)
+    };
+  });
+
+  const topicMap = new Map<string, AdminTopicActivity & { accuracies: number[]; usernames: Set<string> }>();
+  for (const session of normalizedSessions) {
+    const key = session.topicSlug || session.topicTitle;
+    const existing =
+      topicMap.get(key) ||
+      ({
+        topicId: key,
+        topicTitle: session.topicTitle,
+        topicSlug: session.topicSlug,
+        sessionStarts: 0,
+        completedSessions: 0,
+        activeStudents: 0,
+        averageAccuracy: null,
+        lastRevisedAt: null,
+        status: "no_activity",
+        accuracies: [],
+        usernames: new Set<string>()
+      } as AdminTopicActivity & { accuracies: number[]; usernames: Set<string> });
+
+    existing.sessionStarts += 1;
+    existing.usernames.add(session.username);
+    existing.lastRevisedAt = newestIso([existing.lastRevisedAt, session.completedAt || session.startedAt]);
+
+    if (session.status === "completed") {
+      existing.completedSessions += 1;
+      if (session.accuracyPct !== null) {
+        existing.accuracies.push(session.accuracyPct);
+      }
+    }
+
+    topicMap.set(key, existing);
+  }
+
+  const topics = Array.from(topicMap.values())
+    .map((topic) => {
+      const topicAverage = average(topic.accuracies);
+      return {
+        topicId: topic.topicId,
+        topicTitle: topic.topicTitle,
+        topicSlug: topic.topicSlug,
+        sessionStarts: topic.sessionStarts,
+        completedSessions: topic.completedSessions,
+        activeStudents: topic.usernames.size,
+        averageAccuracy: topicAverage,
+        lastRevisedAt: topic.lastRevisedAt,
+        status: getTopicStatus(topic.completedSessions, topicAverage)
+      };
+    })
+    .sort((a, b) => {
+      const statusOrder: Record<AdminTopicActivity["status"], number> = {
+        needs_attention: 0,
+        watch: 1,
+        no_activity: 2,
+        steady: 3,
+        strong: 4
+      };
+      const statusDiff = statusOrder[a.status] - statusOrder[b.status];
+      if (statusDiff !== 0) {
+        return statusDiff;
+      }
+      return a.topicTitle.localeCompare(b.topicTitle);
+    });
+
+  const difficulties: AdminDifficultyActivity[] = (["easy", "medium", "expert"] as Difficulty[]).map((difficulty) => {
+    const difficultySessions = normalizedSessions.filter((session) => session.difficulty === difficulty);
+    const difficultyCompleted = difficultySessions.filter((session) => session.status === "completed");
+    const accuracies = difficultyCompleted
+      .map((session) => session.accuracyPct)
+      .filter((value): value is number => typeof value === "number" && Number.isFinite(value));
+
+    return {
+      difficulty,
+      sessionStarts: difficultySessions.length,
+      completedSessions: difficultyCompleted.length,
+      averageAccuracy: average(accuracies)
+    };
+  });
+
+  const sevenDaysAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
+  const studentsWithActivity = studentsActivity.filter((student) => student.sessionStarts > 0);
+
+  return {
+    generatedAt: new Date().toISOString(),
+    totalStudents: studentById.size,
+    activeStudentAccounts: Array.from(studentById.values()).filter((student) => student.is_active).length,
+    studentsWithActivity: studentsWithActivity.length,
+    studentsWithoutActivity: studentsActivity.filter((student) => student.sessionStarts === 0).length,
+    sessionStarts: normalizedSessions.length,
+    completedSessions: completed.length,
+    unfinishedSessions: normalizedSessions.length - completed.length,
+    questionsAnswered: questionCountError ? completed.length * 10 : questionCount ?? completed.length * 10,
+    averageAccuracy: average(completedAccuracy),
+    lastActivityAt: newestIso(normalizedSessions.map((session) => session.completedAt || session.startedAt)),
+    recentSessions: normalizedSessions.slice(0, 20),
+    students: studentsActivity.sort((a, b) => {
+      const aTime = a.lastActivityAt ? new Date(a.lastActivityAt).getTime() : 0;
+      const bTime = b.lastActivityAt ? new Date(b.lastActivityAt).getTime() : 0;
+      return bTime - aTime || a.username.localeCompare(b.username);
+    }),
+    topics,
+    difficulties,
+    attention: {
+      noActivity: studentsActivity.filter((student) => student.sessionStarts === 0).slice(0, 20),
+      needsSupport: studentsActivity
+        .filter((student) => student.status === "needs_support")
+        .sort((a, b) => (a.averageAccuracy ?? 0) - (b.averageAccuracy ?? 0))
+        .slice(0, 20),
+      inactiveSevenDays: studentsActivity
+        .filter((student) => {
+          if (!student.lastActivityAt) {
+            return false;
+          }
+          return new Date(student.lastActivityAt).getTime() < sevenDaysAgo;
+        })
+        .sort((a, b) => new Date(a.lastActivityAt || 0).getTime() - new Date(b.lastActivityAt || 0).getTime())
+        .slice(0, 20)
+    }
+  };
+}
+
 export async function getAdminAccounts() {
   const { data, error } = await withTimeout(
     supabase

@@ -335,6 +335,151 @@ input[type="checkbox"] {
   gap: 0.8rem;
 }
 
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.section-head p,
+.muted-text {
+  color: var(--muted);
+}
+
+.activity-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.75rem;
+}
+
+.activity-card,
+.activity-panel {
+  border: 1px solid #d6e0ea;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 0.85rem;
+  box-shadow: 0 8px 18px rgba(16, 42, 67, 0.08);
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.activity-card strong {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.activity-card small,
+.activity-panel small {
+  color: var(--muted);
+}
+
+.activity-panels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.activity-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.activity-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid #e1eaf3;
+  border-radius: 10px;
+  padding: 0.5rem 0.6rem;
+  background: #f8fbff;
+}
+
+.activity-list span {
+  color: var(--muted);
+  text-align: right;
+}
+
+.difficulty-mix {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.difficulty-mix-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.mini-bar {
+  width: 100%;
+  height: 0.55rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #e7eef6;
+  margin: 0.25rem 0;
+}
+
+.mini-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #d64045 0%, #f4a259 48%, #2f9e44 100%);
+}
+
+.activity-table td {
+  vertical-align: middle;
+}
+
+.accuracy-cell {
+  min-width: 130px;
+}
+
+.review-pill.status-needs_attention,
+.review-pill.status-needs_support {
+  border-color: #e7b0b3;
+  background: #fff1f2;
+  color: #9f2228;
+}
+
+.review-pill.status-watch,
+.review-pill.status-building {
+  border-color: #f0c58b;
+  background: #fff4e7;
+  color: #9f5f1d;
+}
+
+.review-pill.status-steady {
+  border-color: #b8ccd9;
+  background: #f3f7fb;
+  color: #334e68;
+}
+
+.review-pill.status-strong {
+  border-color: #9ad4bb;
+  background: #e8f7ef;
+  color: #1b6e4a;
+}
+
+.review-pill.status-no_activity {
+  border-color: #c5d2e2;
+  background: #f4f8fc;
+  color: #5f6f7c;
+}
+
 .insight-card {
   display: flex;
   flex-direction: column;
@@ -802,6 +947,14 @@ input[type="checkbox"] {
 
   .inline-actions {
     flex-wrap: wrap;
+  }
+
+  .section-head {
+    flex-direction: column;
+  }
+
+  .activity-panels-grid {
+    grid-template-columns: 1fr;
   }
 
   .teacher-review-toolbar {

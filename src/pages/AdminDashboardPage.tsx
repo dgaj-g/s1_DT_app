@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   callEdgeFunction,
+  getAdminActivityAnalytics,
   getAdminAccounts,
   getAdminSummary,
   getAllAcademicYears,
@@ -13,6 +14,7 @@ import {
   toggleQuestionActive,
   toggleTopicEnabled
 } from "../lib/api";
+import type { AdminActivityAnalytics } from "../lib/api";
 import { useAuth } from "../hooks/useAuth";
 import { getErrorMessage } from "../lib/request";
 import type { AcademicYear, Difficulty, QuestionFormat, Topic } from "../lib/types";
@@ -269,6 +271,36 @@ function buildEditDraft(question: AdminQuestion): QuestionEditDraft {
   };
 }
 
+function formatDateTime(value: string | null): string {
+  if (!value) {
+    return "Not yet";
+  }
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return "Not yet";
+  }
+
+  return new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit"
+  }).format(date);
+}
+
+function formatPercent(value: number | null): string {
+  return value === null ? "No completed sessions" : `${Math.round(value)}%`;
+}
+
+function formatStatus(value: string): string {
+  return formatToken(value.replace("no_activity", "not started").replace("needs_support", "needs support"));
+}
+
+function accuracyBarWidth(value: number | null): string {
+  return `${Math.max(0, Math.min(100, value ?? 0))}%`;
+}
+
 export function AdminDashboardPage() {
   const { profile } = useAuth();
   const [years, setYears] = useState<AcademicYear[]>([]);
@@ -278,6 +310,7 @@ export function AdminDashboardPage() {
   const [networkTopicId, setNetworkTopicId] = useState<string>("");
   const [questions, setQuestions] = useState<AdminQuestion[]>([]);
   const [admins, setAdmins] = useState<Array<Record<string, unknown>>>([]);
+  const [activity, setActivity] = useState<AdminActivityAnalytics | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
@@ -322,14 +355,16 @@ export function AdminDashboardPage() {
 
         if (active) {
           setActiveYearId(active.id);
-          const [summaryData, questionRows] = await Promise.all([
+          const [summaryData, questionRows, activityData] = await Promise.all([
             getAdminSummary({ academicYearId: active.id }),
-            getQuestionsForAdmin(selectedTopicId || undefined)
+            getQuestionsForAdmin(selectedTopicId || undefined),
+            getAdminActivityAnalytics({ academicYearId: active.id })
           ]);
 
           if (!cancelled) {
             setSummary(summaryData);
             setQuestions((questionRows || []) as AdminQuestion[]);
+            setActivity(activityData);
           }
         }
       } catch (caught) {
@@ -351,10 +386,11 @@ export function AdminDashboardPage() {
   }, [reloadKey]);
 
   async function refreshSummary(yearId: string) {
-    const [summaryData, topicRows, adminRows] = await Promise.all([
+    const [summaryData, topicRows, adminRows, activityData] = await Promise.all([
       getAdminSummary({ academicYearId: yearId }),
       getTopics(),
-      getAdminAccounts()
+      getAdminAccounts(),
+      getAdminActivityAnalytics({ academicYearId: yearId })
     ]);
 
     const networkTopic = topicRows.find((topic) => topic.slug === "network-technologies");
@@ -365,6 +401,7 @@ export function AdminDashboardPage() {
     setTopics(topicRows);
     setQuestions((questionRows || []) as AdminQuestion[]);
     setAdmins(adminRows);
+    setActivity(activityData);
     setNetworkTopicId(selectedTopicId);
   }
 
@@ -681,6 +718,206 @@ export function AdminDashboardPage() {
           <h3>Questions In Student Sessions</h3>
           <p className="metric">{summary?.activeQuestions ?? 0}</p>
         </article>
+      </section>
+
+      <section className="panel stack gap-md">
+        <div className="section-head">
+          <div>
+            <h3>Class Activity Dashboard</h3>
+            <p>
+              Live progress for the selected academic year. This shows revision sessions that students have started or
+              completed; it does not use student names.
+            </p>
+          </div>
+          <button
+            className="ghost-btn"
+            disabled={busy === "activity-refresh" || !activeYearId}
+            onClick={async () => {
+              if (!activeYearId) {
+                return;
+              }
+              setBusy("activity-refresh");
+              setError(null);
+              try {
+                await refreshSummary(activeYearId);
+              } catch (caught) {
+                setError(getErrorMessage(caught, "Could not refresh activity dashboard."));
+              } finally {
+                setBusy(null);
+              }
+            }}
+          >
+            {busy === "activity-refresh" ? "Refreshing..." : "Refresh Activity"}
+          </button>
+        </div>
+
+        {activity ? (
+          <>
+            <div className="activity-summary-grid">
+              <article className="activity-card">
+                <span className="eyebrow">Students Active</span>
+                <strong>{activity.studentsWithActivity} / {activity.activeStudentAccounts}</strong>
+                <small>{activity.studentsWithoutActivity} have not started a session yet.</small>
+              </article>
+              <article className="activity-card">
+                <span className="eyebrow">Completed Sessions</span>
+                <strong>{activity.completedSessions}</strong>
+                <small>{activity.unfinishedSessions} started but not completed.</small>
+              </article>
+              <article className="activity-card">
+                <span className="eyebrow">Questions Answered</span>
+                <strong>{activity.questionsAnswered}</strong>
+                <small>Across all completed and saved session question attempts.</small>
+              </article>
+              <article className="activity-card">
+                <span className="eyebrow">Class Accuracy</span>
+                <strong>{formatPercent(activity.averageAccuracy)}</strong>
+                <small>Last activity: {formatDateTime(activity.lastActivityAt)}</small>
+              </article>
+            </div>
+
+            <div className="activity-panels-grid">
+              <article className="activity-panel">
+                <h4>Needs Attention</h4>
+                {activity.attention.needsSupport.length === 0 && activity.attention.noActivity.length === 0 ? (
+                  <p className="muted-text">No immediate support flags from completed sessions.</p>
+                ) : null}
+                <ul className="activity-list">
+                  {activity.attention.needsSupport.slice(0, 6).map((student) => (
+                    <li key={`support-${student.studentId}`}>
+                      <strong>{student.username}</strong>
+                      <span>{formatPercent(student.averageAccuracy)} average</span>
+                    </li>
+                  ))}
+                  {activity.attention.noActivity.slice(0, 6).map((student) => (
+                    <li key={`no-activity-${student.studentId}`}>
+                      <strong>{student.username}</strong>
+                      <span>No session started</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+
+              <article className="activity-panel">
+                <h4>Difficulty Mix</h4>
+                <div className="difficulty-mix">
+                  {activity.difficulties.map((item) => (
+                    <div key={item.difficulty}>
+                      <div className="difficulty-mix-row">
+                        <span>{formatToken(item.difficulty)}</span>
+                        <strong>{item.completedSessions} done</strong>
+                      </div>
+                      <div className="mini-bar">
+                        <span style={{ width: accuracyBarWidth(item.averageAccuracy) }} />
+                      </div>
+                      <small>{formatPercent(item.averageAccuracy)} average accuracy</small>
+                    </div>
+                  ))}
+                </div>
+              </article>
+
+              <article className="activity-panel">
+                <h4>Recent Activity</h4>
+                <ul className="activity-list">
+                  {activity.recentSessions.slice(0, 8).map((session) => (
+                    <li key={session.id}>
+                      <strong>{session.username}</strong>
+                      <span>
+                        {session.topicTitle} · {formatToken(session.difficulty)} ·{" "}
+                        {session.status === "completed" ? formatPercent(session.accuracyPct) : "In progress"}
+                      </span>
+                    </li>
+                  ))}
+                  {activity.recentSessions.length === 0 ? (
+                    <li>
+                      <strong>No activity yet</strong>
+                      <span>Student sessions will appear here as soon as they start.</span>
+                    </li>
+                  ) : null}
+                </ul>
+              </article>
+            </div>
+
+            <div className="responsive-table">
+              <h4>Topic Performance</h4>
+              <table className="table compact-table activity-table">
+                <thead>
+                  <tr>
+                    <th>Topic</th>
+                    <th>Students</th>
+                    <th>Completed</th>
+                    <th>Average</th>
+                    <th>Last Revised</th>
+                    <th>Signal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {activity.topics.slice(0, 12).map((topic) => (
+                    <tr key={topic.topicSlug || topic.topicTitle}>
+                      <td>{topic.topicTitle}</td>
+                      <td>{topic.activeStudents}</td>
+                      <td>{topic.completedSessions}</td>
+                      <td>
+                        <div className="accuracy-cell">
+                          <span>{formatPercent(topic.averageAccuracy)}</span>
+                          <div className="mini-bar">
+                            <span style={{ width: accuracyBarWidth(topic.averageAccuracy) }} />
+                          </div>
+                        </div>
+                      </td>
+                      <td>{formatDateTime(topic.lastRevisedAt)}</td>
+                      <td>
+                        <span className={`review-pill status-${topic.status}`}>{formatStatus(topic.status)}</span>
+                      </td>
+                    </tr>
+                  ))}
+                  {activity.topics.length === 0 ? (
+                    <tr>
+                      <td colSpan={6}>No topic activity yet.</td>
+                    </tr>
+                  ) : null}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="responsive-table">
+              <h4>Student Progress</h4>
+              <table className="table compact-table activity-table">
+                <thead>
+                  <tr>
+                    <th>Student</th>
+                    <th>Completed</th>
+                    <th>Average</th>
+                    <th>Best Topic</th>
+                    <th>Needs Work</th>
+                    <th>Last Activity</th>
+                    <th>Signal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {activity.students.map((student) => (
+                    <tr key={student.studentId}>
+                      <td>{student.username}</td>
+                      <td>
+                        {student.completedSessions}
+                        {student.unfinishedSessions > 0 ? ` (${student.unfinishedSessions} unfinished)` : ""}
+                      </td>
+                      <td>{formatPercent(student.averageAccuracy)}</td>
+                      <td>{student.bestTopic || "Not enough data"}</td>
+                      <td>{student.needsWorkTopic || "Not enough data"}</td>
+                      <td>{formatDateTime(student.lastActivityAt)}</td>
+                      <td>
+                        <span className={`review-pill status-${student.status}`}>{formatStatus(student.status)}</span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
+        ) : (
+          <div className="error-box">Activity data has not loaded yet.</div>
+        )}
       </section>
 
       <section className="panel stack gap-sm">
