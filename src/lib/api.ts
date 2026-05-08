@@ -606,12 +606,13 @@ export interface AdminActivityAnalytics {
   };
 }
 
-export interface AdminStudentLoginDay {
+export interface AdminStudentAccessDay {
   localDate: string;
   usernames: string[];
   studentCount: number;
   loginEvents: number;
-  latestLoginAt: string | null;
+  sessionStarts: number;
+  latestActivityAt: string | null;
 }
 
 type RelatedRecord = Record<string, unknown> | Record<string, unknown>[] | null | undefined;
@@ -951,16 +952,18 @@ export async function recordStudentLogin(timezone = "Europe/London") {
   }
 }
 
-export async function getStudentLoginsPastWeek(args?: {
+export async function getStudentAccessPastWeek(args?: {
+  academicYearId?: string;
   days?: number;
   timezone?: string;
-}): Promise<AdminStudentLoginDay[]> {
+}): Promise<AdminStudentAccessDay[]> {
   const { data, error } = await withTimeout(
-    supabase.rpc("get_student_logins_past_week", {
+    supabase.rpc("get_student_access_past_week", {
+      p_academic_year_id: args?.academicYearId ?? null,
       p_days: args?.days ?? 7,
       p_timezone: args?.timezone ?? "Europe/London"
     }),
-    "Loading student login summary"
+    "Loading student access summary"
   );
 
   if (error) {
@@ -972,7 +975,8 @@ export async function getStudentLoginsPastWeek(args?: {
     usernames: Array.isArray(row.usernames) ? row.usernames.map(String) : [],
     studentCount: Number(row.student_count || 0),
     loginEvents: Number(row.login_events || 0),
-    latestLoginAt: row.latest_login_at ? String(row.latest_login_at) : null
+    sessionStarts: Number(row.session_starts || 0),
+    latestActivityAt: row.latest_activity_at ? String(row.latest_activity_at) : null
   }));
 }
 

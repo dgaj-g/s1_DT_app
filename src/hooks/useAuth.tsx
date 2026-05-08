@@ -58,6 +58,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [profileLoading, setProfileLoading] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
   const profileRequestRef = useRef(0);
+  const recordedStudentAccessRef = useRef<Set<string>>(new Set());
 
   const refreshProfile = useCallback(async () => {
     if (!user) {
@@ -167,6 +168,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     void refreshProfile();
   }, [booting, refreshProfile, user]);
 
+
+  useEffect(() => {
+    if (booting || !user) {
+      return;
+    }
+
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Europe/London";
+    const accessKey = `${user.id}:${new Date().toISOString().slice(0, 10)}`;
+
+    if (recordedStudentAccessRef.current.has(accessKey)) {
+      return;
+    }
+
+    recordedStudentAccessRef.current.add(accessKey);
+    void recordStudentLogin(timezone).catch((caught) => {
+      console.warn("Student login was not recorded.", caught);
+    });
+  }, [booting, user]);
+
   const loginWithIdentifier = useCallback(async (identifier: string, password: string) => {
     const email = toEmailIdentifier(identifier);
     setAuthError(null);
@@ -183,12 +203,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       throw error;
     }
 
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Europe/London";
-    try {
-      await recordStudentLogin(timezone);
-    } catch (caught) {
-      console.warn("Student login was not recorded.", caught);
-    }
   }, []);
 
   const logout = useCallback(async () => {
