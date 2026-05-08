@@ -384,6 +384,45 @@ input[type="checkbox"] {
   gap: 0.75rem;
 }
 
+.login-week-panel {
+  background:
+    linear-gradient(135deg, rgba(237, 247, 244, 0.96), rgba(255, 255, 255, 0.98)),
+    #ffffff;
+}
+
+.login-week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.login-day-card {
+  display: grid;
+  gap: 0.55rem;
+  border: 1px solid #cfe6de;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0.7rem;
+}
+
+.login-day-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.login-day-head span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.login-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
 .activity-panel {
   display: flex;
   flex-direction: column;

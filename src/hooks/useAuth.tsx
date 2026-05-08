@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { Session, User } from "@supabase/supabase-js";
+import { recordStudentLogin } from "../lib/api";
 import { supabase } from "../lib/supabase";
 import { getErrorMessage, withTimeout } from "../lib/request";
 import type { Profile, Role } from "../lib/types";
@@ -180,6 +181,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     if (error) {
       throw error;
+    }
+
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Europe/London";
+    try {
+      await recordStudentLogin(timezone);
+    } catch (caught) {
+      console.warn("Student login was not recorded.", caught);
     }
   }, []);
 

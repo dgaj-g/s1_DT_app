@@ -6,6 +6,7 @@ import {
   getAdminSummary,
   getAllAcademicYears,
   getQuestionsForAdmin,
+  getStudentLoginsPastWeek,
   getTopics,
   setQuestionQaStatus,
   setActiveAcademicYear,
@@ -14,7 +15,7 @@ import {
   toggleQuestionActive,
   toggleTopicEnabled
 } from "../lib/api";
-import type { AdminActivityAnalytics } from "../lib/api";
+import type { AdminActivityAnalytics, AdminStudentLoginDay } from "../lib/api";
 import { useAuth } from "../hooks/useAuth";
 import { getErrorMessage } from "../lib/request";
 import type { AcademicYear, Difficulty, QuestionFormat, Topic } from "../lib/types";
@@ -289,6 +290,19 @@ function formatDateTime(value: string | null): string {
   }).format(date);
 }
 
+function formatDateOnly(value: string): string {
+  const date = new Date(`${value}T12:00:00`);
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return new Intl.DateTimeFormat("en-GB", {
+    weekday: "short",
+    day: "2-digit",
+    month: "short"
+  }).format(date);
+}
+
 function formatPercent(value: number | null): string {
   return value === null ? "No completed sessions" : `${Math.round(value)}%`;
 }
@@ -311,6 +325,7 @@ export function AdminDashboardPage() {
   const [questions, setQuestions] = useState<AdminQuestion[]>([]);
   const [admins, setAdmins] = useState<Array<Record<string, unknown>>>([]);
   const [activity, setActivity] = useState<AdminActivityAnalytics | null>(null);
+  const [loginDays, setLoginDays] = useState<AdminStudentLoginDay[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
@@ -355,16 +370,18 @@ export function AdminDashboardPage() {
 
         if (active) {
           setActiveYearId(active.id);
-          const [summaryData, questionRows, activityData] = await Promise.all([
+          const [summaryData, questionRows, activityData, loginData] = await Promise.all([
             getAdminSummary({ academicYearId: active.id }),
             getQuestionsForAdmin(selectedTopicId || undefined),
-            getAdminActivityAnalytics({ academicYearId: active.id })
+            getAdminActivityAnalytics({ academicYearId: active.id }),
+            getStudentLoginsPastWeek({ days: 7 })
           ]);
 
           if (!cancelled) {
             setSummary(summaryData);
             setQuestions((questionRows || []) as AdminQuestion[]);
             setActivity(activityData);
+            setLoginDays(loginData);
           }
         }
       } catch (caught) {
@@ -386,11 +403,12 @@ export function AdminDashboardPage() {
   }, [reloadKey]);
 
   async function refreshSummary(yearId: string) {
-    const [summaryData, topicRows, adminRows, activityData] = await Promise.all([
+    const [summaryData, topicRows, adminRows, activityData, loginData] = await Promise.all([
       getAdminSummary({ academicYearId: yearId }),
       getTopics(),
       getAdminAccounts(),
-      getAdminActivityAnalytics({ academicYearId: yearId })
+      getAdminActivityAnalytics({ academicYearId: yearId }),
+      getStudentLoginsPastWeek({ days: 7 })
     ]);
 
     const networkTopic = topicRows.find((topic) => topic.slug === "network-technologies");
@@ -402,6 +420,7 @@ export function AdminDashboardPage() {
     setQuestions((questionRows || []) as AdminQuestion[]);
     setAdmins(adminRows);
     setActivity(activityData);
+    setLoginDays(loginData);
     setNetworkTopicId(selectedTopicId);
   }
 
@@ -775,6 +794,45 @@ export function AdminDashboardPage() {
                 <small>Last activity: {formatDateTime(activity.lastActivityAt)}</small>
               </article>
             </div>
+
+            <article className="activity-panel login-week-panel">
+              <div className="section-head">
+                <div>
+                  <h4>Student Logins: Past 7 Days</h4>
+                  <p>
+                    Distinct student usernames that successfully signed in each day. This tracking starts from the
+                    deployment that added login logging.
+                  </p>
+                </div>
+              </div>
+
+              <div className="login-week-grid">
+                {loginDays.map((day) => (
+                  <div className="login-day-card" key={day.localDate}>
+                    <div className="login-day-head">
+                      <strong>{formatDateOnly(day.localDate)}</strong>
+                      <span>{day.studentCount} student{day.studentCount === 1 ? "" : "s"}</span>
+                    </div>
+
+                    {day.usernames.length > 0 ? (
+                      <div className="login-chip-list" aria-label={`Students logged in on ${formatDateOnly(day.localDate)}`}>
+                        {day.usernames.map((username) => (
+                          <span className="review-pill is-live" key={`${day.localDate}-${username}`}>
+                            {username}
+                          </span>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="muted-text">No student logins recorded.</p>
+                    )}
+
+                    {day.loginEvents > day.studentCount ? (
+                      <small>{day.loginEvents} total sign-ins including repeat logins.</small>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </article>
 
             <div className="activity-panels-grid">
               <article className="activity-panel">
