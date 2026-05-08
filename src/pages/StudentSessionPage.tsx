@@ -172,7 +172,7 @@ function buildRuntimeMatchCorrections(
       const selectedChoice = schema.choices.find((entry) => entry.id === selectedChoiceId);
 
       return {
-        left: row?.label || rowId,
+        left: cleanQuestionStemForDisplay(row?.label || rowId),
         selected: selectedChoice?.label || selectedPairs[rowId] || selectedChoiceId,
         expected: expectedChoice?.label || expectedChoiceId
       };
@@ -566,7 +566,7 @@ export function StudentSessionPage() {
                 <ul className="correction-list">
                   {matchCorrections.map((item) => (
                     <li key={item.left}>
-                      <strong>{item.left}</strong>: your match was <em>{item.selected || "not answered"}</em>; correct match is <em>{item.expected}</em>.
+                      <strong>{cleanQuestionStemForDisplay(item.left)}</strong>: your match was <em>{item.selected || "not answered"}</em>; correct match is <em>{item.expected}</em>.
                     </li>
                   ))}
                 </ul>

@@ -106,12 +106,20 @@ function renderRuntimePrompt(question: RuntimeSessionQuestion) {
     }
 
     if (kind === "list_block" && Array.isArray(block.items)) {
+      const visibleItems = block.items
+        .map((item) => cleanQuestionStemForDisplay(item))
+        .filter((item) => item && !isPublicHelperText(item));
+
+      if (visibleItems.length === 0) {
+        return [];
+      }
+
       return [
         <div className="question-prompt-list" key={`list-${index}`}>
           {block.label ? <p>{String(block.label)}</p> : null}
           <ul>
-            {block.items.map((item, itemIndex) => (
-              <li key={`${index}-${itemIndex}`}>{String(item)}</li>
+            {visibleItems.map((item, itemIndex) => (
+              <li key={`${index}-${itemIndex}`}>{item}</li>
             ))}
           </ul>
         </div>
@@ -366,7 +374,7 @@ function renderRuntimeQuestion(
 
             return (
               <tr key={row.id}>
-                <td>{row.label}</td>
+                <td>{cleanQuestionStemForDisplay(row.label)}</td>
                 <td>
                   <select
                     className={stateClass}
@@ -609,7 +617,7 @@ function renderLegacyQuestion(
 
             return (
               <tr key={pair.left}>
-                <td>{pair.left}</td>
+                <td>{cleanQuestionStemForDisplay(pair.left)}</td>
                 <td>
                   <select
                     className={stateClass}
