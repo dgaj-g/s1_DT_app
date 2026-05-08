@@ -315,6 +315,12 @@ function accuracyBarWidth(value: number | null): string {
   return `${Math.max(0, Math.min(100, value ?? 0))}%`;
 }
 
+function getRejectedMessages(results: PromiseSettledResult<unknown>[]): string[] {
+  return results
+    .filter((result): result is PromiseRejectedResult => result.status === "rejected")
+    .map((result) => getErrorMessage(result.reason, "Some admin data could not load."));
+}
+
 export function AdminDashboardPage() {
   const { profile } = useAuth();
   const [years, setYears] = useState<AcademicYear[]>([]);
@@ -370,7 +376,7 @@ export function AdminDashboardPage() {
 
         if (active) {
           setActiveYearId(active.id);
-          const [summaryData, questionRows, activityData, loginData] = await Promise.all([
+          const [summaryResult, questionResult, activityResult, accessResult] = await Promise.allSettled([
             getAdminSummary({ academicYearId: active.id }),
             getQuestionsForAdmin(selectedTopicId || undefined),
             getAdminActivityAnalytics({ academicYearId: active.id }),
@@ -378,10 +384,25 @@ export function AdminDashboardPage() {
           ]);
 
           if (!cancelled) {
-            setSummary(summaryData);
-            setQuestions((questionRows || []) as AdminQuestion[]);
-            setActivity(activityData);
-            setAccessDays(loginData);
+            if (summaryResult.status === "fulfilled") {
+              setSummary(summaryResult.value);
+            }
+            if (questionResult.status === "fulfilled") {
+              setQuestions((questionResult.value || []) as AdminQuestion[]);
+            }
+            if (activityResult.status === "fulfilled") {
+              setActivity(activityResult.value);
+            }
+            if (accessResult.status === "fulfilled") {
+              setAccessDays(accessResult.value);
+            } else {
+              setAccessDays([]);
+            }
+
+            const messages = getRejectedMessages([summaryResult, questionResult, activityResult, accessResult]);
+            if (messages.length > 0) {
+              setError(messages[0]);
+            }
           }
         }
       } catch (caught) {
@@ -404,7 +425,7 @@ export function AdminDashboardPage() {
 
   async function refreshSummary(yearId: string) {
     const selectedYear = years.find((item) => item.id === yearId);
-    const [summaryData, topicRows, adminRows, activityData, loginData] = await Promise.all([
+    const [summaryResult, topicResult, adminResult, activityResult, accessResult] = await Promise.allSettled([
       getAdminSummary({ academicYearId: yearId }),
       getTopics(),
       getAdminAccounts(),
@@ -416,16 +437,32 @@ export function AdminDashboardPage() {
       })
     ]);
 
+    const messages = getRejectedMessages([summaryResult, topicResult, adminResult, activityResult, accessResult]);
+    if (messages.length > 0) {
+      setError(messages[0]);
+    }
+
+    const topicRows = topicResult.status === "fulfilled" ? topicResult.value : topics;
     const networkTopic = topicRows.find((topic) => topic.slug === "network-technologies");
     const selectedTopicId = networkTopic?.id || "";
     const questionRows = await getQuestionsForAdmin(selectedTopicId || undefined);
 
-    setSummary(summaryData);
+    if (summaryResult.status === "fulfilled") {
+      setSummary(summaryResult.value);
+    }
     setTopics(topicRows);
     setQuestions((questionRows || []) as AdminQuestion[]);
-    setAdmins(adminRows);
-    setActivity(activityData);
-    setAccessDays(loginData);
+    if (adminResult.status === "fulfilled") {
+      setAdmins(adminResult.value);
+    }
+    if (activityResult.status === "fulfilled") {
+      setActivity(activityResult.value);
+    }
+    if (accessResult.status === "fulfilled") {
+      setAccessDays(accessResult.value);
+    } else {
+      setAccessDays([]);
+    }
     setNetworkTopicId(selectedTopicId);
   }
 

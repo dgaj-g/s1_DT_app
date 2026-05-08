@@ -32,5 +32,16 @@ export function getErrorMessage(error: unknown, fallback: string): string {
     return error;
   }
 
+  if (error && typeof error === "object") {
+    const record = error as { message?: unknown; details?: unknown; hint?: unknown; code?: unknown };
+    const parts = [record.message, record.details, record.hint, record.code]
+      .filter((part): part is string => typeof part === "string" && part.trim().length > 0)
+      .map((part) => part.trim());
+
+    if (parts.length > 0) {
+      return parts.join(" ");
+    }
+  }
+
   return fallback;
 }
