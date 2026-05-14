@@ -10231,7 +10231,7 @@
         "Storage devices",
         "Processor time"
       ],
-      "explanation": "An accepted answer is Storage devices; Processor time. This question checks whether you can explain how an operating system manages resources, files, interfaces and multitasking. It also checks whether you can classify software as system, utility, application, translator or library software.",
+      "explanation": "An accepted answer is Storage devices; Processor time. This question checks whether you can explain how an operating system manages resources, files, interfaces and multitasking. It also checks whether you can classify software as system, utility and application software.",
       "max_marks": 2,
       "content_blocks_json": [
         {
@@ -49454,7 +49454,7 @@
       "markscheme_points_json": [
         "C"
       ],
-      "explanation": "The correct option is Operating system. This question checks whether you can explain how an operating system manages resources, files, interfaces and multitasking. It also checks whether you can classify software as system, utility, application, translator or library software.",
+      "explanation": "The correct option is Operating system. This question checks whether you can explain how an operating system manages resources, files, interfaces and multitasking. It also checks whether you can classify software as system, utility and application software.",
       "max_marks": 1,
       "content_blocks_json": [
         {
@@ -49516,7 +49516,7 @@
       "stem": "Which type of software allows users to operate the computer and install programs?",
       "options_json": {
         "choices": [
-          "Library software",
+          "Spreadsheet software",
           "Utility software",
           "System software",
           "Application software"
@@ -49528,7 +49528,7 @@
       "markscheme_points_json": [
         "C"
       ],
-      "explanation": "The correct option is System software. This question checks whether you can explain how an operating system manages resources, files, interfaces and multitasking.",
+      "explanation": "The correct option is System software. This question checks whether you can explain how system software allows the computer to operate and supports application software.",
       "max_marks": 1,
       "content_blocks_json": [
         {
@@ -49542,7 +49542,7 @@
         "choices": [
           {
             "id": "a",
-            "label": "Library software"
+            "label": "Spreadsheet software"
           },
           {
             "id": "b",
@@ -49567,7 +49567,7 @@
       ],
       "source_type": "new_original",
       "source_ref": "Sources: Factfile Unit 1 - Software, Factfile Unit 1 - Software 2",
-      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04.",
+      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04. | Scope correction 2026-05-14: replaced library-software distractor with spreadsheet-software distractor.",
       "metadata_json": {
         "question_external_id": "software.practice_bank.topic_02_03_software_database.q002",
         "source_kind": "practice_bank",
@@ -49676,7 +49676,7 @@
       "markscheme_points_json": [
         "C"
       ],
-      "explanation": "The correct option is Spreadsheet programs. This question checks whether you can classify software as system, utility, application, translator or library software.",
+      "explanation": "The correct option is Spreadsheet programs. This question checks whether you can classify software as system, utility and application software.",
       "max_marks": 1,
       "content_blocks_json": [
         {
@@ -49715,7 +49715,7 @@
       ],
       "source_type": "new_original",
       "source_ref": "Sources: Factfile Unit 1 - Software, Factfile Unit 1 - Software 2",
-      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04.",
+      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04. | Scope correction 2026-05-14: removed from live student sessions because code-library/library-program content is outside the confirmed Software topic scope.",
       "metadata_json": {
         "question_external_id": "software.practice_bank.topic_02_03_software_database.q004",
         "source_kind": "practice_bank",
@@ -49725,7 +49725,9 @@
         "dedupe_fingerprint": "924ccaf504f1e1c4",
         "review_priority": "medium"
       },
-      "asset_count": 0
+      "asset_count": 0,
+      "is_active": false,
+      "qa_status": "draft"
     },
     {
       "question_external_id": "software.practice_bank.topic_02_03_software_database.q005",
@@ -49750,7 +49752,7 @@
       "markscheme_points_json": [
         "A"
       ],
-      "explanation": "The correct option is To translate a high-level language program into machine code. This question checks whether you can explain the roles of translators and reusable library code in software development.",
+      "explanation": "The correct option is To translate a high-level language program into machine code. This question checks whether you can explain the role of a compiler.",
       "max_marks": 1,
       "content_blocks_json": [
         {
@@ -49824,7 +49826,7 @@
       "markscheme_points_json": [
         "C"
       ],
-      "explanation": "The correct option is Precompiled pieces of code that a user can include when creating their own programs. This question checks whether you can classify software as system, utility, application, translator or library software.",
+      "explanation": "The correct option is Precompiled pieces of code that a user can include when creating their own programs. This question checks whether you can classify software as system, utility and application software.",
       "max_marks": 1,
       "content_blocks_json": [
         {
@@ -49863,7 +49865,7 @@
       ],
       "source_type": "new_original",
       "source_ref": "Sources: Factfile Unit 1 - Software, Factfile Unit 1 - Software 2",
-      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04.",
+      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04. | Scope correction 2026-05-14: removed from live student sessions because code-library/library-program content is outside the confirmed Software topic scope.",
       "metadata_json": {
         "question_external_id": "software.practice_bank.topic_02_03_software_database.q006",
         "source_kind": "practice_bank",
@@ -49874,7 +49876,9 @@
         "review_priority": "medium",
         "difficulty_review_note": "Moved from easy to medium on 2026-05-05: source-backed by Software fact file, but not suitable for Easy recognition tier."
       },
-      "asset_count": 0
+      "asset_count": 0,
+      "is_active": false,
+      "qa_status": "draft"
     },
     {
       "question_external_id": "software.practice_bank.topic_02_03_software_database.q007",
@@ -52181,7 +52185,7 @@
         "choices": [
           "Transaction file",
           "Master file",
-          "Library file",
+          "Backup file",
           "Journal file"
         ]
       },
@@ -52213,7 +52217,7 @@
           },
           {
             "id": "c",
-            "label": "Library file"
+            "label": "Backup file"
           },
           {
             "id": "d",
@@ -52230,7 +52234,7 @@
       ],
       "source_type": "new_original",
       "source_ref": "Sources: Factfile Unit 1 - Software, Factfile Unit 1 - Software 2",
-      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04.",
+      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04. | Scope correction 2026-05-14: replaced library-file distractor with backup-file distractor.",
       "metadata_json": {
         "question_external_id": "software.practice_bank.topic_02_03_software_database.q034",
         "source_kind": "practice_bank",
@@ -80272,7 +80276,7 @@
         "Software that helps the user complete a task such as word processing -> Application software",
         "Software that manages hardware and allows the computer to operate Terms: Application software; System software -> System software"
       ],
-      "explanation": "The correct matches are: Software that helps the user complete a task such as word processing -> Application software; Software that manages hardware and allows the computer to operate Terms: Application software; System software -> System software. This question checks whether you can classify software as system, utility, application, translator or library software.",
+      "explanation": "The correct matches are: Software that helps the user complete a task such as word processing -> Application software; Software that manages hardware and allows the computer to operate Terms: Application software; System software -> System software. This question checks whether you can classify software as system, utility and application software.",
       "max_marks": 2,
       "content_blocks_json": [
         {
@@ -80378,7 +80382,7 @@
         "Finds and may remove malicious software -> Antivirus",
         "Rearranges files on a hard disk so they can be accessed more efficiently Terms: Antivirus; Disk defragmenter -> Disk defragmenter"
       ],
-      "explanation": "The correct matches are: Finds and may remove malicious software -> Antivirus; Rearranges files on a hard disk so they can be accessed more efficiently Terms: Antivirus; Disk defragmenter -> Disk defragmenter. This question checks whether you can recognise common utility programs and their purposes. It also checks whether you can classify software as system, utility, application, translator or library software.",
+      "explanation": "The correct matches are: Finds and may remove malicious software -> Antivirus; Rearranges files on a hard disk so they can be accessed more efficiently Terms: Antivirus; Disk defragmenter -> Disk defragmenter. This question checks whether you can recognise common utility programs and their purposes. It also checks whether you can classify software as system, utility and application software.",
       "max_marks": 2,
       "content_blocks_json": [
         {
@@ -80755,7 +80759,7 @@
       ],
       "source_type": "new_original",
       "source_ref": "supplementary medium balancing item based on translators and libraries",
-      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04.",
+      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04. | Scope correction 2026-05-14: removed from live student sessions because code-library/library-program content is outside the confirmed Software topic scope.",
       "metadata_json": {
         "question_external_id": "software.practice_bank.expert_balancing_2026_05.q005",
         "source_kind": "practice_bank",
@@ -80765,7 +80769,9 @@
         "dedupe_fingerprint": "afe790463573af6f",
         "review_priority": "medium"
       },
-      "asset_count": 0
+      "asset_count": 0,
+      "is_active": false,
+      "qa_status": "draft"
     },
     {
       "question_external_id": "health-and-safety.practice_bank.expert_balancing_2026_05.q001",
@@ -85645,7 +85651,7 @@
     },
     {
       "question_external_id": "software.practice_bank.topic_02_03_software_database.q005",
-      "objective_code": "software.translators-and-libraries",
+      "objective_code": "software.compiler-role",
       "is_primary": true,
       "display_order": 1
     },
@@ -88123,7 +88129,7 @@
     },
     {
       "question_external_id": "software.practice_bank.expert_balancing_2026_05.q005",
-      "objective_code": "software.translators-and-libraries",
+      "objective_code": "software.compiler-role",
       "is_primary": true,
       "display_order": 1
     },
