@@ -41534,7 +41534,7 @@
       ],
       "source_type": "new_original",
       "source_ref": "Sources: Factfile 01 Representing Data, Factfile 02 Representing Images, Factfile 03 Representing Sound, Factfile 04 Portability",
-      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04.",
+      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04. | Scope correction 2026-05-14: retired from live student sessions because 24-bit true-colour count recall is too niche for the intended exam-revision bank.",
       "metadata_json": {
         "question_external_id": "digital-data.practice_bank.topic_01_digital_data.q028",
         "source_kind": "practice_bank",
@@ -41544,7 +41544,9 @@
         "dedupe_fingerprint": "a967f443c3285d34",
         "review_priority": "medium"
       },
-      "asset_count": 0
+      "asset_count": 0,
+      "is_active": false,
+      "qa_status": "draft"
     },
     {
       "question_external_id": "digital-data.practice_bank.topic_01_digital_data.q029",
@@ -41554,27 +41556,28 @@
       "adaptive_tier": "support",
       "question_family_code": "digital-data.meant-resolution-image.choose",
       "selection_weight": 1.0,
-      "stem": "What is meant by the resolution of an image?",
+      "stem": "Which statement best describes the resolution of a bitmap image?",
       "options_json": {
         "choices": [
-          "The number of pixels per unit of measurement",
-          "The total number of colours in the image",
-          "The total number of pixels in the image",
-          "The width of the image in centimetres"
+          "The number of pixels in the image; higher resolution usually means better quality and a larger file size",
+          "The total number of colours that can be displayed in the image",
+          "The file format used to save the image, such as JPG or PNG",
+          "The physical width of the image measured in centimetres"
         ]
       },
       "correct_answer_json": {
-        "choice": "The number of pixels per unit of measurement"
+        "choice": "The number of pixels in the image; higher resolution usually means better quality and a larger file size"
       },
       "markscheme_points_json": [
-        "A"
+        "Resolution means the number of pixels in an image or pixels per inch.",
+        "Higher resolution usually gives better quality and increases file size/storage required."
       ],
-      "explanation": "The correct option is The number of pixels per unit of measurement. This question checks whether you can describe pixels, resolution and how bitmap images are represented.",
+      "explanation": "Resolution means the number of pixels in an image, often described as pixels per inch. A higher-resolution image normally has better quality but needs more storage space.",
       "max_marks": 1,
       "content_blocks_json": [
         {
           "kind": "text",
-          "text": "What is meant by the resolution of an image?",
+          "text": "Which statement best describes the resolution of a bitmap image?",
           "block_key": null
         }
       ],
@@ -41583,19 +41586,19 @@
         "choices": [
           {
             "id": "a",
-            "label": "The number of pixels per unit of measurement"
+            "label": "The number of pixels in the image; higher resolution usually means better quality and a larger file size"
           },
           {
             "id": "b",
-            "label": "The total number of colours in the image"
+            "label": "The total number of colours that can be displayed in the image"
           },
           {
             "id": "c",
-            "label": "The total number of pixels in the image"
+            "label": "The file format used to save the image, such as JPG or PNG"
           },
           {
             "id": "d",
-            "label": "The width of the image in centimetres"
+            "label": "The physical width of the image measured in centimetres"
           }
         ]
       },
@@ -41606,9 +41609,9 @@
       "tags_json": [
         "multiple-choice"
       ],
-      "source_type": "new_original",
-      "source_ref": "Sources: Factfile 01 Representing Data, Factfile 02 Representing Images, Factfile 03 Representing Sound, Factfile 04 Portability",
-      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04.",
+      "source_type": "adapted_exam",
+      "source_ref": "2018 Q4(a)(ii), 2019 Q4(a)(ii), and 2023 Q2(b) mark-scheme wording on resolution - simplified MCQ",
+      "teacher_notes": "First-pass explanation generated from answer and mapped objective; review before approval. | Teacher review comment: Owner approved full reviewed bank for technical import preparation on 2026-05-04. | Scope correction 2026-05-14: rewrote resolution prompt to match CCEA mark-scheme language on number of pixels, quality, and storage/file size.",
       "metadata_json": {
         "question_external_id": "digital-data.practice_bank.topic_01_digital_data.q029",
         "source_kind": "practice_bank",
